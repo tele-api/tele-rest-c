@@ -1,0 +1,11 @@
+name: C/C++ C
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  call-ci:
+    uses: qntx/workflows/.github/workflows/c-cpp.yml@main

@@ -1,0 +1,117 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "_set_webhook_post_200_response.h"
+
+
+
+static _set_webhook_post_200_response_t *_set_webhook_post_200_response_create_internal(
+    int ok,
+    int result
+    ) {
+    _set_webhook_post_200_response_t *_set_webhook_post_200_response_local_var = malloc(sizeof(_set_webhook_post_200_response_t));
+    if (!_set_webhook_post_200_response_local_var) {
+        return NULL;
+    }
+    _set_webhook_post_200_response_local_var->ok = ok;
+    _set_webhook_post_200_response_local_var->result = result;
+
+    _set_webhook_post_200_response_local_var->_library_owned = 1;
+    return _set_webhook_post_200_response_local_var;
+}
+
+__attribute__((deprecated)) _set_webhook_post_200_response_t *_set_webhook_post_200_response_create(
+    int ok,
+    int result
+    ) {
+    return _set_webhook_post_200_response_create_internal (
+        ok,
+        result
+        );
+}
+
+void _set_webhook_post_200_response_free(_set_webhook_post_200_response_t *_set_webhook_post_200_response) {
+    if(NULL == _set_webhook_post_200_response){
+        return ;
+    }
+    if(_set_webhook_post_200_response->_library_owned != 1){
+        fprintf(stderr, "WARNING: %s() does NOT free objects allocated by the user\n", "_set_webhook_post_200_response_free");
+        return ;
+    }
+    listEntry_t *listEntry;
+    free(_set_webhook_post_200_response);
+}
+
+cJSON *_set_webhook_post_200_response_convertToJSON(_set_webhook_post_200_response_t *_set_webhook_post_200_response) {
+    cJSON *item = cJSON_CreateObject();
+
+    // _set_webhook_post_200_response->ok
+    if (!_set_webhook_post_200_response->ok) {
+        goto fail;
+    }
+    if(cJSON_AddBoolToObject(item, "ok", _set_webhook_post_200_response->ok) == NULL) {
+    goto fail; //Bool
+    }
+
+
+    // _set_webhook_post_200_response->result
+    if (!_set_webhook_post_200_response->result) {
+        goto fail;
+    }
+    if(cJSON_AddBoolToObject(item, "result", _set_webhook_post_200_response->result) == NULL) {
+    goto fail; //Bool
+    }
+
+    return item;
+fail:
+    if (item) {
+        cJSON_Delete(item);
+    }
+    return NULL;
+}
+
+_set_webhook_post_200_response_t *_set_webhook_post_200_response_parseFromJSON(cJSON *_set_webhook_post_200_responseJSON){
+
+    _set_webhook_post_200_response_t *_set_webhook_post_200_response_local_var = NULL;
+
+    // _set_webhook_post_200_response->ok
+    cJSON *ok = cJSON_GetObjectItemCaseSensitive(_set_webhook_post_200_responseJSON, "ok");
+    if (cJSON_IsNull(ok)) {
+        ok = NULL;
+    }
+    if (!ok) {
+        goto end;
+    }
+
+    
+    if(!cJSON_IsBool(ok))
+    {
+    goto end; //Bool
+    }
+
+    // _set_webhook_post_200_response->result
+    cJSON *result = cJSON_GetObjectItemCaseSensitive(_set_webhook_post_200_responseJSON, "result");
+    if (cJSON_IsNull(result)) {
+        result = NULL;
+    }
+    if (!result) {
+        goto end;
+    }
+
+    
+    if(!cJSON_IsBool(result))
+    {
+    goto end; //Bool
+    }
+
+
+    _set_webhook_post_200_response_local_var = _set_webhook_post_200_response_create_internal (
+        ok->valueint,
+        result->valueint
+        );
+
+    return _set_webhook_post_200_response_local_var;
+end:
+    return NULL;
+
+}
