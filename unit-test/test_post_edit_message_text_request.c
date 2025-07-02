@@ -1,0 +1,79 @@
+#ifndef post_edit_message_text_request_TEST
+#define post_edit_message_text_request_TEST
+
+// the following is to include only the main from the first c file
+#ifndef TEST_MAIN
+#define TEST_MAIN
+#define post_edit_message_text_request_MAIN
+#endif // TEST_MAIN
+
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include "../external/cJSON.h"
+
+#include "../model/post_edit_message_text_request.h"
+post_edit_message_text_request_t* instantiate_post_edit_message_text_request(int include_optional);
+
+#include "test_post_edit_message_text_request_chat_id.c"
+#include "test_link_preview_options.c"
+#include "test_inline_keyboard_markup.c"
+
+
+post_edit_message_text_request_t* instantiate_post_edit_message_text_request(int include_optional) {
+  post_edit_message_text_request_t* post_edit_message_text_request = NULL;
+  if (include_optional) {
+    post_edit_message_text_request = post_edit_message_text_request_create(
+      "0",
+      "0",
+      null,
+      56,
+      "0",
+      "0",
+      list_createList(),
+       // false, not to have infinite recursion
+      instantiate_link_preview_options(0),
+       // false, not to have infinite recursion
+      instantiate_inline_keyboard_markup(0)
+    );
+  } else {
+    post_edit_message_text_request = post_edit_message_text_request_create(
+      "0",
+      "0",
+      null,
+      56,
+      "0",
+      "0",
+      list_createList(),
+      NULL,
+      NULL
+    );
+  }
+
+  return post_edit_message_text_request;
+}
+
+
+#ifdef post_edit_message_text_request_MAIN
+
+void test_post_edit_message_text_request(int include_optional) {
+    post_edit_message_text_request_t* post_edit_message_text_request_1 = instantiate_post_edit_message_text_request(include_optional);
+
+	cJSON* jsonpost_edit_message_text_request_1 = post_edit_message_text_request_convertToJSON(post_edit_message_text_request_1);
+	printf("post_edit_message_text_request :\n%s\n", cJSON_Print(jsonpost_edit_message_text_request_1));
+	post_edit_message_text_request_t* post_edit_message_text_request_2 = post_edit_message_text_request_parseFromJSON(jsonpost_edit_message_text_request_1);
+	cJSON* jsonpost_edit_message_text_request_2 = post_edit_message_text_request_convertToJSON(post_edit_message_text_request_2);
+	printf("repeating post_edit_message_text_request:\n%s\n", cJSON_Print(jsonpost_edit_message_text_request_2));
+}
+
+int main() {
+  test_post_edit_message_text_request(1);
+  test_post_edit_message_text_request(0);
+
+  printf("Hello world \n");
+  return 0;
+}
+
+#endif // post_edit_message_text_request_MAIN
+#endif // post_edit_message_text_request_TEST

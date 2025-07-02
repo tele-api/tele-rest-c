@@ -1,0 +1,59 @@
+#ifndef post_delete_chat_sticker_set_request_TEST
+#define post_delete_chat_sticker_set_request_TEST
+
+// the following is to include only the main from the first c file
+#ifndef TEST_MAIN
+#define TEST_MAIN
+#define post_delete_chat_sticker_set_request_MAIN
+#endif // TEST_MAIN
+
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include "../external/cJSON.h"
+
+#include "../model/post_delete_chat_sticker_set_request.h"
+post_delete_chat_sticker_set_request_t* instantiate_post_delete_chat_sticker_set_request(int include_optional);
+
+#include "test_post_restrict_chat_member_request_chat_id.c"
+
+
+post_delete_chat_sticker_set_request_t* instantiate_post_delete_chat_sticker_set_request(int include_optional) {
+  post_delete_chat_sticker_set_request_t* post_delete_chat_sticker_set_request = NULL;
+  if (include_optional) {
+    post_delete_chat_sticker_set_request = post_delete_chat_sticker_set_request_create(
+      null
+    );
+  } else {
+    post_delete_chat_sticker_set_request = post_delete_chat_sticker_set_request_create(
+      null
+    );
+  }
+
+  return post_delete_chat_sticker_set_request;
+}
+
+
+#ifdef post_delete_chat_sticker_set_request_MAIN
+
+void test_post_delete_chat_sticker_set_request(int include_optional) {
+    post_delete_chat_sticker_set_request_t* post_delete_chat_sticker_set_request_1 = instantiate_post_delete_chat_sticker_set_request(include_optional);
+
+	cJSON* jsonpost_delete_chat_sticker_set_request_1 = post_delete_chat_sticker_set_request_convertToJSON(post_delete_chat_sticker_set_request_1);
+	printf("post_delete_chat_sticker_set_request :\n%s\n", cJSON_Print(jsonpost_delete_chat_sticker_set_request_1));
+	post_delete_chat_sticker_set_request_t* post_delete_chat_sticker_set_request_2 = post_delete_chat_sticker_set_request_parseFromJSON(jsonpost_delete_chat_sticker_set_request_1);
+	cJSON* jsonpost_delete_chat_sticker_set_request_2 = post_delete_chat_sticker_set_request_convertToJSON(post_delete_chat_sticker_set_request_2);
+	printf("repeating post_delete_chat_sticker_set_request:\n%s\n", cJSON_Print(jsonpost_delete_chat_sticker_set_request_2));
+}
+
+int main() {
+  test_post_delete_chat_sticker_set_request(1);
+  test_post_delete_chat_sticker_set_request(0);
+
+  printf("Hello world \n");
+  return 0;
+}
+
+#endif // post_delete_chat_sticker_set_request_MAIN
+#endif // post_delete_chat_sticker_set_request_TEST

@@ -15,7 +15,6 @@
 
 typedef struct bot_command_scope_t bot_command_scope_t;
 
-#include "_restrict_chat_member_post_request_chat_id.h"
 #include "bot_command_scope_all_chat_administrators.h"
 #include "bot_command_scope_all_group_chats.h"
 #include "bot_command_scope_all_private_chats.h"
@@ -23,12 +22,13 @@ typedef struct bot_command_scope_t bot_command_scope_t;
 #include "bot_command_scope_chat_administrators.h"
 #include "bot_command_scope_chat_member.h"
 #include "bot_command_scope_default.h"
+#include "post_restrict_chat_member_request_chat_id.h"
 
 
 
 typedef struct bot_command_scope_t {
     char *type; // string
-    struct _restrict_chat_member_post_request_chat_id_t *chat_id; //model
+    struct post_restrict_chat_member_request_chat_id_t *chat_id; //model
     int user_id; //numeric
 
     int _library_owned; // Is the library responsible for freeing this object?
@@ -36,7 +36,7 @@ typedef struct bot_command_scope_t {
 
 __attribute__((deprecated)) bot_command_scope_t *bot_command_scope_create(
     char *type,
-    _restrict_chat_member_post_request_chat_id_t *chat_id,
+    post_restrict_chat_member_request_chat_id_t *chat_id,
     int user_id
 );
 
