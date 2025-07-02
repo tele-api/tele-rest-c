@@ -21,7 +21,7 @@ typedef struct business_bot_rights_t business_bot_rights_t;
 typedef struct business_bot_rights_t {
     int can_reply; //boolean
     int can_read_messages; //boolean
-    int can_delete_sent_messages; //boolean
+    int can_delete_outgoing_messages; //boolean
     int can_delete_all_messages; //boolean
     int can_edit_name; //boolean
     int can_edit_bio; //boolean
@@ -40,7 +40,7 @@ typedef struct business_bot_rights_t {
 __attribute__((deprecated)) business_bot_rights_t *business_bot_rights_create(
     int can_reply,
     int can_read_messages,
-    int can_delete_sent_messages,
+    int can_delete_outgoing_messages,
     int can_delete_all_messages,
     int can_edit_name,
     int can_edit_bio,

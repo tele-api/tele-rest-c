@@ -1,0 +1,60 @@
+#ifndef create_invoice_link_response_TEST
+#define create_invoice_link_response_TEST
+
+// the following is to include only the main from the first c file
+#ifndef TEST_MAIN
+#define TEST_MAIN
+#define create_invoice_link_response_MAIN
+#endif // TEST_MAIN
+
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include "../external/cJSON.h"
+
+#include "../model/create_invoice_link_response.h"
+create_invoice_link_response_t* instantiate_create_invoice_link_response(int include_optional);
+
+
+
+create_invoice_link_response_t* instantiate_create_invoice_link_response(int include_optional) {
+  create_invoice_link_response_t* create_invoice_link_response = NULL;
+  if (include_optional) {
+    create_invoice_link_response = create_invoice_link_response_create(
+      1,
+      "0"
+    );
+  } else {
+    create_invoice_link_response = create_invoice_link_response_create(
+      1,
+      "0"
+    );
+  }
+
+  return create_invoice_link_response;
+}
+
+
+#ifdef create_invoice_link_response_MAIN
+
+void test_create_invoice_link_response(int include_optional) {
+    create_invoice_link_response_t* create_invoice_link_response_1 = instantiate_create_invoice_link_response(include_optional);
+
+	cJSON* jsoncreate_invoice_link_response_1 = create_invoice_link_response_convertToJSON(create_invoice_link_response_1);
+	printf("create_invoice_link_response :\n%s\n", cJSON_Print(jsoncreate_invoice_link_response_1));
+	create_invoice_link_response_t* create_invoice_link_response_2 = create_invoice_link_response_parseFromJSON(jsoncreate_invoice_link_response_1);
+	cJSON* jsoncreate_invoice_link_response_2 = create_invoice_link_response_convertToJSON(create_invoice_link_response_2);
+	printf("repeating create_invoice_link_response:\n%s\n", cJSON_Print(jsoncreate_invoice_link_response_2));
+}
+
+int main() {
+  test_create_invoice_link_response(1);
+  test_create_invoice_link_response(0);
+
+  printf("Hello world \n");
+  return 0;
+}
+
+#endif // create_invoice_link_response_MAIN
+#endif // create_invoice_link_response_TEST

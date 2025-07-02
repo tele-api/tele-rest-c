@@ -8,7 +8,7 @@
 static business_bot_rights_t *business_bot_rights_create_internal(
     int can_reply,
     int can_read_messages,
-    int can_delete_sent_messages,
+    int can_delete_outgoing_messages,
     int can_delete_all_messages,
     int can_edit_name,
     int can_edit_bio,
@@ -27,7 +27,7 @@ static business_bot_rights_t *business_bot_rights_create_internal(
     }
     business_bot_rights_local_var->can_reply = can_reply;
     business_bot_rights_local_var->can_read_messages = can_read_messages;
-    business_bot_rights_local_var->can_delete_sent_messages = can_delete_sent_messages;
+    business_bot_rights_local_var->can_delete_outgoing_messages = can_delete_outgoing_messages;
     business_bot_rights_local_var->can_delete_all_messages = can_delete_all_messages;
     business_bot_rights_local_var->can_edit_name = can_edit_name;
     business_bot_rights_local_var->can_edit_bio = can_edit_bio;
@@ -47,7 +47,7 @@ static business_bot_rights_t *business_bot_rights_create_internal(
 __attribute__((deprecated)) business_bot_rights_t *business_bot_rights_create(
     int can_reply,
     int can_read_messages,
-    int can_delete_sent_messages,
+    int can_delete_outgoing_messages,
     int can_delete_all_messages,
     int can_edit_name,
     int can_edit_bio,
@@ -63,7 +63,7 @@ __attribute__((deprecated)) business_bot_rights_t *business_bot_rights_create(
     return business_bot_rights_create_internal (
         can_reply,
         can_read_messages,
-        can_delete_sent_messages,
+        can_delete_outgoing_messages,
         can_delete_all_messages,
         can_edit_name,
         can_edit_bio,
@@ -109,9 +109,9 @@ cJSON *business_bot_rights_convertToJSON(business_bot_rights_t *business_bot_rig
     }
 
 
-    // business_bot_rights->can_delete_sent_messages
-    if(business_bot_rights->can_delete_sent_messages) {
-    if(cJSON_AddBoolToObject(item, "can_delete_sent_messages", business_bot_rights->can_delete_sent_messages) == NULL) {
+    // business_bot_rights->can_delete_outgoing_messages
+    if(business_bot_rights->can_delete_outgoing_messages) {
+    if(cJSON_AddBoolToObject(item, "can_delete_outgoing_messages", business_bot_rights->can_delete_outgoing_messages) == NULL) {
     goto fail; //Bool
     }
     }
@@ -240,13 +240,13 @@ business_bot_rights_t *business_bot_rights_parseFromJSON(cJSON *business_bot_rig
     }
     }
 
-    // business_bot_rights->can_delete_sent_messages
-    cJSON *can_delete_sent_messages = cJSON_GetObjectItemCaseSensitive(business_bot_rightsJSON, "can_delete_sent_messages");
-    if (cJSON_IsNull(can_delete_sent_messages)) {
-        can_delete_sent_messages = NULL;
+    // business_bot_rights->can_delete_outgoing_messages
+    cJSON *can_delete_outgoing_messages = cJSON_GetObjectItemCaseSensitive(business_bot_rightsJSON, "can_delete_outgoing_messages");
+    if (cJSON_IsNull(can_delete_outgoing_messages)) {
+        can_delete_outgoing_messages = NULL;
     }
-    if (can_delete_sent_messages) { 
-    if(!cJSON_IsBool(can_delete_sent_messages))
+    if (can_delete_outgoing_messages) { 
+    if(!cJSON_IsBool(can_delete_outgoing_messages))
     {
     goto end; //Bool
     }
@@ -388,7 +388,7 @@ business_bot_rights_t *business_bot_rights_parseFromJSON(cJSON *business_bot_rig
     business_bot_rights_local_var = business_bot_rights_create_internal (
         can_reply ? can_reply->valueint : 0,
         can_read_messages ? can_read_messages->valueint : 0,
-        can_delete_sent_messages ? can_delete_sent_messages->valueint : 0,
+        can_delete_outgoing_messages ? can_delete_outgoing_messages->valueint : 0,
         can_delete_all_messages ? can_delete_all_messages->valueint : 0,
         can_edit_name ? can_edit_name->valueint : 0,
         can_edit_bio ? can_edit_bio->valueint : 0,

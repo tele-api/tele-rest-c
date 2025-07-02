@@ -1,0 +1,117 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "set_chat_administrator_custom_title_response.h"
+
+
+
+static set_chat_administrator_custom_title_response_t *set_chat_administrator_custom_title_response_create_internal(
+    int ok,
+    int result
+    ) {
+    set_chat_administrator_custom_title_response_t *set_chat_administrator_custom_title_response_local_var = malloc(sizeof(set_chat_administrator_custom_title_response_t));
+    if (!set_chat_administrator_custom_title_response_local_var) {
+        return NULL;
+    }
+    set_chat_administrator_custom_title_response_local_var->ok = ok;
+    set_chat_administrator_custom_title_response_local_var->result = result;
+
+    set_chat_administrator_custom_title_response_local_var->_library_owned = 1;
+    return set_chat_administrator_custom_title_response_local_var;
+}
+
+__attribute__((deprecated)) set_chat_administrator_custom_title_response_t *set_chat_administrator_custom_title_response_create(
+    int ok,
+    int result
+    ) {
+    return set_chat_administrator_custom_title_response_create_internal (
+        ok,
+        result
+        );
+}
+
+void set_chat_administrator_custom_title_response_free(set_chat_administrator_custom_title_response_t *set_chat_administrator_custom_title_response) {
+    if(NULL == set_chat_administrator_custom_title_response){
+        return ;
+    }
+    if(set_chat_administrator_custom_title_response->_library_owned != 1){
+        fprintf(stderr, "WARNING: %s() does NOT free objects allocated by the user\n", "set_chat_administrator_custom_title_response_free");
+        return ;
+    }
+    listEntry_t *listEntry;
+    free(set_chat_administrator_custom_title_response);
+}
+
+cJSON *set_chat_administrator_custom_title_response_convertToJSON(set_chat_administrator_custom_title_response_t *set_chat_administrator_custom_title_response) {
+    cJSON *item = cJSON_CreateObject();
+
+    // set_chat_administrator_custom_title_response->ok
+    if (!set_chat_administrator_custom_title_response->ok) {
+        goto fail;
+    }
+    if(cJSON_AddBoolToObject(item, "ok", set_chat_administrator_custom_title_response->ok) == NULL) {
+    goto fail; //Bool
+    }
+
+
+    // set_chat_administrator_custom_title_response->result
+    if (!set_chat_administrator_custom_title_response->result) {
+        goto fail;
+    }
+    if(cJSON_AddBoolToObject(item, "result", set_chat_administrator_custom_title_response->result) == NULL) {
+    goto fail; //Bool
+    }
+
+    return item;
+fail:
+    if (item) {
+        cJSON_Delete(item);
+    }
+    return NULL;
+}
+
+set_chat_administrator_custom_title_response_t *set_chat_administrator_custom_title_response_parseFromJSON(cJSON *set_chat_administrator_custom_title_responseJSON){
+
+    set_chat_administrator_custom_title_response_t *set_chat_administrator_custom_title_response_local_var = NULL;
+
+    // set_chat_administrator_custom_title_response->ok
+    cJSON *ok = cJSON_GetObjectItemCaseSensitive(set_chat_administrator_custom_title_responseJSON, "ok");
+    if (cJSON_IsNull(ok)) {
+        ok = NULL;
+    }
+    if (!ok) {
+        goto end;
+    }
+
+    
+    if(!cJSON_IsBool(ok))
+    {
+    goto end; //Bool
+    }
+
+    // set_chat_administrator_custom_title_response->result
+    cJSON *result = cJSON_GetObjectItemCaseSensitive(set_chat_administrator_custom_title_responseJSON, "result");
+    if (cJSON_IsNull(result)) {
+        result = NULL;
+    }
+    if (!result) {
+        goto end;
+    }
+
+    
+    if(!cJSON_IsBool(result))
+    {
+    goto end; //Bool
+    }
+
+
+    set_chat_administrator_custom_title_response_local_var = set_chat_administrator_custom_title_response_create_internal (
+        ok->valueint,
+        result->valueint
+        );
+
+    return set_chat_administrator_custom_title_response_local_var;
+end:
+    return NULL;
+
+}
