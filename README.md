@@ -4,7 +4,7 @@
 
 - API version: 9.0.0
 - Package version: 
-- Build date: 2025-07-01T14:36:17.291886628Z[Etc/UTC]
+- Build date: 2025-07-02T07:03:23.311023461Z[Etc/UTC]
 - Generator version: 7.14.0
 
 ## Installation
@@ -64,333 +64,163 @@ All URIs are relative to *https://api.telegram.org/bot123456:ABC-DEF1234ghIkl-zy
 
 Category | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultAPI* | [**DefaultAPI_addStickerToSetPost**](docs/DefaultAPI.md#DefaultAPI_addStickerToSetPost) | **POST** /addStickerToSet | 
-*DefaultAPI* | [**DefaultAPI_answerCallbackQueryPost**](docs/DefaultAPI.md#DefaultAPI_answerCallbackQueryPost) | **POST** /answerCallbackQuery | 
-*DefaultAPI* | [**DefaultAPI_answerInlineQueryPost**](docs/DefaultAPI.md#DefaultAPI_answerInlineQueryPost) | **POST** /answerInlineQuery | 
-*DefaultAPI* | [**DefaultAPI_answerPreCheckoutQueryPost**](docs/DefaultAPI.md#DefaultAPI_answerPreCheckoutQueryPost) | **POST** /answerPreCheckoutQuery | 
-*DefaultAPI* | [**DefaultAPI_answerShippingQueryPost**](docs/DefaultAPI.md#DefaultAPI_answerShippingQueryPost) | **POST** /answerShippingQuery | 
-*DefaultAPI* | [**DefaultAPI_answerWebAppQueryPost**](docs/DefaultAPI.md#DefaultAPI_answerWebAppQueryPost) | **POST** /answerWebAppQuery | 
-*DefaultAPI* | [**DefaultAPI_approveChatJoinRequestPost**](docs/DefaultAPI.md#DefaultAPI_approveChatJoinRequestPost) | **POST** /approveChatJoinRequest | 
-*DefaultAPI* | [**DefaultAPI_banChatMemberPost**](docs/DefaultAPI.md#DefaultAPI_banChatMemberPost) | **POST** /banChatMember | 
-*DefaultAPI* | [**DefaultAPI_banChatSenderChatPost**](docs/DefaultAPI.md#DefaultAPI_banChatSenderChatPost) | **POST** /banChatSenderChat | 
-*DefaultAPI* | [**DefaultAPI_closeForumTopicPost**](docs/DefaultAPI.md#DefaultAPI_closeForumTopicPost) | **POST** /closeForumTopic | 
-*DefaultAPI* | [**DefaultAPI_closeGeneralForumTopicPost**](docs/DefaultAPI.md#DefaultAPI_closeGeneralForumTopicPost) | **POST** /closeGeneralForumTopic | 
-*DefaultAPI* | [**DefaultAPI_closePost**](docs/DefaultAPI.md#DefaultAPI_closePost) | **POST** /close | 
-*DefaultAPI* | [**DefaultAPI_convertGiftToStarsPost**](docs/DefaultAPI.md#DefaultAPI_convertGiftToStarsPost) | **POST** /convertGiftToStars | 
-*DefaultAPI* | [**DefaultAPI_copyMessagePost**](docs/DefaultAPI.md#DefaultAPI_copyMessagePost) | **POST** /copyMessage | 
-*DefaultAPI* | [**DefaultAPI_copyMessagesPost**](docs/DefaultAPI.md#DefaultAPI_copyMessagesPost) | **POST** /copyMessages | 
-*DefaultAPI* | [**DefaultAPI_createChatInviteLinkPost**](docs/DefaultAPI.md#DefaultAPI_createChatInviteLinkPost) | **POST** /createChatInviteLink | 
-*DefaultAPI* | [**DefaultAPI_createChatSubscriptionInviteLinkPost**](docs/DefaultAPI.md#DefaultAPI_createChatSubscriptionInviteLinkPost) | **POST** /createChatSubscriptionInviteLink | 
-*DefaultAPI* | [**DefaultAPI_createForumTopicPost**](docs/DefaultAPI.md#DefaultAPI_createForumTopicPost) | **POST** /createForumTopic | 
-*DefaultAPI* | [**DefaultAPI_createInvoiceLinkPost**](docs/DefaultAPI.md#DefaultAPI_createInvoiceLinkPost) | **POST** /createInvoiceLink | 
-*DefaultAPI* | [**DefaultAPI_createNewStickerSetPost**](docs/DefaultAPI.md#DefaultAPI_createNewStickerSetPost) | **POST** /createNewStickerSet | 
-*DefaultAPI* | [**DefaultAPI_declineChatJoinRequestPost**](docs/DefaultAPI.md#DefaultAPI_declineChatJoinRequestPost) | **POST** /declineChatJoinRequest | 
-*DefaultAPI* | [**DefaultAPI_deleteBusinessMessagesPost**](docs/DefaultAPI.md#DefaultAPI_deleteBusinessMessagesPost) | **POST** /deleteBusinessMessages | 
-*DefaultAPI* | [**DefaultAPI_deleteChatPhotoPost**](docs/DefaultAPI.md#DefaultAPI_deleteChatPhotoPost) | **POST** /deleteChatPhoto | 
-*DefaultAPI* | [**DefaultAPI_deleteChatStickerSetPost**](docs/DefaultAPI.md#DefaultAPI_deleteChatStickerSetPost) | **POST** /deleteChatStickerSet | 
-*DefaultAPI* | [**DefaultAPI_deleteForumTopicPost**](docs/DefaultAPI.md#DefaultAPI_deleteForumTopicPost) | **POST** /deleteForumTopic | 
-*DefaultAPI* | [**DefaultAPI_deleteMessagePost**](docs/DefaultAPI.md#DefaultAPI_deleteMessagePost) | **POST** /deleteMessage | 
-*DefaultAPI* | [**DefaultAPI_deleteMessagesPost**](docs/DefaultAPI.md#DefaultAPI_deleteMessagesPost) | **POST** /deleteMessages | 
-*DefaultAPI* | [**DefaultAPI_deleteMyCommandsPost**](docs/DefaultAPI.md#DefaultAPI_deleteMyCommandsPost) | **POST** /deleteMyCommands | 
-*DefaultAPI* | [**DefaultAPI_deleteStickerFromSetPost**](docs/DefaultAPI.md#DefaultAPI_deleteStickerFromSetPost) | **POST** /deleteStickerFromSet | 
-*DefaultAPI* | [**DefaultAPI_deleteStickerSetPost**](docs/DefaultAPI.md#DefaultAPI_deleteStickerSetPost) | **POST** /deleteStickerSet | 
-*DefaultAPI* | [**DefaultAPI_deleteStoryPost**](docs/DefaultAPI.md#DefaultAPI_deleteStoryPost) | **POST** /deleteStory | 
-*DefaultAPI* | [**DefaultAPI_deleteWebhookPost**](docs/DefaultAPI.md#DefaultAPI_deleteWebhookPost) | **POST** /deleteWebhook | 
-*DefaultAPI* | [**DefaultAPI_editChatInviteLinkPost**](docs/DefaultAPI.md#DefaultAPI_editChatInviteLinkPost) | **POST** /editChatInviteLink | 
-*DefaultAPI* | [**DefaultAPI_editChatSubscriptionInviteLinkPost**](docs/DefaultAPI.md#DefaultAPI_editChatSubscriptionInviteLinkPost) | **POST** /editChatSubscriptionInviteLink | 
-*DefaultAPI* | [**DefaultAPI_editForumTopicPost**](docs/DefaultAPI.md#DefaultAPI_editForumTopicPost) | **POST** /editForumTopic | 
-*DefaultAPI* | [**DefaultAPI_editGeneralForumTopicPost**](docs/DefaultAPI.md#DefaultAPI_editGeneralForumTopicPost) | **POST** /editGeneralForumTopic | 
-*DefaultAPI* | [**DefaultAPI_editMessageCaptionPost**](docs/DefaultAPI.md#DefaultAPI_editMessageCaptionPost) | **POST** /editMessageCaption | 
-*DefaultAPI* | [**DefaultAPI_editMessageLiveLocationPost**](docs/DefaultAPI.md#DefaultAPI_editMessageLiveLocationPost) | **POST** /editMessageLiveLocation | 
-*DefaultAPI* | [**DefaultAPI_editMessageMediaPost**](docs/DefaultAPI.md#DefaultAPI_editMessageMediaPost) | **POST** /editMessageMedia | 
-*DefaultAPI* | [**DefaultAPI_editMessageReplyMarkupPost**](docs/DefaultAPI.md#DefaultAPI_editMessageReplyMarkupPost) | **POST** /editMessageReplyMarkup | 
-*DefaultAPI* | [**DefaultAPI_editMessageTextPost**](docs/DefaultAPI.md#DefaultAPI_editMessageTextPost) | **POST** /editMessageText | 
-*DefaultAPI* | [**DefaultAPI_editStoryPost**](docs/DefaultAPI.md#DefaultAPI_editStoryPost) | **POST** /editStory | 
-*DefaultAPI* | [**DefaultAPI_editUserStarSubscriptionPost**](docs/DefaultAPI.md#DefaultAPI_editUserStarSubscriptionPost) | **POST** /editUserStarSubscription | 
-*DefaultAPI* | [**DefaultAPI_exportChatInviteLinkPost**](docs/DefaultAPI.md#DefaultAPI_exportChatInviteLinkPost) | **POST** /exportChatInviteLink | 
-*DefaultAPI* | [**DefaultAPI_forwardMessagePost**](docs/DefaultAPI.md#DefaultAPI_forwardMessagePost) | **POST** /forwardMessage | 
-*DefaultAPI* | [**DefaultAPI_forwardMessagesPost**](docs/DefaultAPI.md#DefaultAPI_forwardMessagesPost) | **POST** /forwardMessages | 
-*DefaultAPI* | [**DefaultAPI_getAvailableGiftsPost**](docs/DefaultAPI.md#DefaultAPI_getAvailableGiftsPost) | **POST** /getAvailableGifts | 
-*DefaultAPI* | [**DefaultAPI_getBusinessAccountGiftsPost**](docs/DefaultAPI.md#DefaultAPI_getBusinessAccountGiftsPost) | **POST** /getBusinessAccountGifts | 
-*DefaultAPI* | [**DefaultAPI_getBusinessAccountStarBalancePost**](docs/DefaultAPI.md#DefaultAPI_getBusinessAccountStarBalancePost) | **POST** /getBusinessAccountStarBalance | 
-*DefaultAPI* | [**DefaultAPI_getBusinessConnectionPost**](docs/DefaultAPI.md#DefaultAPI_getBusinessConnectionPost) | **POST** /getBusinessConnection | 
-*DefaultAPI* | [**DefaultAPI_getChatAdministratorsPost**](docs/DefaultAPI.md#DefaultAPI_getChatAdministratorsPost) | **POST** /getChatAdministrators | 
-*DefaultAPI* | [**DefaultAPI_getChatMemberCountPost**](docs/DefaultAPI.md#DefaultAPI_getChatMemberCountPost) | **POST** /getChatMemberCount | 
-*DefaultAPI* | [**DefaultAPI_getChatMemberPost**](docs/DefaultAPI.md#DefaultAPI_getChatMemberPost) | **POST** /getChatMember | 
-*DefaultAPI* | [**DefaultAPI_getChatMenuButtonPost**](docs/DefaultAPI.md#DefaultAPI_getChatMenuButtonPost) | **POST** /getChatMenuButton | 
-*DefaultAPI* | [**DefaultAPI_getChatPost**](docs/DefaultAPI.md#DefaultAPI_getChatPost) | **POST** /getChat | 
-*DefaultAPI* | [**DefaultAPI_getCustomEmojiStickersPost**](docs/DefaultAPI.md#DefaultAPI_getCustomEmojiStickersPost) | **POST** /getCustomEmojiStickers | 
-*DefaultAPI* | [**DefaultAPI_getFilePost**](docs/DefaultAPI.md#DefaultAPI_getFilePost) | **POST** /getFile | 
-*DefaultAPI* | [**DefaultAPI_getForumTopicIconStickersPost**](docs/DefaultAPI.md#DefaultAPI_getForumTopicIconStickersPost) | **POST** /getForumTopicIconStickers | 
-*DefaultAPI* | [**DefaultAPI_getGameHighScoresPost**](docs/DefaultAPI.md#DefaultAPI_getGameHighScoresPost) | **POST** /getGameHighScores | 
-*DefaultAPI* | [**DefaultAPI_getMePost**](docs/DefaultAPI.md#DefaultAPI_getMePost) | **POST** /getMe | 
-*DefaultAPI* | [**DefaultAPI_getMyCommandsPost**](docs/DefaultAPI.md#DefaultAPI_getMyCommandsPost) | **POST** /getMyCommands | 
-*DefaultAPI* | [**DefaultAPI_getMyDefaultAdministratorRightsPost**](docs/DefaultAPI.md#DefaultAPI_getMyDefaultAdministratorRightsPost) | **POST** /getMyDefaultAdministratorRights | 
-*DefaultAPI* | [**DefaultAPI_getMyDescriptionPost**](docs/DefaultAPI.md#DefaultAPI_getMyDescriptionPost) | **POST** /getMyDescription | 
-*DefaultAPI* | [**DefaultAPI_getMyNamePost**](docs/DefaultAPI.md#DefaultAPI_getMyNamePost) | **POST** /getMyName | 
-*DefaultAPI* | [**DefaultAPI_getMyShortDescriptionPost**](docs/DefaultAPI.md#DefaultAPI_getMyShortDescriptionPost) | **POST** /getMyShortDescription | 
-*DefaultAPI* | [**DefaultAPI_getStarTransactionsPost**](docs/DefaultAPI.md#DefaultAPI_getStarTransactionsPost) | **POST** /getStarTransactions | 
-*DefaultAPI* | [**DefaultAPI_getStickerSetPost**](docs/DefaultAPI.md#DefaultAPI_getStickerSetPost) | **POST** /getStickerSet | 
-*DefaultAPI* | [**DefaultAPI_getUpdatesPost**](docs/DefaultAPI.md#DefaultAPI_getUpdatesPost) | **POST** /getUpdates | 
-*DefaultAPI* | [**DefaultAPI_getUserChatBoostsPost**](docs/DefaultAPI.md#DefaultAPI_getUserChatBoostsPost) | **POST** /getUserChatBoosts | 
-*DefaultAPI* | [**DefaultAPI_getUserProfilePhotosPost**](docs/DefaultAPI.md#DefaultAPI_getUserProfilePhotosPost) | **POST** /getUserProfilePhotos | 
-*DefaultAPI* | [**DefaultAPI_getWebhookInfoPost**](docs/DefaultAPI.md#DefaultAPI_getWebhookInfoPost) | **POST** /getWebhookInfo | 
-*DefaultAPI* | [**DefaultAPI_giftPremiumSubscriptionPost**](docs/DefaultAPI.md#DefaultAPI_giftPremiumSubscriptionPost) | **POST** /giftPremiumSubscription | 
-*DefaultAPI* | [**DefaultAPI_hideGeneralForumTopicPost**](docs/DefaultAPI.md#DefaultAPI_hideGeneralForumTopicPost) | **POST** /hideGeneralForumTopic | 
-*DefaultAPI* | [**DefaultAPI_leaveChatPost**](docs/DefaultAPI.md#DefaultAPI_leaveChatPost) | **POST** /leaveChat | 
-*DefaultAPI* | [**DefaultAPI_logOutPost**](docs/DefaultAPI.md#DefaultAPI_logOutPost) | **POST** /logOut | 
-*DefaultAPI* | [**DefaultAPI_pinChatMessagePost**](docs/DefaultAPI.md#DefaultAPI_pinChatMessagePost) | **POST** /pinChatMessage | 
-*DefaultAPI* | [**DefaultAPI_postStoryPost**](docs/DefaultAPI.md#DefaultAPI_postStoryPost) | **POST** /postStory | 
-*DefaultAPI* | [**DefaultAPI_promoteChatMemberPost**](docs/DefaultAPI.md#DefaultAPI_promoteChatMemberPost) | **POST** /promoteChatMember | 
-*DefaultAPI* | [**DefaultAPI_readBusinessMessagePost**](docs/DefaultAPI.md#DefaultAPI_readBusinessMessagePost) | **POST** /readBusinessMessage | 
-*DefaultAPI* | [**DefaultAPI_refundStarPaymentPost**](docs/DefaultAPI.md#DefaultAPI_refundStarPaymentPost) | **POST** /refundStarPayment | 
-*DefaultAPI* | [**DefaultAPI_removeBusinessAccountProfilePhotoPost**](docs/DefaultAPI.md#DefaultAPI_removeBusinessAccountProfilePhotoPost) | **POST** /removeBusinessAccountProfilePhoto | 
-*DefaultAPI* | [**DefaultAPI_removeChatVerificationPost**](docs/DefaultAPI.md#DefaultAPI_removeChatVerificationPost) | **POST** /removeChatVerification | 
-*DefaultAPI* | [**DefaultAPI_removeUserVerificationPost**](docs/DefaultAPI.md#DefaultAPI_removeUserVerificationPost) | **POST** /removeUserVerification | 
-*DefaultAPI* | [**DefaultAPI_reopenForumTopicPost**](docs/DefaultAPI.md#DefaultAPI_reopenForumTopicPost) | **POST** /reopenForumTopic | 
-*DefaultAPI* | [**DefaultAPI_reopenGeneralForumTopicPost**](docs/DefaultAPI.md#DefaultAPI_reopenGeneralForumTopicPost) | **POST** /reopenGeneralForumTopic | 
-*DefaultAPI* | [**DefaultAPI_replaceStickerInSetPost**](docs/DefaultAPI.md#DefaultAPI_replaceStickerInSetPost) | **POST** /replaceStickerInSet | 
-*DefaultAPI* | [**DefaultAPI_restrictChatMemberPost**](docs/DefaultAPI.md#DefaultAPI_restrictChatMemberPost) | **POST** /restrictChatMember | 
-*DefaultAPI* | [**DefaultAPI_revokeChatInviteLinkPost**](docs/DefaultAPI.md#DefaultAPI_revokeChatInviteLinkPost) | **POST** /revokeChatInviteLink | 
-*DefaultAPI* | [**DefaultAPI_savePreparedInlineMessagePost**](docs/DefaultAPI.md#DefaultAPI_savePreparedInlineMessagePost) | **POST** /savePreparedInlineMessage | 
-*DefaultAPI* | [**DefaultAPI_sendAnimationPost**](docs/DefaultAPI.md#DefaultAPI_sendAnimationPost) | **POST** /sendAnimation | 
-*DefaultAPI* | [**DefaultAPI_sendAudioPost**](docs/DefaultAPI.md#DefaultAPI_sendAudioPost) | **POST** /sendAudio | 
-*DefaultAPI* | [**DefaultAPI_sendChatActionPost**](docs/DefaultAPI.md#DefaultAPI_sendChatActionPost) | **POST** /sendChatAction | 
-*DefaultAPI* | [**DefaultAPI_sendContactPost**](docs/DefaultAPI.md#DefaultAPI_sendContactPost) | **POST** /sendContact | 
-*DefaultAPI* | [**DefaultAPI_sendDicePost**](docs/DefaultAPI.md#DefaultAPI_sendDicePost) | **POST** /sendDice | 
-*DefaultAPI* | [**DefaultAPI_sendDocumentPost**](docs/DefaultAPI.md#DefaultAPI_sendDocumentPost) | **POST** /sendDocument | 
-*DefaultAPI* | [**DefaultAPI_sendGamePost**](docs/DefaultAPI.md#DefaultAPI_sendGamePost) | **POST** /sendGame | 
-*DefaultAPI* | [**DefaultAPI_sendGiftPost**](docs/DefaultAPI.md#DefaultAPI_sendGiftPost) | **POST** /sendGift | 
-*DefaultAPI* | [**DefaultAPI_sendInvoicePost**](docs/DefaultAPI.md#DefaultAPI_sendInvoicePost) | **POST** /sendInvoice | 
-*DefaultAPI* | [**DefaultAPI_sendLocationPost**](docs/DefaultAPI.md#DefaultAPI_sendLocationPost) | **POST** /sendLocation | 
-*DefaultAPI* | [**DefaultAPI_sendMediaGroupPost**](docs/DefaultAPI.md#DefaultAPI_sendMediaGroupPost) | **POST** /sendMediaGroup | 
-*DefaultAPI* | [**DefaultAPI_sendMessagePost**](docs/DefaultAPI.md#DefaultAPI_sendMessagePost) | **POST** /sendMessage | 
-*DefaultAPI* | [**DefaultAPI_sendPaidMediaPost**](docs/DefaultAPI.md#DefaultAPI_sendPaidMediaPost) | **POST** /sendPaidMedia | 
-*DefaultAPI* | [**DefaultAPI_sendPhotoPost**](docs/DefaultAPI.md#DefaultAPI_sendPhotoPost) | **POST** /sendPhoto | 
-*DefaultAPI* | [**DefaultAPI_sendPollPost**](docs/DefaultAPI.md#DefaultAPI_sendPollPost) | **POST** /sendPoll | 
-*DefaultAPI* | [**DefaultAPI_sendStickerPost**](docs/DefaultAPI.md#DefaultAPI_sendStickerPost) | **POST** /sendSticker | 
-*DefaultAPI* | [**DefaultAPI_sendVenuePost**](docs/DefaultAPI.md#DefaultAPI_sendVenuePost) | **POST** /sendVenue | 
-*DefaultAPI* | [**DefaultAPI_sendVideoNotePost**](docs/DefaultAPI.md#DefaultAPI_sendVideoNotePost) | **POST** /sendVideoNote | 
-*DefaultAPI* | [**DefaultAPI_sendVideoPost**](docs/DefaultAPI.md#DefaultAPI_sendVideoPost) | **POST** /sendVideo | 
-*DefaultAPI* | [**DefaultAPI_sendVoicePost**](docs/DefaultAPI.md#DefaultAPI_sendVoicePost) | **POST** /sendVoice | 
-*DefaultAPI* | [**DefaultAPI_setBusinessAccountBioPost**](docs/DefaultAPI.md#DefaultAPI_setBusinessAccountBioPost) | **POST** /setBusinessAccountBio | 
-*DefaultAPI* | [**DefaultAPI_setBusinessAccountGiftSettingsPost**](docs/DefaultAPI.md#DefaultAPI_setBusinessAccountGiftSettingsPost) | **POST** /setBusinessAccountGiftSettings | 
-*DefaultAPI* | [**DefaultAPI_setBusinessAccountNamePost**](docs/DefaultAPI.md#DefaultAPI_setBusinessAccountNamePost) | **POST** /setBusinessAccountName | 
-*DefaultAPI* | [**DefaultAPI_setBusinessAccountProfilePhotoPost**](docs/DefaultAPI.md#DefaultAPI_setBusinessAccountProfilePhotoPost) | **POST** /setBusinessAccountProfilePhoto | 
-*DefaultAPI* | [**DefaultAPI_setBusinessAccountUsernamePost**](docs/DefaultAPI.md#DefaultAPI_setBusinessAccountUsernamePost) | **POST** /setBusinessAccountUsername | 
-*DefaultAPI* | [**DefaultAPI_setChatAdministratorCustomTitlePost**](docs/DefaultAPI.md#DefaultAPI_setChatAdministratorCustomTitlePost) | **POST** /setChatAdministratorCustomTitle | 
-*DefaultAPI* | [**DefaultAPI_setChatDescriptionPost**](docs/DefaultAPI.md#DefaultAPI_setChatDescriptionPost) | **POST** /setChatDescription | 
-*DefaultAPI* | [**DefaultAPI_setChatMenuButtonPost**](docs/DefaultAPI.md#DefaultAPI_setChatMenuButtonPost) | **POST** /setChatMenuButton | 
-*DefaultAPI* | [**DefaultAPI_setChatPermissionsPost**](docs/DefaultAPI.md#DefaultAPI_setChatPermissionsPost) | **POST** /setChatPermissions | 
-*DefaultAPI* | [**DefaultAPI_setChatPhotoPost**](docs/DefaultAPI.md#DefaultAPI_setChatPhotoPost) | **POST** /setChatPhoto | 
-*DefaultAPI* | [**DefaultAPI_setChatStickerSetPost**](docs/DefaultAPI.md#DefaultAPI_setChatStickerSetPost) | **POST** /setChatStickerSet | 
-*DefaultAPI* | [**DefaultAPI_setChatTitlePost**](docs/DefaultAPI.md#DefaultAPI_setChatTitlePost) | **POST** /setChatTitle | 
-*DefaultAPI* | [**DefaultAPI_setCustomEmojiStickerSetThumbnailPost**](docs/DefaultAPI.md#DefaultAPI_setCustomEmojiStickerSetThumbnailPost) | **POST** /setCustomEmojiStickerSetThumbnail | 
-*DefaultAPI* | [**DefaultAPI_setGameScorePost**](docs/DefaultAPI.md#DefaultAPI_setGameScorePost) | **POST** /setGameScore | 
-*DefaultAPI* | [**DefaultAPI_setMessageReactionPost**](docs/DefaultAPI.md#DefaultAPI_setMessageReactionPost) | **POST** /setMessageReaction | 
-*DefaultAPI* | [**DefaultAPI_setMyCommandsPost**](docs/DefaultAPI.md#DefaultAPI_setMyCommandsPost) | **POST** /setMyCommands | 
-*DefaultAPI* | [**DefaultAPI_setMyDefaultAdministratorRightsPost**](docs/DefaultAPI.md#DefaultAPI_setMyDefaultAdministratorRightsPost) | **POST** /setMyDefaultAdministratorRights | 
-*DefaultAPI* | [**DefaultAPI_setMyDescriptionPost**](docs/DefaultAPI.md#DefaultAPI_setMyDescriptionPost) | **POST** /setMyDescription | 
-*DefaultAPI* | [**DefaultAPI_setMyNamePost**](docs/DefaultAPI.md#DefaultAPI_setMyNamePost) | **POST** /setMyName | 
-*DefaultAPI* | [**DefaultAPI_setMyShortDescriptionPost**](docs/DefaultAPI.md#DefaultAPI_setMyShortDescriptionPost) | **POST** /setMyShortDescription | 
-*DefaultAPI* | [**DefaultAPI_setPassportDataErrorsPost**](docs/DefaultAPI.md#DefaultAPI_setPassportDataErrorsPost) | **POST** /setPassportDataErrors | 
-*DefaultAPI* | [**DefaultAPI_setStickerEmojiListPost**](docs/DefaultAPI.md#DefaultAPI_setStickerEmojiListPost) | **POST** /setStickerEmojiList | 
-*DefaultAPI* | [**DefaultAPI_setStickerKeywordsPost**](docs/DefaultAPI.md#DefaultAPI_setStickerKeywordsPost) | **POST** /setStickerKeywords | 
-*DefaultAPI* | [**DefaultAPI_setStickerMaskPositionPost**](docs/DefaultAPI.md#DefaultAPI_setStickerMaskPositionPost) | **POST** /setStickerMaskPosition | 
-*DefaultAPI* | [**DefaultAPI_setStickerPositionInSetPost**](docs/DefaultAPI.md#DefaultAPI_setStickerPositionInSetPost) | **POST** /setStickerPositionInSet | 
-*DefaultAPI* | [**DefaultAPI_setStickerSetThumbnailPost**](docs/DefaultAPI.md#DefaultAPI_setStickerSetThumbnailPost) | **POST** /setStickerSetThumbnail | 
-*DefaultAPI* | [**DefaultAPI_setStickerSetTitlePost**](docs/DefaultAPI.md#DefaultAPI_setStickerSetTitlePost) | **POST** /setStickerSetTitle | 
-*DefaultAPI* | [**DefaultAPI_setUserEmojiStatusPost**](docs/DefaultAPI.md#DefaultAPI_setUserEmojiStatusPost) | **POST** /setUserEmojiStatus | 
-*DefaultAPI* | [**DefaultAPI_setWebhookPost**](docs/DefaultAPI.md#DefaultAPI_setWebhookPost) | **POST** /setWebhook | 
-*DefaultAPI* | [**DefaultAPI_stopMessageLiveLocationPost**](docs/DefaultAPI.md#DefaultAPI_stopMessageLiveLocationPost) | **POST** /stopMessageLiveLocation | 
-*DefaultAPI* | [**DefaultAPI_stopPollPost**](docs/DefaultAPI.md#DefaultAPI_stopPollPost) | **POST** /stopPoll | 
-*DefaultAPI* | [**DefaultAPI_transferBusinessAccountStarsPost**](docs/DefaultAPI.md#DefaultAPI_transferBusinessAccountStarsPost) | **POST** /transferBusinessAccountStars | 
-*DefaultAPI* | [**DefaultAPI_transferGiftPost**](docs/DefaultAPI.md#DefaultAPI_transferGiftPost) | **POST** /transferGift | 
-*DefaultAPI* | [**DefaultAPI_unbanChatMemberPost**](docs/DefaultAPI.md#DefaultAPI_unbanChatMemberPost) | **POST** /unbanChatMember | 
-*DefaultAPI* | [**DefaultAPI_unbanChatSenderChatPost**](docs/DefaultAPI.md#DefaultAPI_unbanChatSenderChatPost) | **POST** /unbanChatSenderChat | 
-*DefaultAPI* | [**DefaultAPI_unhideGeneralForumTopicPost**](docs/DefaultAPI.md#DefaultAPI_unhideGeneralForumTopicPost) | **POST** /unhideGeneralForumTopic | 
-*DefaultAPI* | [**DefaultAPI_unpinAllChatMessagesPost**](docs/DefaultAPI.md#DefaultAPI_unpinAllChatMessagesPost) | **POST** /unpinAllChatMessages | 
-*DefaultAPI* | [**DefaultAPI_unpinAllForumTopicMessagesPost**](docs/DefaultAPI.md#DefaultAPI_unpinAllForumTopicMessagesPost) | **POST** /unpinAllForumTopicMessages | 
-*DefaultAPI* | [**DefaultAPI_unpinAllGeneralForumTopicMessagesPost**](docs/DefaultAPI.md#DefaultAPI_unpinAllGeneralForumTopicMessagesPost) | **POST** /unpinAllGeneralForumTopicMessages | 
-*DefaultAPI* | [**DefaultAPI_unpinChatMessagePost**](docs/DefaultAPI.md#DefaultAPI_unpinChatMessagePost) | **POST** /unpinChatMessage | 
-*DefaultAPI* | [**DefaultAPI_upgradeGiftPost**](docs/DefaultAPI.md#DefaultAPI_upgradeGiftPost) | **POST** /upgradeGift | 
-*DefaultAPI* | [**DefaultAPI_uploadStickerFilePost**](docs/DefaultAPI.md#DefaultAPI_uploadStickerFilePost) | **POST** /uploadStickerFile | 
-*DefaultAPI* | [**DefaultAPI_verifyChatPost**](docs/DefaultAPI.md#DefaultAPI_verifyChatPost) | **POST** /verifyChat | 
-*DefaultAPI* | [**DefaultAPI_verifyUserPost**](docs/DefaultAPI.md#DefaultAPI_verifyUserPost) | **POST** /verifyUser | 
+*DefaultAPI* | [**DefaultAPI_postAddStickerToSet**](docs/DefaultAPI.md#DefaultAPI_postAddStickerToSet) | **POST** /addStickerToSet | addStickerToSet
+*DefaultAPI* | [**DefaultAPI_postAnswerCallbackQuery**](docs/DefaultAPI.md#DefaultAPI_postAnswerCallbackQuery) | **POST** /answerCallbackQuery | answerCallbackQuery
+*DefaultAPI* | [**DefaultAPI_postAnswerInlineQuery**](docs/DefaultAPI.md#DefaultAPI_postAnswerInlineQuery) | **POST** /answerInlineQuery | answerInlineQuery
+*DefaultAPI* | [**DefaultAPI_postAnswerPreCheckoutQuery**](docs/DefaultAPI.md#DefaultAPI_postAnswerPreCheckoutQuery) | **POST** /answerPreCheckoutQuery | answerPreCheckoutQuery
+*DefaultAPI* | [**DefaultAPI_postAnswerShippingQuery**](docs/DefaultAPI.md#DefaultAPI_postAnswerShippingQuery) | **POST** /answerShippingQuery | answerShippingQuery
+*DefaultAPI* | [**DefaultAPI_postAnswerWebAppQuery**](docs/DefaultAPI.md#DefaultAPI_postAnswerWebAppQuery) | **POST** /answerWebAppQuery | answerWebAppQuery
+*DefaultAPI* | [**DefaultAPI_postApproveChatJoinRequest**](docs/DefaultAPI.md#DefaultAPI_postApproveChatJoinRequest) | **POST** /approveChatJoinRequest | approveChatJoinRequest
+*DefaultAPI* | [**DefaultAPI_postBanChatMember**](docs/DefaultAPI.md#DefaultAPI_postBanChatMember) | **POST** /banChatMember | banChatMember
+*DefaultAPI* | [**DefaultAPI_postBanChatSenderChat**](docs/DefaultAPI.md#DefaultAPI_postBanChatSenderChat) | **POST** /banChatSenderChat | banChatSenderChat
+*DefaultAPI* | [**DefaultAPI_postClose**](docs/DefaultAPI.md#DefaultAPI_postClose) | **POST** /close | close
+*DefaultAPI* | [**DefaultAPI_postCloseForumTopic**](docs/DefaultAPI.md#DefaultAPI_postCloseForumTopic) | **POST** /closeForumTopic | closeForumTopic
+*DefaultAPI* | [**DefaultAPI_postCloseGeneralForumTopic**](docs/DefaultAPI.md#DefaultAPI_postCloseGeneralForumTopic) | **POST** /closeGeneralForumTopic | closeGeneralForumTopic
+*DefaultAPI* | [**DefaultAPI_postConvertGiftToStars**](docs/DefaultAPI.md#DefaultAPI_postConvertGiftToStars) | **POST** /convertGiftToStars | convertGiftToStars
+*DefaultAPI* | [**DefaultAPI_postCopyMessage**](docs/DefaultAPI.md#DefaultAPI_postCopyMessage) | **POST** /copyMessage | copyMessage
+*DefaultAPI* | [**DefaultAPI_postCopyMessages**](docs/DefaultAPI.md#DefaultAPI_postCopyMessages) | **POST** /copyMessages | copyMessages
+*DefaultAPI* | [**DefaultAPI_postCreateChatInviteLink**](docs/DefaultAPI.md#DefaultAPI_postCreateChatInviteLink) | **POST** /createChatInviteLink | createChatInviteLink
+*DefaultAPI* | [**DefaultAPI_postCreateChatSubscriptionInviteLink**](docs/DefaultAPI.md#DefaultAPI_postCreateChatSubscriptionInviteLink) | **POST** /createChatSubscriptionInviteLink | createChatSubscriptionInviteLink
+*DefaultAPI* | [**DefaultAPI_postCreateForumTopic**](docs/DefaultAPI.md#DefaultAPI_postCreateForumTopic) | **POST** /createForumTopic | createForumTopic
+*DefaultAPI* | [**DefaultAPI_postCreateInvoiceLink**](docs/DefaultAPI.md#DefaultAPI_postCreateInvoiceLink) | **POST** /createInvoiceLink | createInvoiceLink
+*DefaultAPI* | [**DefaultAPI_postCreateNewStickerSet**](docs/DefaultAPI.md#DefaultAPI_postCreateNewStickerSet) | **POST** /createNewStickerSet | createNewStickerSet
+*DefaultAPI* | [**DefaultAPI_postDeclineChatJoinRequest**](docs/DefaultAPI.md#DefaultAPI_postDeclineChatJoinRequest) | **POST** /declineChatJoinRequest | declineChatJoinRequest
+*DefaultAPI* | [**DefaultAPI_postDeleteBusinessMessages**](docs/DefaultAPI.md#DefaultAPI_postDeleteBusinessMessages) | **POST** /deleteBusinessMessages | deleteBusinessMessages
+*DefaultAPI* | [**DefaultAPI_postDeleteChatPhoto**](docs/DefaultAPI.md#DefaultAPI_postDeleteChatPhoto) | **POST** /deleteChatPhoto | deleteChatPhoto
+*DefaultAPI* | [**DefaultAPI_postDeleteChatStickerSet**](docs/DefaultAPI.md#DefaultAPI_postDeleteChatStickerSet) | **POST** /deleteChatStickerSet | deleteChatStickerSet
+*DefaultAPI* | [**DefaultAPI_postDeleteForumTopic**](docs/DefaultAPI.md#DefaultAPI_postDeleteForumTopic) | **POST** /deleteForumTopic | deleteForumTopic
+*DefaultAPI* | [**DefaultAPI_postDeleteMessage**](docs/DefaultAPI.md#DefaultAPI_postDeleteMessage) | **POST** /deleteMessage | deleteMessage
+*DefaultAPI* | [**DefaultAPI_postDeleteMessages**](docs/DefaultAPI.md#DefaultAPI_postDeleteMessages) | **POST** /deleteMessages | deleteMessages
+*DefaultAPI* | [**DefaultAPI_postDeleteMyCommands**](docs/DefaultAPI.md#DefaultAPI_postDeleteMyCommands) | **POST** /deleteMyCommands | deleteMyCommands
+*DefaultAPI* | [**DefaultAPI_postDeleteStickerFromSet**](docs/DefaultAPI.md#DefaultAPI_postDeleteStickerFromSet) | **POST** /deleteStickerFromSet | deleteStickerFromSet
+*DefaultAPI* | [**DefaultAPI_postDeleteStickerSet**](docs/DefaultAPI.md#DefaultAPI_postDeleteStickerSet) | **POST** /deleteStickerSet | deleteStickerSet
+*DefaultAPI* | [**DefaultAPI_postDeleteStory**](docs/DefaultAPI.md#DefaultAPI_postDeleteStory) | **POST** /deleteStory | deleteStory
+*DefaultAPI* | [**DefaultAPI_postDeleteWebhook**](docs/DefaultAPI.md#DefaultAPI_postDeleteWebhook) | **POST** /deleteWebhook | deleteWebhook
+*DefaultAPI* | [**DefaultAPI_postEditChatInviteLink**](docs/DefaultAPI.md#DefaultAPI_postEditChatInviteLink) | **POST** /editChatInviteLink | editChatInviteLink
+*DefaultAPI* | [**DefaultAPI_postEditChatSubscriptionInviteLink**](docs/DefaultAPI.md#DefaultAPI_postEditChatSubscriptionInviteLink) | **POST** /editChatSubscriptionInviteLink | editChatSubscriptionInviteLink
+*DefaultAPI* | [**DefaultAPI_postEditForumTopic**](docs/DefaultAPI.md#DefaultAPI_postEditForumTopic) | **POST** /editForumTopic | editForumTopic
+*DefaultAPI* | [**DefaultAPI_postEditGeneralForumTopic**](docs/DefaultAPI.md#DefaultAPI_postEditGeneralForumTopic) | **POST** /editGeneralForumTopic | editGeneralForumTopic
+*DefaultAPI* | [**DefaultAPI_postEditMessageCaption**](docs/DefaultAPI.md#DefaultAPI_postEditMessageCaption) | **POST** /editMessageCaption | editMessageCaption
+*DefaultAPI* | [**DefaultAPI_postEditMessageLiveLocation**](docs/DefaultAPI.md#DefaultAPI_postEditMessageLiveLocation) | **POST** /editMessageLiveLocation | editMessageLiveLocation
+*DefaultAPI* | [**DefaultAPI_postEditMessageMedia**](docs/DefaultAPI.md#DefaultAPI_postEditMessageMedia) | **POST** /editMessageMedia | editMessageMedia
+*DefaultAPI* | [**DefaultAPI_postEditMessageReplyMarkup**](docs/DefaultAPI.md#DefaultAPI_postEditMessageReplyMarkup) | **POST** /editMessageReplyMarkup | editMessageReplyMarkup
+*DefaultAPI* | [**DefaultAPI_postEditMessageText**](docs/DefaultAPI.md#DefaultAPI_postEditMessageText) | **POST** /editMessageText | editMessageText
+*DefaultAPI* | [**DefaultAPI_postEditStory**](docs/DefaultAPI.md#DefaultAPI_postEditStory) | **POST** /editStory | editStory
+*DefaultAPI* | [**DefaultAPI_postEditUserStarSubscription**](docs/DefaultAPI.md#DefaultAPI_postEditUserStarSubscription) | **POST** /editUserStarSubscription | editUserStarSubscription
+*DefaultAPI* | [**DefaultAPI_postExportChatInviteLink**](docs/DefaultAPI.md#DefaultAPI_postExportChatInviteLink) | **POST** /exportChatInviteLink | exportChatInviteLink
+*DefaultAPI* | [**DefaultAPI_postForwardMessage**](docs/DefaultAPI.md#DefaultAPI_postForwardMessage) | **POST** /forwardMessage | forwardMessage
+*DefaultAPI* | [**DefaultAPI_postForwardMessages**](docs/DefaultAPI.md#DefaultAPI_postForwardMessages) | **POST** /forwardMessages | forwardMessages
+*DefaultAPI* | [**DefaultAPI_postGetAvailableGifts**](docs/DefaultAPI.md#DefaultAPI_postGetAvailableGifts) | **POST** /getAvailableGifts | getAvailableGifts
+*DefaultAPI* | [**DefaultAPI_postGetBusinessAccountGifts**](docs/DefaultAPI.md#DefaultAPI_postGetBusinessAccountGifts) | **POST** /getBusinessAccountGifts | getBusinessAccountGifts
+*DefaultAPI* | [**DefaultAPI_postGetBusinessAccountStarBalance**](docs/DefaultAPI.md#DefaultAPI_postGetBusinessAccountStarBalance) | **POST** /getBusinessAccountStarBalance | getBusinessAccountStarBalance
+*DefaultAPI* | [**DefaultAPI_postGetBusinessConnection**](docs/DefaultAPI.md#DefaultAPI_postGetBusinessConnection) | **POST** /getBusinessConnection | getBusinessConnection
+*DefaultAPI* | [**DefaultAPI_postGetChat**](docs/DefaultAPI.md#DefaultAPI_postGetChat) | **POST** /getChat | getChat
+*DefaultAPI* | [**DefaultAPI_postGetChatAdministrators**](docs/DefaultAPI.md#DefaultAPI_postGetChatAdministrators) | **POST** /getChatAdministrators | getChatAdministrators
+*DefaultAPI* | [**DefaultAPI_postGetChatMember**](docs/DefaultAPI.md#DefaultAPI_postGetChatMember) | **POST** /getChatMember | getChatMember
+*DefaultAPI* | [**DefaultAPI_postGetChatMemberCount**](docs/DefaultAPI.md#DefaultAPI_postGetChatMemberCount) | **POST** /getChatMemberCount | getChatMemberCount
+*DefaultAPI* | [**DefaultAPI_postGetChatMenuButton**](docs/DefaultAPI.md#DefaultAPI_postGetChatMenuButton) | **POST** /getChatMenuButton | getChatMenuButton
+*DefaultAPI* | [**DefaultAPI_postGetCustomEmojiStickers**](docs/DefaultAPI.md#DefaultAPI_postGetCustomEmojiStickers) | **POST** /getCustomEmojiStickers | getCustomEmojiStickers
+*DefaultAPI* | [**DefaultAPI_postGetFile**](docs/DefaultAPI.md#DefaultAPI_postGetFile) | **POST** /getFile | getFile
+*DefaultAPI* | [**DefaultAPI_postGetForumTopicIconStickers**](docs/DefaultAPI.md#DefaultAPI_postGetForumTopicIconStickers) | **POST** /getForumTopicIconStickers | getForumTopicIconStickers
+*DefaultAPI* | [**DefaultAPI_postGetGameHighScores**](docs/DefaultAPI.md#DefaultAPI_postGetGameHighScores) | **POST** /getGameHighScores | getGameHighScores
+*DefaultAPI* | [**DefaultAPI_postGetMe**](docs/DefaultAPI.md#DefaultAPI_postGetMe) | **POST** /getMe | getMe
+*DefaultAPI* | [**DefaultAPI_postGetMyCommands**](docs/DefaultAPI.md#DefaultAPI_postGetMyCommands) | **POST** /getMyCommands | getMyCommands
+*DefaultAPI* | [**DefaultAPI_postGetMyDefaultAdministratorRights**](docs/DefaultAPI.md#DefaultAPI_postGetMyDefaultAdministratorRights) | **POST** /getMyDefaultAdministratorRights | getMyDefaultAdministratorRights
+*DefaultAPI* | [**DefaultAPI_postGetMyDescription**](docs/DefaultAPI.md#DefaultAPI_postGetMyDescription) | **POST** /getMyDescription | getMyDescription
+*DefaultAPI* | [**DefaultAPI_postGetMyName**](docs/DefaultAPI.md#DefaultAPI_postGetMyName) | **POST** /getMyName | getMyName
+*DefaultAPI* | [**DefaultAPI_postGetMyShortDescription**](docs/DefaultAPI.md#DefaultAPI_postGetMyShortDescription) | **POST** /getMyShortDescription | getMyShortDescription
+*DefaultAPI* | [**DefaultAPI_postGetStarTransactions**](docs/DefaultAPI.md#DefaultAPI_postGetStarTransactions) | **POST** /getStarTransactions | getStarTransactions
+*DefaultAPI* | [**DefaultAPI_postGetStickerSet**](docs/DefaultAPI.md#DefaultAPI_postGetStickerSet) | **POST** /getStickerSet | getStickerSet
+*DefaultAPI* | [**DefaultAPI_postGetUpdates**](docs/DefaultAPI.md#DefaultAPI_postGetUpdates) | **POST** /getUpdates | getUpdates
+*DefaultAPI* | [**DefaultAPI_postGetUserChatBoosts**](docs/DefaultAPI.md#DefaultAPI_postGetUserChatBoosts) | **POST** /getUserChatBoosts | getUserChatBoosts
+*DefaultAPI* | [**DefaultAPI_postGetUserProfilePhotos**](docs/DefaultAPI.md#DefaultAPI_postGetUserProfilePhotos) | **POST** /getUserProfilePhotos | getUserProfilePhotos
+*DefaultAPI* | [**DefaultAPI_postGetWebhookInfo**](docs/DefaultAPI.md#DefaultAPI_postGetWebhookInfo) | **POST** /getWebhookInfo | getWebhookInfo
+*DefaultAPI* | [**DefaultAPI_postGiftPremiumSubscription**](docs/DefaultAPI.md#DefaultAPI_postGiftPremiumSubscription) | **POST** /giftPremiumSubscription | giftPremiumSubscription
+*DefaultAPI* | [**DefaultAPI_postHideGeneralForumTopic**](docs/DefaultAPI.md#DefaultAPI_postHideGeneralForumTopic) | **POST** /hideGeneralForumTopic | hideGeneralForumTopic
+*DefaultAPI* | [**DefaultAPI_postLeaveChat**](docs/DefaultAPI.md#DefaultAPI_postLeaveChat) | **POST** /leaveChat | leaveChat
+*DefaultAPI* | [**DefaultAPI_postLogOut**](docs/DefaultAPI.md#DefaultAPI_postLogOut) | **POST** /logOut | logOut
+*DefaultAPI* | [**DefaultAPI_postPinChatMessage**](docs/DefaultAPI.md#DefaultAPI_postPinChatMessage) | **POST** /pinChatMessage | pinChatMessage
+*DefaultAPI* | [**DefaultAPI_postPostStory**](docs/DefaultAPI.md#DefaultAPI_postPostStory) | **POST** /postStory | postStory
+*DefaultAPI* | [**DefaultAPI_postPromoteChatMember**](docs/DefaultAPI.md#DefaultAPI_postPromoteChatMember) | **POST** /promoteChatMember | promoteChatMember
+*DefaultAPI* | [**DefaultAPI_postReadBusinessMessage**](docs/DefaultAPI.md#DefaultAPI_postReadBusinessMessage) | **POST** /readBusinessMessage | readBusinessMessage
+*DefaultAPI* | [**DefaultAPI_postRefundStarPayment**](docs/DefaultAPI.md#DefaultAPI_postRefundStarPayment) | **POST** /refundStarPayment | refundStarPayment
+*DefaultAPI* | [**DefaultAPI_postRemoveBusinessAccountProfilePhoto**](docs/DefaultAPI.md#DefaultAPI_postRemoveBusinessAccountProfilePhoto) | **POST** /removeBusinessAccountProfilePhoto | removeBusinessAccountProfilePhoto
+*DefaultAPI* | [**DefaultAPI_postRemoveChatVerification**](docs/DefaultAPI.md#DefaultAPI_postRemoveChatVerification) | **POST** /removeChatVerification | removeChatVerification
+*DefaultAPI* | [**DefaultAPI_postRemoveUserVerification**](docs/DefaultAPI.md#DefaultAPI_postRemoveUserVerification) | **POST** /removeUserVerification | removeUserVerification
+*DefaultAPI* | [**DefaultAPI_postReopenForumTopic**](docs/DefaultAPI.md#DefaultAPI_postReopenForumTopic) | **POST** /reopenForumTopic | reopenForumTopic
+*DefaultAPI* | [**DefaultAPI_postReopenGeneralForumTopic**](docs/DefaultAPI.md#DefaultAPI_postReopenGeneralForumTopic) | **POST** /reopenGeneralForumTopic | reopenGeneralForumTopic
+*DefaultAPI* | [**DefaultAPI_postReplaceStickerInSet**](docs/DefaultAPI.md#DefaultAPI_postReplaceStickerInSet) | **POST** /replaceStickerInSet | replaceStickerInSet
+*DefaultAPI* | [**DefaultAPI_postRestrictChatMember**](docs/DefaultAPI.md#DefaultAPI_postRestrictChatMember) | **POST** /restrictChatMember | restrictChatMember
+*DefaultAPI* | [**DefaultAPI_postRevokeChatInviteLink**](docs/DefaultAPI.md#DefaultAPI_postRevokeChatInviteLink) | **POST** /revokeChatInviteLink | revokeChatInviteLink
+*DefaultAPI* | [**DefaultAPI_postSavePreparedInlineMessage**](docs/DefaultAPI.md#DefaultAPI_postSavePreparedInlineMessage) | **POST** /savePreparedInlineMessage | savePreparedInlineMessage
+*DefaultAPI* | [**DefaultAPI_postSendAnimation**](docs/DefaultAPI.md#DefaultAPI_postSendAnimation) | **POST** /sendAnimation | sendAnimation
+*DefaultAPI* | [**DefaultAPI_postSendAudio**](docs/DefaultAPI.md#DefaultAPI_postSendAudio) | **POST** /sendAudio | sendAudio
+*DefaultAPI* | [**DefaultAPI_postSendChatAction**](docs/DefaultAPI.md#DefaultAPI_postSendChatAction) | **POST** /sendChatAction | sendChatAction
+*DefaultAPI* | [**DefaultAPI_postSendContact**](docs/DefaultAPI.md#DefaultAPI_postSendContact) | **POST** /sendContact | sendContact
+*DefaultAPI* | [**DefaultAPI_postSendDice**](docs/DefaultAPI.md#DefaultAPI_postSendDice) | **POST** /sendDice | sendDice
+*DefaultAPI* | [**DefaultAPI_postSendDocument**](docs/DefaultAPI.md#DefaultAPI_postSendDocument) | **POST** /sendDocument | sendDocument
+*DefaultAPI* | [**DefaultAPI_postSendGame**](docs/DefaultAPI.md#DefaultAPI_postSendGame) | **POST** /sendGame | sendGame
+*DefaultAPI* | [**DefaultAPI_postSendGift**](docs/DefaultAPI.md#DefaultAPI_postSendGift) | **POST** /sendGift | sendGift
+*DefaultAPI* | [**DefaultAPI_postSendInvoice**](docs/DefaultAPI.md#DefaultAPI_postSendInvoice) | **POST** /sendInvoice | sendInvoice
+*DefaultAPI* | [**DefaultAPI_postSendLocation**](docs/DefaultAPI.md#DefaultAPI_postSendLocation) | **POST** /sendLocation | sendLocation
+*DefaultAPI* | [**DefaultAPI_postSendMediaGroup**](docs/DefaultAPI.md#DefaultAPI_postSendMediaGroup) | **POST** /sendMediaGroup | sendMediaGroup
+*DefaultAPI* | [**DefaultAPI_postSendMessage**](docs/DefaultAPI.md#DefaultAPI_postSendMessage) | **POST** /sendMessage | sendMessage
+*DefaultAPI* | [**DefaultAPI_postSendPaidMedia**](docs/DefaultAPI.md#DefaultAPI_postSendPaidMedia) | **POST** /sendPaidMedia | sendPaidMedia
+*DefaultAPI* | [**DefaultAPI_postSendPhoto**](docs/DefaultAPI.md#DefaultAPI_postSendPhoto) | **POST** /sendPhoto | sendPhoto
+*DefaultAPI* | [**DefaultAPI_postSendPoll**](docs/DefaultAPI.md#DefaultAPI_postSendPoll) | **POST** /sendPoll | sendPoll
+*DefaultAPI* | [**DefaultAPI_postSendSticker**](docs/DefaultAPI.md#DefaultAPI_postSendSticker) | **POST** /sendSticker | sendSticker
+*DefaultAPI* | [**DefaultAPI_postSendVenue**](docs/DefaultAPI.md#DefaultAPI_postSendVenue) | **POST** /sendVenue | sendVenue
+*DefaultAPI* | [**DefaultAPI_postSendVideo**](docs/DefaultAPI.md#DefaultAPI_postSendVideo) | **POST** /sendVideo | sendVideo
+*DefaultAPI* | [**DefaultAPI_postSendVideoNote**](docs/DefaultAPI.md#DefaultAPI_postSendVideoNote) | **POST** /sendVideoNote | sendVideoNote
+*DefaultAPI* | [**DefaultAPI_postSendVoice**](docs/DefaultAPI.md#DefaultAPI_postSendVoice) | **POST** /sendVoice | sendVoice
+*DefaultAPI* | [**DefaultAPI_postSetBusinessAccountBio**](docs/DefaultAPI.md#DefaultAPI_postSetBusinessAccountBio) | **POST** /setBusinessAccountBio | setBusinessAccountBio
+*DefaultAPI* | [**DefaultAPI_postSetBusinessAccountGiftSettings**](docs/DefaultAPI.md#DefaultAPI_postSetBusinessAccountGiftSettings) | **POST** /setBusinessAccountGiftSettings | setBusinessAccountGiftSettings
+*DefaultAPI* | [**DefaultAPI_postSetBusinessAccountName**](docs/DefaultAPI.md#DefaultAPI_postSetBusinessAccountName) | **POST** /setBusinessAccountName | setBusinessAccountName
+*DefaultAPI* | [**DefaultAPI_postSetBusinessAccountProfilePhoto**](docs/DefaultAPI.md#DefaultAPI_postSetBusinessAccountProfilePhoto) | **POST** /setBusinessAccountProfilePhoto | setBusinessAccountProfilePhoto
+*DefaultAPI* | [**DefaultAPI_postSetBusinessAccountUsername**](docs/DefaultAPI.md#DefaultAPI_postSetBusinessAccountUsername) | **POST** /setBusinessAccountUsername | setBusinessAccountUsername
+*DefaultAPI* | [**DefaultAPI_postSetChatAdministratorCustomTitle**](docs/DefaultAPI.md#DefaultAPI_postSetChatAdministratorCustomTitle) | **POST** /setChatAdministratorCustomTitle | setChatAdministratorCustomTitle
+*DefaultAPI* | [**DefaultAPI_postSetChatDescription**](docs/DefaultAPI.md#DefaultAPI_postSetChatDescription) | **POST** /setChatDescription | setChatDescription
+*DefaultAPI* | [**DefaultAPI_postSetChatMenuButton**](docs/DefaultAPI.md#DefaultAPI_postSetChatMenuButton) | **POST** /setChatMenuButton | setChatMenuButton
+*DefaultAPI* | [**DefaultAPI_postSetChatPermissions**](docs/DefaultAPI.md#DefaultAPI_postSetChatPermissions) | **POST** /setChatPermissions | setChatPermissions
+*DefaultAPI* | [**DefaultAPI_postSetChatPhoto**](docs/DefaultAPI.md#DefaultAPI_postSetChatPhoto) | **POST** /setChatPhoto | setChatPhoto
+*DefaultAPI* | [**DefaultAPI_postSetChatStickerSet**](docs/DefaultAPI.md#DefaultAPI_postSetChatStickerSet) | **POST** /setChatStickerSet | setChatStickerSet
+*DefaultAPI* | [**DefaultAPI_postSetChatTitle**](docs/DefaultAPI.md#DefaultAPI_postSetChatTitle) | **POST** /setChatTitle | setChatTitle
+*DefaultAPI* | [**DefaultAPI_postSetCustomEmojiStickerSetThumbnail**](docs/DefaultAPI.md#DefaultAPI_postSetCustomEmojiStickerSetThumbnail) | **POST** /setCustomEmojiStickerSetThumbnail | setCustomEmojiStickerSetThumbnail
+*DefaultAPI* | [**DefaultAPI_postSetGameScore**](docs/DefaultAPI.md#DefaultAPI_postSetGameScore) | **POST** /setGameScore | setGameScore
+*DefaultAPI* | [**DefaultAPI_postSetMessageReaction**](docs/DefaultAPI.md#DefaultAPI_postSetMessageReaction) | **POST** /setMessageReaction | setMessageReaction
+*DefaultAPI* | [**DefaultAPI_postSetMyCommands**](docs/DefaultAPI.md#DefaultAPI_postSetMyCommands) | **POST** /setMyCommands | setMyCommands
+*DefaultAPI* | [**DefaultAPI_postSetMyDefaultAdministratorRights**](docs/DefaultAPI.md#DefaultAPI_postSetMyDefaultAdministratorRights) | **POST** /setMyDefaultAdministratorRights | setMyDefaultAdministratorRights
+*DefaultAPI* | [**DefaultAPI_postSetMyDescription**](docs/DefaultAPI.md#DefaultAPI_postSetMyDescription) | **POST** /setMyDescription | setMyDescription
+*DefaultAPI* | [**DefaultAPI_postSetMyName**](docs/DefaultAPI.md#DefaultAPI_postSetMyName) | **POST** /setMyName | setMyName
+*DefaultAPI* | [**DefaultAPI_postSetMyShortDescription**](docs/DefaultAPI.md#DefaultAPI_postSetMyShortDescription) | **POST** /setMyShortDescription | setMyShortDescription
+*DefaultAPI* | [**DefaultAPI_postSetPassportDataErrors**](docs/DefaultAPI.md#DefaultAPI_postSetPassportDataErrors) | **POST** /setPassportDataErrors | setPassportDataErrors
+*DefaultAPI* | [**DefaultAPI_postSetStickerEmojiList**](docs/DefaultAPI.md#DefaultAPI_postSetStickerEmojiList) | **POST** /setStickerEmojiList | setStickerEmojiList
+*DefaultAPI* | [**DefaultAPI_postSetStickerKeywords**](docs/DefaultAPI.md#DefaultAPI_postSetStickerKeywords) | **POST** /setStickerKeywords | setStickerKeywords
+*DefaultAPI* | [**DefaultAPI_postSetStickerMaskPosition**](docs/DefaultAPI.md#DefaultAPI_postSetStickerMaskPosition) | **POST** /setStickerMaskPosition | setStickerMaskPosition
+*DefaultAPI* | [**DefaultAPI_postSetStickerPositionInSet**](docs/DefaultAPI.md#DefaultAPI_postSetStickerPositionInSet) | **POST** /setStickerPositionInSet | setStickerPositionInSet
+*DefaultAPI* | [**DefaultAPI_postSetStickerSetThumbnail**](docs/DefaultAPI.md#DefaultAPI_postSetStickerSetThumbnail) | **POST** /setStickerSetThumbnail | setStickerSetThumbnail
+*DefaultAPI* | [**DefaultAPI_postSetStickerSetTitle**](docs/DefaultAPI.md#DefaultAPI_postSetStickerSetTitle) | **POST** /setStickerSetTitle | setStickerSetTitle
+*DefaultAPI* | [**DefaultAPI_postSetUserEmojiStatus**](docs/DefaultAPI.md#DefaultAPI_postSetUserEmojiStatus) | **POST** /setUserEmojiStatus | setUserEmojiStatus
+*DefaultAPI* | [**DefaultAPI_postSetWebhook**](docs/DefaultAPI.md#DefaultAPI_postSetWebhook) | **POST** /setWebhook | setWebhook
+*DefaultAPI* | [**DefaultAPI_postStopMessageLiveLocation**](docs/DefaultAPI.md#DefaultAPI_postStopMessageLiveLocation) | **POST** /stopMessageLiveLocation | stopMessageLiveLocation
+*DefaultAPI* | [**DefaultAPI_postStopPoll**](docs/DefaultAPI.md#DefaultAPI_postStopPoll) | **POST** /stopPoll | stopPoll
+*DefaultAPI* | [**DefaultAPI_postTransferBusinessAccountStars**](docs/DefaultAPI.md#DefaultAPI_postTransferBusinessAccountStars) | **POST** /transferBusinessAccountStars | transferBusinessAccountStars
+*DefaultAPI* | [**DefaultAPI_postTransferGift**](docs/DefaultAPI.md#DefaultAPI_postTransferGift) | **POST** /transferGift | transferGift
+*DefaultAPI* | [**DefaultAPI_postUnbanChatMember**](docs/DefaultAPI.md#DefaultAPI_postUnbanChatMember) | **POST** /unbanChatMember | unbanChatMember
+*DefaultAPI* | [**DefaultAPI_postUnbanChatSenderChat**](docs/DefaultAPI.md#DefaultAPI_postUnbanChatSenderChat) | **POST** /unbanChatSenderChat | unbanChatSenderChat
+*DefaultAPI* | [**DefaultAPI_postUnhideGeneralForumTopic**](docs/DefaultAPI.md#DefaultAPI_postUnhideGeneralForumTopic) | **POST** /unhideGeneralForumTopic | unhideGeneralForumTopic
+*DefaultAPI* | [**DefaultAPI_postUnpinAllChatMessages**](docs/DefaultAPI.md#DefaultAPI_postUnpinAllChatMessages) | **POST** /unpinAllChatMessages | unpinAllChatMessages
+*DefaultAPI* | [**DefaultAPI_postUnpinAllForumTopicMessages**](docs/DefaultAPI.md#DefaultAPI_postUnpinAllForumTopicMessages) | **POST** /unpinAllForumTopicMessages | unpinAllForumTopicMessages
+*DefaultAPI* | [**DefaultAPI_postUnpinAllGeneralForumTopicMessages**](docs/DefaultAPI.md#DefaultAPI_postUnpinAllGeneralForumTopicMessages) | **POST** /unpinAllGeneralForumTopicMessages | unpinAllGeneralForumTopicMessages
+*DefaultAPI* | [**DefaultAPI_postUnpinChatMessage**](docs/DefaultAPI.md#DefaultAPI_postUnpinChatMessage) | **POST** /unpinChatMessage | unpinChatMessage
+*DefaultAPI* | [**DefaultAPI_postUpgradeGift**](docs/DefaultAPI.md#DefaultAPI_postUpgradeGift) | **POST** /upgradeGift | upgradeGift
+*DefaultAPI* | [**DefaultAPI_postUploadStickerFile**](docs/DefaultAPI.md#DefaultAPI_postUploadStickerFile) | **POST** /uploadStickerFile | uploadStickerFile
+*DefaultAPI* | [**DefaultAPI_postVerifyChat**](docs/DefaultAPI.md#DefaultAPI_postVerifyChat) | **POST** /verifyChat | verifyChat
+*DefaultAPI* | [**DefaultAPI_postVerifyUser**](docs/DefaultAPI.md#DefaultAPI_postVerifyUser) | **POST** /verifyUser | verifyUser
 
 
 ## Documentation for Models
 
- - [_answer_callback_query_post_request_t](docs/_answer_callback_query_post_request.md)
- - [_answer_inline_query_post_request_t](docs/_answer_inline_query_post_request.md)
- - [_answer_pre_checkout_query_post_request_t](docs/_answer_pre_checkout_query_post_request.md)
- - [_answer_shipping_query_post_request_t](docs/_answer_shipping_query_post_request.md)
- - [_answer_web_app_query_post_200_response_t](docs/_answer_web_app_query_post_200_response.md)
- - [_answer_web_app_query_post_request_t](docs/_answer_web_app_query_post_request.md)
- - [_approve_chat_join_request_post_request_t](docs/_approve_chat_join_request_post_request.md)
- - [_ban_chat_member_post_request_t](docs/_ban_chat_member_post_request.md)
- - [_ban_chat_member_post_request_chat_id_t](docs/_ban_chat_member_post_request_chat_id.md)
- - [_ban_chat_sender_chat_post_request_t](docs/_ban_chat_sender_chat_post_request.md)
- - [_close_forum_topic_post_request_t](docs/_close_forum_topic_post_request.md)
- - [_convert_gift_to_stars_post_request_t](docs/_convert_gift_to_stars_post_request.md)
- - [_copy_message_post_200_response_t](docs/_copy_message_post_200_response.md)
- - [_copy_message_post_request_t](docs/_copy_message_post_request.md)
- - [_copy_messages_post_request_t](docs/_copy_messages_post_request.md)
- - [_create_chat_invite_link_post_200_response_t](docs/_create_chat_invite_link_post_200_response.md)
- - [_create_chat_invite_link_post_request_t](docs/_create_chat_invite_link_post_request.md)
- - [_create_chat_subscription_invite_link_post_request_t](docs/_create_chat_subscription_invite_link_post_request.md)
- - [_create_chat_subscription_invite_link_post_request_chat_id_t](docs/_create_chat_subscription_invite_link_post_request_chat_id.md)
- - [_create_forum_topic_post_200_response_t](docs/_create_forum_topic_post_200_response.md)
- - [_create_forum_topic_post_request_t](docs/_create_forum_topic_post_request.md)
- - [_create_invoice_link_post_request_t](docs/_create_invoice_link_post_request.md)
- - [_delete_business_messages_post_request_t](docs/_delete_business_messages_post_request.md)
- - [_delete_chat_sticker_set_post_request_t](docs/_delete_chat_sticker_set_post_request.md)
- - [_delete_message_post_request_t](docs/_delete_message_post_request.md)
- - [_delete_messages_post_request_t](docs/_delete_messages_post_request.md)
- - [_delete_my_commands_post_request_t](docs/_delete_my_commands_post_request.md)
- - [_delete_sticker_from_set_post_request_t](docs/_delete_sticker_from_set_post_request.md)
- - [_delete_sticker_set_post_request_t](docs/_delete_sticker_set_post_request.md)
- - [_delete_story_post_request_t](docs/_delete_story_post_request.md)
- - [_delete_webhook_post_request_t](docs/_delete_webhook_post_request.md)
- - [_edit_chat_invite_link_post_request_t](docs/_edit_chat_invite_link_post_request.md)
- - [_edit_chat_subscription_invite_link_post_request_t](docs/_edit_chat_subscription_invite_link_post_request.md)
- - [_edit_forum_topic_post_request_t](docs/_edit_forum_topic_post_request.md)
- - [_edit_general_forum_topic_post_request_t](docs/_edit_general_forum_topic_post_request.md)
- - [_edit_message_caption_post_request_t](docs/_edit_message_caption_post_request.md)
- - [_edit_message_live_location_post_request_t](docs/_edit_message_live_location_post_request.md)
- - [_edit_message_reply_markup_post_request_t](docs/_edit_message_reply_markup_post_request.md)
- - [_edit_message_text_post_200_response_t](docs/_edit_message_text_post_200_response.md)
- - [_edit_message_text_post_200_response_result_t](docs/_edit_message_text_post_200_response_result.md)
- - [_edit_message_text_post_request_t](docs/_edit_message_text_post_request.md)
- - [_edit_message_text_post_request_chat_id_t](docs/_edit_message_text_post_request_chat_id.md)
- - [_edit_user_star_subscription_post_request_t](docs/_edit_user_star_subscription_post_request.md)
- - [_export_chat_invite_link_post_200_response_t](docs/_export_chat_invite_link_post_200_response.md)
- - [_export_chat_invite_link_post_request_t](docs/_export_chat_invite_link_post_request.md)
- - [_forward_message_post_request_t](docs/_forward_message_post_request.md)
- - [_forward_message_post_request_from_chat_id_t](docs/_forward_message_post_request_from_chat_id.md)
- - [_forward_messages_post_200_response_t](docs/_forward_messages_post_200_response.md)
- - [_forward_messages_post_request_t](docs/_forward_messages_post_request.md)
- - [_forward_messages_post_request_from_chat_id_t](docs/_forward_messages_post_request_from_chat_id.md)
- - [_get_available_gifts_post_200_response_t](docs/_get_available_gifts_post_200_response.md)
- - [_get_business_account_gifts_post_200_response_t](docs/_get_business_account_gifts_post_200_response.md)
- - [_get_business_account_gifts_post_request_t](docs/_get_business_account_gifts_post_request.md)
- - [_get_business_account_star_balance_post_200_response_t](docs/_get_business_account_star_balance_post_200_response.md)
- - [_get_business_connection_post_200_response_t](docs/_get_business_connection_post_200_response.md)
- - [_get_business_connection_post_request_t](docs/_get_business_connection_post_request.md)
- - [_get_chat_administrators_post_200_response_t](docs/_get_chat_administrators_post_200_response.md)
- - [_get_chat_member_count_post_200_response_t](docs/_get_chat_member_count_post_200_response.md)
- - [_get_chat_member_post_200_response_t](docs/_get_chat_member_post_200_response.md)
- - [_get_chat_member_post_request_t](docs/_get_chat_member_post_request.md)
- - [_get_chat_menu_button_post_200_response_t](docs/_get_chat_menu_button_post_200_response.md)
- - [_get_chat_menu_button_post_request_t](docs/_get_chat_menu_button_post_request.md)
- - [_get_chat_post_200_response_t](docs/_get_chat_post_200_response.md)
- - [_get_custom_emoji_stickers_post_request_t](docs/_get_custom_emoji_stickers_post_request.md)
- - [_get_file_post_200_response_t](docs/_get_file_post_200_response.md)
- - [_get_file_post_request_t](docs/_get_file_post_request.md)
- - [_get_forum_topic_icon_stickers_post_200_response_t](docs/_get_forum_topic_icon_stickers_post_200_response.md)
- - [_get_game_high_scores_post_200_response_t](docs/_get_game_high_scores_post_200_response.md)
- - [_get_game_high_scores_post_request_t](docs/_get_game_high_scores_post_request.md)
- - [_get_me_post_200_response_t](docs/_get_me_post_200_response.md)
- - [_get_my_commands_post_200_response_t](docs/_get_my_commands_post_200_response.md)
- - [_get_my_commands_post_request_t](docs/_get_my_commands_post_request.md)
- - [_get_my_default_administrator_rights_post_200_response_t](docs/_get_my_default_administrator_rights_post_200_response.md)
- - [_get_my_default_administrator_rights_post_request_t](docs/_get_my_default_administrator_rights_post_request.md)
- - [_get_my_description_post_200_response_t](docs/_get_my_description_post_200_response.md)
- - [_get_my_name_post_200_response_t](docs/_get_my_name_post_200_response.md)
- - [_get_my_name_post_request_t](docs/_get_my_name_post_request.md)
- - [_get_my_short_description_post_200_response_t](docs/_get_my_short_description_post_200_response.md)
- - [_get_star_transactions_post_200_response_t](docs/_get_star_transactions_post_200_response.md)
- - [_get_star_transactions_post_request_t](docs/_get_star_transactions_post_request.md)
- - [_get_sticker_set_post_200_response_t](docs/_get_sticker_set_post_200_response.md)
- - [_get_sticker_set_post_request_t](docs/_get_sticker_set_post_request.md)
- - [_get_updates_post_200_response_t](docs/_get_updates_post_200_response.md)
- - [_get_updates_post_request_t](docs/_get_updates_post_request.md)
- - [_get_user_chat_boosts_post_200_response_t](docs/_get_user_chat_boosts_post_200_response.md)
- - [_get_user_chat_boosts_post_request_t](docs/_get_user_chat_boosts_post_request.md)
- - [_get_user_chat_boosts_post_request_chat_id_t](docs/_get_user_chat_boosts_post_request_chat_id.md)
- - [_get_user_profile_photos_post_200_response_t](docs/_get_user_profile_photos_post_200_response.md)
- - [_get_user_profile_photos_post_request_t](docs/_get_user_profile_photos_post_request.md)
- - [_get_webhook_info_post_200_response_t](docs/_get_webhook_info_post_200_response.md)
- - [_gift_premium_subscription_post_request_t](docs/_gift_premium_subscription_post_request.md)
- - [_leave_chat_post_request_t](docs/_leave_chat_post_request.md)
- - [_leave_chat_post_request_chat_id_t](docs/_leave_chat_post_request_chat_id.md)
- - [_pin_chat_message_post_request_t](docs/_pin_chat_message_post_request.md)
- - [_post_story_post_200_response_t](docs/_post_story_post_200_response.md)
- - [_promote_chat_member_post_request_t](docs/_promote_chat_member_post_request.md)
- - [_read_business_message_post_request_t](docs/_read_business_message_post_request.md)
- - [_refund_star_payment_post_request_t](docs/_refund_star_payment_post_request.md)
- - [_remove_business_account_profile_photo_post_request_t](docs/_remove_business_account_profile_photo_post_request.md)
- - [_remove_user_verification_post_request_t](docs/_remove_user_verification_post_request.md)
- - [_restrict_chat_member_post_request_t](docs/_restrict_chat_member_post_request.md)
- - [_restrict_chat_member_post_request_chat_id_t](docs/_restrict_chat_member_post_request_chat_id.md)
- - [_revoke_chat_invite_link_post_request_t](docs/_revoke_chat_invite_link_post_request.md)
- - [_revoke_chat_invite_link_post_request_chat_id_t](docs/_revoke_chat_invite_link_post_request_chat_id.md)
- - [_save_prepared_inline_message_post_200_response_t](docs/_save_prepared_inline_message_post_200_response.md)
- - [_save_prepared_inline_message_post_request_t](docs/_save_prepared_inline_message_post_request.md)
- - [_send_animation_post_request_animation_t](docs/_send_animation_post_request_animation.md)
- - [_send_audio_post_request_audio_t](docs/_send_audio_post_request_audio.md)
- - [_send_audio_post_request_thumbnail_t](docs/_send_audio_post_request_thumbnail.md)
- - [_send_chat_action_post_request_t](docs/_send_chat_action_post_request.md)
- - [_send_contact_post_request_t](docs/_send_contact_post_request.md)
- - [_send_dice_post_request_t](docs/_send_dice_post_request.md)
- - [_send_document_post_request_document_t](docs/_send_document_post_request_document.md)
- - [_send_game_post_request_t](docs/_send_game_post_request.md)
- - [_send_gift_post_request_t](docs/_send_gift_post_request.md)
- - [_send_gift_post_request_chat_id_t](docs/_send_gift_post_request_chat_id.md)
- - [_send_invoice_post_request_t](docs/_send_invoice_post_request.md)
- - [_send_location_post_request_t](docs/_send_location_post_request.md)
- - [_send_media_group_post_200_response_t](docs/_send_media_group_post_200_response.md)
- - [_send_media_group_post_request_media_inner_t](docs/_send_media_group_post_request_media_inner.md)
- - [_send_message_post_200_response_t](docs/_send_message_post_200_response.md)
- - [_send_message_post_request_t](docs/_send_message_post_request.md)
- - [_send_message_post_request_chat_id_t](docs/_send_message_post_request_chat_id.md)
- - [_send_message_post_request_reply_markup_t](docs/_send_message_post_request_reply_markup.md)
- - [_send_paid_media_post_request_chat_id_t](docs/_send_paid_media_post_request_chat_id.md)
- - [_send_photo_post_request_photo_t](docs/_send_photo_post_request_photo.md)
- - [_send_poll_post_request_t](docs/_send_poll_post_request.md)
- - [_send_sticker_post_request_sticker_t](docs/_send_sticker_post_request_sticker.md)
- - [_send_venue_post_request_t](docs/_send_venue_post_request.md)
- - [_send_video_note_post_request_video_note_t](docs/_send_video_note_post_request_video_note.md)
- - [_send_video_post_request_cover_t](docs/_send_video_post_request_cover.md)
- - [_send_video_post_request_video_t](docs/_send_video_post_request_video.md)
- - [_send_voice_post_request_voice_t](docs/_send_voice_post_request_voice.md)
- - [_set_business_account_bio_post_request_t](docs/_set_business_account_bio_post_request.md)
- - [_set_business_account_gift_settings_post_request_t](docs/_set_business_account_gift_settings_post_request.md)
- - [_set_business_account_name_post_request_t](docs/_set_business_account_name_post_request.md)
- - [_set_business_account_username_post_request_t](docs/_set_business_account_username_post_request.md)
- - [_set_chat_administrator_custom_title_post_request_t](docs/_set_chat_administrator_custom_title_post_request.md)
- - [_set_chat_description_post_request_t](docs/_set_chat_description_post_request.md)
- - [_set_chat_menu_button_post_request_t](docs/_set_chat_menu_button_post_request.md)
- - [_set_chat_permissions_post_request_t](docs/_set_chat_permissions_post_request.md)
- - [_set_chat_sticker_set_post_request_t](docs/_set_chat_sticker_set_post_request.md)
- - [_set_chat_title_post_request_t](docs/_set_chat_title_post_request.md)
- - [_set_custom_emoji_sticker_set_thumbnail_post_request_t](docs/_set_custom_emoji_sticker_set_thumbnail_post_request.md)
- - [_set_game_score_post_request_t](docs/_set_game_score_post_request.md)
- - [_set_message_reaction_post_request_t](docs/_set_message_reaction_post_request.md)
- - [_set_my_commands_post_request_t](docs/_set_my_commands_post_request.md)
- - [_set_my_default_administrator_rights_post_request_t](docs/_set_my_default_administrator_rights_post_request.md)
- - [_set_my_description_post_request_t](docs/_set_my_description_post_request.md)
- - [_set_my_name_post_request_t](docs/_set_my_name_post_request.md)
- - [_set_my_short_description_post_request_t](docs/_set_my_short_description_post_request.md)
- - [_set_passport_data_errors_post_request_t](docs/_set_passport_data_errors_post_request.md)
- - [_set_sticker_emoji_list_post_request_t](docs/_set_sticker_emoji_list_post_request.md)
- - [_set_sticker_keywords_post_request_t](docs/_set_sticker_keywords_post_request.md)
- - [_set_sticker_mask_position_post_request_t](docs/_set_sticker_mask_position_post_request.md)
- - [_set_sticker_position_in_set_post_request_t](docs/_set_sticker_position_in_set_post_request.md)
- - [_set_sticker_set_thumbnail_post_request_thumbnail_t](docs/_set_sticker_set_thumbnail_post_request_thumbnail.md)
- - [_set_sticker_set_title_post_request_t](docs/_set_sticker_set_title_post_request.md)
- - [_set_user_emoji_status_post_request_t](docs/_set_user_emoji_status_post_request.md)
- - [_set_webhook_post_200_response_t](docs/_set_webhook_post_200_response.md)
- - [_stop_message_live_location_post_request_t](docs/_stop_message_live_location_post_request.md)
- - [_stop_poll_post_200_response_t](docs/_stop_poll_post_200_response.md)
- - [_stop_poll_post_request_t](docs/_stop_poll_post_request.md)
- - [_transfer_business_account_stars_post_request_t](docs/_transfer_business_account_stars_post_request.md)
- - [_transfer_gift_post_request_t](docs/_transfer_gift_post_request.md)
- - [_unban_chat_member_post_request_t](docs/_unban_chat_member_post_request.md)
- - [_unpin_chat_message_post_request_t](docs/_unpin_chat_message_post_request.md)
- - [_upgrade_gift_post_request_t](docs/_upgrade_gift_post_request.md)
- - [_verify_chat_post_request_t](docs/_verify_chat_post_request.md)
- - [_verify_user_post_request_t](docs/_verify_user_post_request.md)
  - [accepted_gift_types_t](docs/accepted_gift_types.md)
  - [affiliate_info_t](docs/affiliate_info.md)
  - [animation_t](docs/animation.md)
@@ -578,6 +408,176 @@ Category | Method | HTTP request | Description
  - [poll_t](docs/poll.md)
  - [poll_answer_t](docs/poll_answer.md)
  - [poll_option_t](docs/poll_option.md)
+ - [post_answer_callback_query_request_t](docs/post_answer_callback_query_request.md)
+ - [post_answer_inline_query_request_t](docs/post_answer_inline_query_request.md)
+ - [post_answer_pre_checkout_query_request_t](docs/post_answer_pre_checkout_query_request.md)
+ - [post_answer_shipping_query_request_t](docs/post_answer_shipping_query_request.md)
+ - [post_answer_web_app_query_200_response_t](docs/post_answer_web_app_query_200_response.md)
+ - [post_answer_web_app_query_request_t](docs/post_answer_web_app_query_request.md)
+ - [post_approve_chat_join_request_request_t](docs/post_approve_chat_join_request_request.md)
+ - [post_ban_chat_member_request_t](docs/post_ban_chat_member_request.md)
+ - [post_ban_chat_member_request_chat_id_t](docs/post_ban_chat_member_request_chat_id.md)
+ - [post_ban_chat_sender_chat_request_t](docs/post_ban_chat_sender_chat_request.md)
+ - [post_close_forum_topic_request_t](docs/post_close_forum_topic_request.md)
+ - [post_convert_gift_to_stars_request_t](docs/post_convert_gift_to_stars_request.md)
+ - [post_copy_message_200_response_t](docs/post_copy_message_200_response.md)
+ - [post_copy_message_request_t](docs/post_copy_message_request.md)
+ - [post_copy_messages_request_t](docs/post_copy_messages_request.md)
+ - [post_create_chat_invite_link_200_response_t](docs/post_create_chat_invite_link_200_response.md)
+ - [post_create_chat_invite_link_request_t](docs/post_create_chat_invite_link_request.md)
+ - [post_create_chat_subscription_invite_link_request_t](docs/post_create_chat_subscription_invite_link_request.md)
+ - [post_create_chat_subscription_invite_link_request_chat_id_t](docs/post_create_chat_subscription_invite_link_request_chat_id.md)
+ - [post_create_forum_topic_200_response_t](docs/post_create_forum_topic_200_response.md)
+ - [post_create_forum_topic_request_t](docs/post_create_forum_topic_request.md)
+ - [post_create_invoice_link_request_t](docs/post_create_invoice_link_request.md)
+ - [post_delete_business_messages_request_t](docs/post_delete_business_messages_request.md)
+ - [post_delete_chat_sticker_set_request_t](docs/post_delete_chat_sticker_set_request.md)
+ - [post_delete_message_request_t](docs/post_delete_message_request.md)
+ - [post_delete_messages_request_t](docs/post_delete_messages_request.md)
+ - [post_delete_my_commands_request_t](docs/post_delete_my_commands_request.md)
+ - [post_delete_sticker_from_set_request_t](docs/post_delete_sticker_from_set_request.md)
+ - [post_delete_sticker_set_request_t](docs/post_delete_sticker_set_request.md)
+ - [post_delete_story_request_t](docs/post_delete_story_request.md)
+ - [post_delete_webhook_request_t](docs/post_delete_webhook_request.md)
+ - [post_edit_chat_invite_link_request_t](docs/post_edit_chat_invite_link_request.md)
+ - [post_edit_chat_subscription_invite_link_request_t](docs/post_edit_chat_subscription_invite_link_request.md)
+ - [post_edit_forum_topic_request_t](docs/post_edit_forum_topic_request.md)
+ - [post_edit_general_forum_topic_request_t](docs/post_edit_general_forum_topic_request.md)
+ - [post_edit_message_caption_request_t](docs/post_edit_message_caption_request.md)
+ - [post_edit_message_live_location_request_t](docs/post_edit_message_live_location_request.md)
+ - [post_edit_message_reply_markup_request_t](docs/post_edit_message_reply_markup_request.md)
+ - [post_edit_message_text_200_response_t](docs/post_edit_message_text_200_response.md)
+ - [post_edit_message_text_200_response_result_t](docs/post_edit_message_text_200_response_result.md)
+ - [post_edit_message_text_request_t](docs/post_edit_message_text_request.md)
+ - [post_edit_message_text_request_chat_id_t](docs/post_edit_message_text_request_chat_id.md)
+ - [post_edit_user_star_subscription_request_t](docs/post_edit_user_star_subscription_request.md)
+ - [post_export_chat_invite_link_200_response_t](docs/post_export_chat_invite_link_200_response.md)
+ - [post_export_chat_invite_link_request_t](docs/post_export_chat_invite_link_request.md)
+ - [post_forward_message_request_t](docs/post_forward_message_request.md)
+ - [post_forward_message_request_from_chat_id_t](docs/post_forward_message_request_from_chat_id.md)
+ - [post_forward_messages_200_response_t](docs/post_forward_messages_200_response.md)
+ - [post_forward_messages_request_t](docs/post_forward_messages_request.md)
+ - [post_forward_messages_request_from_chat_id_t](docs/post_forward_messages_request_from_chat_id.md)
+ - [post_get_available_gifts_200_response_t](docs/post_get_available_gifts_200_response.md)
+ - [post_get_business_account_gifts_200_response_t](docs/post_get_business_account_gifts_200_response.md)
+ - [post_get_business_account_gifts_request_t](docs/post_get_business_account_gifts_request.md)
+ - [post_get_business_account_star_balance_200_response_t](docs/post_get_business_account_star_balance_200_response.md)
+ - [post_get_business_connection_200_response_t](docs/post_get_business_connection_200_response.md)
+ - [post_get_business_connection_request_t](docs/post_get_business_connection_request.md)
+ - [post_get_chat_200_response_t](docs/post_get_chat_200_response.md)
+ - [post_get_chat_administrators_200_response_t](docs/post_get_chat_administrators_200_response.md)
+ - [post_get_chat_member_200_response_t](docs/post_get_chat_member_200_response.md)
+ - [post_get_chat_member_count_200_response_t](docs/post_get_chat_member_count_200_response.md)
+ - [post_get_chat_member_request_t](docs/post_get_chat_member_request.md)
+ - [post_get_chat_menu_button_200_response_t](docs/post_get_chat_menu_button_200_response.md)
+ - [post_get_chat_menu_button_request_t](docs/post_get_chat_menu_button_request.md)
+ - [post_get_custom_emoji_stickers_request_t](docs/post_get_custom_emoji_stickers_request.md)
+ - [post_get_file_200_response_t](docs/post_get_file_200_response.md)
+ - [post_get_file_request_t](docs/post_get_file_request.md)
+ - [post_get_forum_topic_icon_stickers_200_response_t](docs/post_get_forum_topic_icon_stickers_200_response.md)
+ - [post_get_game_high_scores_200_response_t](docs/post_get_game_high_scores_200_response.md)
+ - [post_get_game_high_scores_request_t](docs/post_get_game_high_scores_request.md)
+ - [post_get_me_200_response_t](docs/post_get_me_200_response.md)
+ - [post_get_my_commands_200_response_t](docs/post_get_my_commands_200_response.md)
+ - [post_get_my_commands_request_t](docs/post_get_my_commands_request.md)
+ - [post_get_my_default_administrator_rights_200_response_t](docs/post_get_my_default_administrator_rights_200_response.md)
+ - [post_get_my_default_administrator_rights_request_t](docs/post_get_my_default_administrator_rights_request.md)
+ - [post_get_my_description_200_response_t](docs/post_get_my_description_200_response.md)
+ - [post_get_my_name_200_response_t](docs/post_get_my_name_200_response.md)
+ - [post_get_my_name_request_t](docs/post_get_my_name_request.md)
+ - [post_get_my_short_description_200_response_t](docs/post_get_my_short_description_200_response.md)
+ - [post_get_star_transactions_200_response_t](docs/post_get_star_transactions_200_response.md)
+ - [post_get_star_transactions_request_t](docs/post_get_star_transactions_request.md)
+ - [post_get_sticker_set_200_response_t](docs/post_get_sticker_set_200_response.md)
+ - [post_get_sticker_set_request_t](docs/post_get_sticker_set_request.md)
+ - [post_get_updates_200_response_t](docs/post_get_updates_200_response.md)
+ - [post_get_updates_request_t](docs/post_get_updates_request.md)
+ - [post_get_user_chat_boosts_200_response_t](docs/post_get_user_chat_boosts_200_response.md)
+ - [post_get_user_chat_boosts_request_t](docs/post_get_user_chat_boosts_request.md)
+ - [post_get_user_chat_boosts_request_chat_id_t](docs/post_get_user_chat_boosts_request_chat_id.md)
+ - [post_get_user_profile_photos_200_response_t](docs/post_get_user_profile_photos_200_response.md)
+ - [post_get_user_profile_photos_request_t](docs/post_get_user_profile_photos_request.md)
+ - [post_get_webhook_info_200_response_t](docs/post_get_webhook_info_200_response.md)
+ - [post_gift_premium_subscription_request_t](docs/post_gift_premium_subscription_request.md)
+ - [post_leave_chat_request_t](docs/post_leave_chat_request.md)
+ - [post_leave_chat_request_chat_id_t](docs/post_leave_chat_request_chat_id.md)
+ - [post_pin_chat_message_request_t](docs/post_pin_chat_message_request.md)
+ - [post_post_story_200_response_t](docs/post_post_story_200_response.md)
+ - [post_promote_chat_member_request_t](docs/post_promote_chat_member_request.md)
+ - [post_read_business_message_request_t](docs/post_read_business_message_request.md)
+ - [post_refund_star_payment_request_t](docs/post_refund_star_payment_request.md)
+ - [post_remove_business_account_profile_photo_request_t](docs/post_remove_business_account_profile_photo_request.md)
+ - [post_remove_user_verification_request_t](docs/post_remove_user_verification_request.md)
+ - [post_restrict_chat_member_request_t](docs/post_restrict_chat_member_request.md)
+ - [post_restrict_chat_member_request_chat_id_t](docs/post_restrict_chat_member_request_chat_id.md)
+ - [post_revoke_chat_invite_link_request_t](docs/post_revoke_chat_invite_link_request.md)
+ - [post_revoke_chat_invite_link_request_chat_id_t](docs/post_revoke_chat_invite_link_request_chat_id.md)
+ - [post_save_prepared_inline_message_200_response_t](docs/post_save_prepared_inline_message_200_response.md)
+ - [post_save_prepared_inline_message_request_t](docs/post_save_prepared_inline_message_request.md)
+ - [post_send_animation_request_animation_t](docs/post_send_animation_request_animation.md)
+ - [post_send_audio_request_audio_t](docs/post_send_audio_request_audio.md)
+ - [post_send_audio_request_thumbnail_t](docs/post_send_audio_request_thumbnail.md)
+ - [post_send_chat_action_request_t](docs/post_send_chat_action_request.md)
+ - [post_send_contact_request_t](docs/post_send_contact_request.md)
+ - [post_send_dice_request_t](docs/post_send_dice_request.md)
+ - [post_send_document_request_document_t](docs/post_send_document_request_document.md)
+ - [post_send_game_request_t](docs/post_send_game_request.md)
+ - [post_send_gift_request_t](docs/post_send_gift_request.md)
+ - [post_send_gift_request_chat_id_t](docs/post_send_gift_request_chat_id.md)
+ - [post_send_invoice_request_t](docs/post_send_invoice_request.md)
+ - [post_send_location_request_t](docs/post_send_location_request.md)
+ - [post_send_media_group_200_response_t](docs/post_send_media_group_200_response.md)
+ - [post_send_media_group_request_media_inner_t](docs/post_send_media_group_request_media_inner.md)
+ - [post_send_message_200_response_t](docs/post_send_message_200_response.md)
+ - [post_send_message_request_t](docs/post_send_message_request.md)
+ - [post_send_message_request_chat_id_t](docs/post_send_message_request_chat_id.md)
+ - [post_send_message_request_reply_markup_t](docs/post_send_message_request_reply_markup.md)
+ - [post_send_paid_media_request_chat_id_t](docs/post_send_paid_media_request_chat_id.md)
+ - [post_send_photo_request_photo_t](docs/post_send_photo_request_photo.md)
+ - [post_send_poll_request_t](docs/post_send_poll_request.md)
+ - [post_send_sticker_request_sticker_t](docs/post_send_sticker_request_sticker.md)
+ - [post_send_venue_request_t](docs/post_send_venue_request.md)
+ - [post_send_video_note_request_video_note_t](docs/post_send_video_note_request_video_note.md)
+ - [post_send_video_request_cover_t](docs/post_send_video_request_cover.md)
+ - [post_send_video_request_video_t](docs/post_send_video_request_video.md)
+ - [post_send_voice_request_voice_t](docs/post_send_voice_request_voice.md)
+ - [post_set_business_account_bio_request_t](docs/post_set_business_account_bio_request.md)
+ - [post_set_business_account_gift_settings_request_t](docs/post_set_business_account_gift_settings_request.md)
+ - [post_set_business_account_name_request_t](docs/post_set_business_account_name_request.md)
+ - [post_set_business_account_username_request_t](docs/post_set_business_account_username_request.md)
+ - [post_set_chat_administrator_custom_title_request_t](docs/post_set_chat_administrator_custom_title_request.md)
+ - [post_set_chat_description_request_t](docs/post_set_chat_description_request.md)
+ - [post_set_chat_menu_button_request_t](docs/post_set_chat_menu_button_request.md)
+ - [post_set_chat_permissions_request_t](docs/post_set_chat_permissions_request.md)
+ - [post_set_chat_sticker_set_request_t](docs/post_set_chat_sticker_set_request.md)
+ - [post_set_chat_title_request_t](docs/post_set_chat_title_request.md)
+ - [post_set_custom_emoji_sticker_set_thumbnail_request_t](docs/post_set_custom_emoji_sticker_set_thumbnail_request.md)
+ - [post_set_game_score_request_t](docs/post_set_game_score_request.md)
+ - [post_set_message_reaction_request_t](docs/post_set_message_reaction_request.md)
+ - [post_set_my_commands_request_t](docs/post_set_my_commands_request.md)
+ - [post_set_my_default_administrator_rights_request_t](docs/post_set_my_default_administrator_rights_request.md)
+ - [post_set_my_description_request_t](docs/post_set_my_description_request.md)
+ - [post_set_my_name_request_t](docs/post_set_my_name_request.md)
+ - [post_set_my_short_description_request_t](docs/post_set_my_short_description_request.md)
+ - [post_set_passport_data_errors_request_t](docs/post_set_passport_data_errors_request.md)
+ - [post_set_sticker_emoji_list_request_t](docs/post_set_sticker_emoji_list_request.md)
+ - [post_set_sticker_keywords_request_t](docs/post_set_sticker_keywords_request.md)
+ - [post_set_sticker_mask_position_request_t](docs/post_set_sticker_mask_position_request.md)
+ - [post_set_sticker_position_in_set_request_t](docs/post_set_sticker_position_in_set_request.md)
+ - [post_set_sticker_set_thumbnail_request_thumbnail_t](docs/post_set_sticker_set_thumbnail_request_thumbnail.md)
+ - [post_set_sticker_set_title_request_t](docs/post_set_sticker_set_title_request.md)
+ - [post_set_user_emoji_status_request_t](docs/post_set_user_emoji_status_request.md)
+ - [post_set_webhook_200_response_t](docs/post_set_webhook_200_response.md)
+ - [post_stop_message_live_location_request_t](docs/post_stop_message_live_location_request.md)
+ - [post_stop_poll_200_response_t](docs/post_stop_poll_200_response.md)
+ - [post_stop_poll_request_t](docs/post_stop_poll_request.md)
+ - [post_transfer_business_account_stars_request_t](docs/post_transfer_business_account_stars_request.md)
+ - [post_transfer_gift_request_t](docs/post_transfer_gift_request.md)
+ - [post_unban_chat_member_request_t](docs/post_unban_chat_member_request.md)
+ - [post_unpin_chat_message_request_t](docs/post_unpin_chat_message_request.md)
+ - [post_upgrade_gift_request_t](docs/post_upgrade_gift_request.md)
+ - [post_verify_chat_request_t](docs/post_verify_chat_request.md)
+ - [post_verify_user_request_t](docs/post_verify_user_request.md)
  - [pre_checkout_query_t](docs/pre_checkout_query.md)
  - [prepared_inline_message_t](docs/prepared_inline_message.md)
  - [proximity_alert_triggered_t](docs/proximity_alert_triggered.md)

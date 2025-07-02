@@ -6,14 +6,14 @@
 #define MAX_NUMBER_LENGTH 16
 #define MAX_BUFFER_LENGTH 4096
 
-// Functions for enum ICONCOLOR for DefaultAPI_createForumTopicPost
+// Functions for enum ICONCOLOR for DefaultAPI_postCreateForumTopic
 
-static char* createForumTopicPost_ICONCOLOR_ToString(telegram_bot_api_createForumTopicPost_icon_color_e ICONCOLOR){
+static char* postCreateForumTopic_ICONCOLOR_ToString(telegram_bot_api_postCreateForumTopic_icon_color_e ICONCOLOR){
     char *ICONCOLORArray[] =  { "NULL", "7322096", "16766590", "13338331", "9367192", "16749490", "16478047" };
     return ICONCOLORArray[ICONCOLOR];
 }
 
-static telegram_bot_api_createForumTopicPost_icon_color_e createForumTopicPost_ICONCOLOR_FromString(char* ICONCOLOR){
+static telegram_bot_api_postCreateForumTopic_icon_color_e postCreateForumTopic_ICONCOLOR_FromString(char* ICONCOLOR){
     int stringToReturn = 0;
     char *ICONCOLORArray[] =  { "NULL", "7322096", "16766590", "13338331", "9367192", "16749490", "16478047" };
     size_t sizeofArray = sizeof(ICONCOLORArray) / sizeof(ICONCOLORArray[0]);
@@ -27,10 +27,10 @@ static telegram_bot_api_createForumTopicPost_icon_color_e createForumTopicPost_I
 }
 
 /*
-// Function createForumTopicPost_ICONCOLOR_convertToJSON is not currently used,
+// Function postCreateForumTopic_ICONCOLOR_convertToJSON is not currently used,
 // since conversion to JSON passes through the conversion of the model, and ToString. The function is kept for future reference.
 //
-static cJSON *createForumTopicPost_ICONCOLOR_convertToJSON(telegram_bot_api_createForumTopicPost_icon_color_e ICONCOLOR) {
+static cJSON *postCreateForumTopic_ICONCOLOR_convertToJSON(telegram_bot_api_postCreateForumTopic_icon_color_e ICONCOLOR) {
     cJSON *item = cJSON_CreateObject();
     return item;
     fail:
@@ -38,25 +38,25 @@ static cJSON *createForumTopicPost_ICONCOLOR_convertToJSON(telegram_bot_api_crea
     return NULL;
 }
 
-// Function createForumTopicPost_ICONCOLOR_parseFromJSON is not currently used,
+// Function postCreateForumTopic_ICONCOLOR_parseFromJSON is not currently used,
 // since conversion from JSON passes through the conversion of the model, and FromString. The function is kept for future reference.
 //
-static telegram_bot_api_createForumTopicPost_icon_color_e createForumTopicPost_ICONCOLOR_parseFromJSON(cJSON* ICONCOLORJSON) {
-    telegram_bot_api_createForumTopicPost_icon_color_e ICONCOLORVariable = 0;
+static telegram_bot_api_postCreateForumTopic_icon_color_e postCreateForumTopic_ICONCOLOR_parseFromJSON(cJSON* ICONCOLORJSON) {
+    telegram_bot_api_postCreateForumTopic_icon_color_e ICONCOLORVariable = 0;
     return ICONCOLORVariable;
 end:
     return 0;
 }
 */
 
-// Functions for enum STICKERTYPE for DefaultAPI_createNewStickerSetPost
+// Functions for enum STICKERTYPE for DefaultAPI_postCreateNewStickerSet
 
-static char* createNewStickerSetPost_STICKERTYPE_ToString(telegram_bot_api_createNewStickerSetPost_sticker_type_e STICKERTYPE){
+static char* postCreateNewStickerSet_STICKERTYPE_ToString(telegram_bot_api_postCreateNewStickerSet_sticker_type_e STICKERTYPE){
     char *STICKERTYPEArray[] =  { "NULL", "mask", "custom_emoji" };
     return STICKERTYPEArray[STICKERTYPE];
 }
 
-static telegram_bot_api_createNewStickerSetPost_sticker_type_e createNewStickerSetPost_STICKERTYPE_FromString(char* STICKERTYPE){
+static telegram_bot_api_postCreateNewStickerSet_sticker_type_e postCreateNewStickerSet_STICKERTYPE_FromString(char* STICKERTYPE){
     int stringToReturn = 0;
     char *STICKERTYPEArray[] =  { "NULL", "mask", "custom_emoji" };
     size_t sizeofArray = sizeof(STICKERTYPEArray) / sizeof(STICKERTYPEArray[0]);
@@ -70,12 +70,12 @@ static telegram_bot_api_createNewStickerSetPost_sticker_type_e createNewStickerS
 }
 
 /*
-// Function createNewStickerSetPost_STICKERTYPE_convertToJSON is not currently used,
+// Function postCreateNewStickerSet_STICKERTYPE_convertToJSON is not currently used,
 // since conversion to JSON passes through the conversion of the model, and ToString. The function is kept for future reference.
 //
-static cJSON *createNewStickerSetPost_STICKERTYPE_convertToJSON(telegram_bot_api_createNewStickerSetPost_sticker_type_e STICKERTYPE) {
+static cJSON *postCreateNewStickerSet_STICKERTYPE_convertToJSON(telegram_bot_api_postCreateNewStickerSet_sticker_type_e STICKERTYPE) {
     cJSON *item = cJSON_CreateObject();
-    if(cJSON_AddStringToObject(item, "sticker_type", createNewStickerSetPost_STICKERTYPE_ToString(STICKERTYPE)) == NULL) {
+    if(cJSON_AddStringToObject(item, "sticker_type", postCreateNewStickerSet_STICKERTYPE_ToString(STICKERTYPE)) == NULL) {
         goto fail;
     }
     return item;
@@ -84,31 +84,31 @@ static cJSON *createNewStickerSetPost_STICKERTYPE_convertToJSON(telegram_bot_api
     return NULL;
 }
 
-// Function createNewStickerSetPost_STICKERTYPE_parseFromJSON is not currently used,
+// Function postCreateNewStickerSet_STICKERTYPE_parseFromJSON is not currently used,
 // since conversion from JSON passes through the conversion of the model, and FromString. The function is kept for future reference.
 //
-static telegram_bot_api_createNewStickerSetPost_sticker_type_e createNewStickerSetPost_STICKERTYPE_parseFromJSON(cJSON* STICKERTYPEJSON) {
-    telegram_bot_api_createNewStickerSetPost_sticker_type_e STICKERTYPEVariable = 0;
+static telegram_bot_api_postCreateNewStickerSet_sticker_type_e postCreateNewStickerSet_STICKERTYPE_parseFromJSON(cJSON* STICKERTYPEJSON) {
+    telegram_bot_api_postCreateNewStickerSet_sticker_type_e STICKERTYPEVariable = 0;
     cJSON *STICKERTYPEVar = cJSON_GetObjectItemCaseSensitive(STICKERTYPEJSON, "sticker_type");
     if(!cJSON_IsString(STICKERTYPEVar) || (STICKERTYPEVar->valuestring == NULL))
     {
         goto end;
     }
-    STICKERTYPEVariable = createNewStickerSetPost_STICKERTYPE_FromString(STICKERTYPEVar->valuestring);
+    STICKERTYPEVariable = postCreateNewStickerSet_STICKERTYPE_FromString(STICKERTYPEVar->valuestring);
     return STICKERTYPEVariable;
 end:
     return 0;
 }
 */
 
-// Functions for enum MONTHCOUNT for DefaultAPI_giftPremiumSubscriptionPost
+// Functions for enum MONTHCOUNT for DefaultAPI_postGiftPremiumSubscription
 
-static char* giftPremiumSubscriptionPost_MONTHCOUNT_ToString(telegram_bot_api_giftPremiumSubscriptionPost_month_count_e MONTHCOUNT){
+static char* postGiftPremiumSubscription_MONTHCOUNT_ToString(telegram_bot_api_postGiftPremiumSubscription_month_count_e MONTHCOUNT){
     char *MONTHCOUNTArray[] =  { "NULL", "3", "6", "12" };
     return MONTHCOUNTArray[MONTHCOUNT];
 }
 
-static telegram_bot_api_giftPremiumSubscriptionPost_month_count_e giftPremiumSubscriptionPost_MONTHCOUNT_FromString(char* MONTHCOUNT){
+static telegram_bot_api_postGiftPremiumSubscription_month_count_e postGiftPremiumSubscription_MONTHCOUNT_FromString(char* MONTHCOUNT){
     int stringToReturn = 0;
     char *MONTHCOUNTArray[] =  { "NULL", "3", "6", "12" };
     size_t sizeofArray = sizeof(MONTHCOUNTArray) / sizeof(MONTHCOUNTArray[0]);
@@ -122,10 +122,10 @@ static telegram_bot_api_giftPremiumSubscriptionPost_month_count_e giftPremiumSub
 }
 
 /*
-// Function giftPremiumSubscriptionPost_MONTHCOUNT_convertToJSON is not currently used,
+// Function postGiftPremiumSubscription_MONTHCOUNT_convertToJSON is not currently used,
 // since conversion to JSON passes through the conversion of the model, and ToString. The function is kept for future reference.
 //
-static cJSON *giftPremiumSubscriptionPost_MONTHCOUNT_convertToJSON(telegram_bot_api_giftPremiumSubscriptionPost_month_count_e MONTHCOUNT) {
+static cJSON *postGiftPremiumSubscription_MONTHCOUNT_convertToJSON(telegram_bot_api_postGiftPremiumSubscription_month_count_e MONTHCOUNT) {
     cJSON *item = cJSON_CreateObject();
     return item;
     fail:
@@ -133,25 +133,25 @@ static cJSON *giftPremiumSubscriptionPost_MONTHCOUNT_convertToJSON(telegram_bot_
     return NULL;
 }
 
-// Function giftPremiumSubscriptionPost_MONTHCOUNT_parseFromJSON is not currently used,
+// Function postGiftPremiumSubscription_MONTHCOUNT_parseFromJSON is not currently used,
 // since conversion from JSON passes through the conversion of the model, and FromString. The function is kept for future reference.
 //
-static telegram_bot_api_giftPremiumSubscriptionPost_month_count_e giftPremiumSubscriptionPost_MONTHCOUNT_parseFromJSON(cJSON* MONTHCOUNTJSON) {
-    telegram_bot_api_giftPremiumSubscriptionPost_month_count_e MONTHCOUNTVariable = 0;
+static telegram_bot_api_postGiftPremiumSubscription_month_count_e postGiftPremiumSubscription_MONTHCOUNT_parseFromJSON(cJSON* MONTHCOUNTJSON) {
+    telegram_bot_api_postGiftPremiumSubscription_month_count_e MONTHCOUNTVariable = 0;
     return MONTHCOUNTVariable;
 end:
     return 0;
 }
 */
 
-// Functions for enum ACTIVEPERIOD for DefaultAPI_postStoryPost
+// Functions for enum ACTIVEPERIOD for DefaultAPI_postPostStory
 
-static char* postStoryPost_ACTIVEPERIOD_ToString(telegram_bot_api_postStoryPost_active_period_e ACTIVEPERIOD){
+static char* postPostStory_ACTIVEPERIOD_ToString(telegram_bot_api_postPostStory_active_period_e ACTIVEPERIOD){
     char *ACTIVEPERIODArray[] =  { "NULL", "86400" };
     return ACTIVEPERIODArray[ACTIVEPERIOD];
 }
 
-static telegram_bot_api_postStoryPost_active_period_e postStoryPost_ACTIVEPERIOD_FromString(char* ACTIVEPERIOD){
+static telegram_bot_api_postPostStory_active_period_e postPostStory_ACTIVEPERIOD_FromString(char* ACTIVEPERIOD){
     int stringToReturn = 0;
     char *ACTIVEPERIODArray[] =  { "NULL", "86400" };
     size_t sizeofArray = sizeof(ACTIVEPERIODArray) / sizeof(ACTIVEPERIODArray[0]);
@@ -165,10 +165,10 @@ static telegram_bot_api_postStoryPost_active_period_e postStoryPost_ACTIVEPERIOD
 }
 
 /*
-// Function postStoryPost_ACTIVEPERIOD_convertToJSON is not currently used,
+// Function postPostStory_ACTIVEPERIOD_convertToJSON is not currently used,
 // since conversion to JSON passes through the conversion of the model, and ToString. The function is kept for future reference.
 //
-static cJSON *postStoryPost_ACTIVEPERIOD_convertToJSON(telegram_bot_api_postStoryPost_active_period_e ACTIVEPERIOD) {
+static cJSON *postPostStory_ACTIVEPERIOD_convertToJSON(telegram_bot_api_postPostStory_active_period_e ACTIVEPERIOD) {
     cJSON *item = cJSON_CreateObject();
     return item;
     fail:
@@ -176,25 +176,25 @@ static cJSON *postStoryPost_ACTIVEPERIOD_convertToJSON(telegram_bot_api_postStor
     return NULL;
 }
 
-// Function postStoryPost_ACTIVEPERIOD_parseFromJSON is not currently used,
+// Function postPostStory_ACTIVEPERIOD_parseFromJSON is not currently used,
 // since conversion from JSON passes through the conversion of the model, and FromString. The function is kept for future reference.
 //
-static telegram_bot_api_postStoryPost_active_period_e postStoryPost_ACTIVEPERIOD_parseFromJSON(cJSON* ACTIVEPERIODJSON) {
-    telegram_bot_api_postStoryPost_active_period_e ACTIVEPERIODVariable = 0;
+static telegram_bot_api_postPostStory_active_period_e postPostStory_ACTIVEPERIOD_parseFromJSON(cJSON* ACTIVEPERIODJSON) {
+    telegram_bot_api_postPostStory_active_period_e ACTIVEPERIODVariable = 0;
     return ACTIVEPERIODVariable;
 end:
     return 0;
 }
 */
 
-// Functions for enum ACTION for DefaultAPI_sendChatActionPost
+// Functions for enum ACTION for DefaultAPI_postSendChatAction
 
-static char* sendChatActionPost_ACTION_ToString(telegram_bot_api_sendChatActionPost_action_e ACTION){
+static char* postSendChatAction_ACTION_ToString(telegram_bot_api_postSendChatAction_action_e ACTION){
     char *ACTIONArray[] =  { "NULL", "typing", "upload_photo", "record_video", "upload_video", "record_voice", "upload_voice", "upload_document", "choose_sticker", "find_location", "record_video_note", "upload_video_note" };
     return ACTIONArray[ACTION];
 }
 
-static telegram_bot_api_sendChatActionPost_action_e sendChatActionPost_ACTION_FromString(char* ACTION){
+static telegram_bot_api_postSendChatAction_action_e postSendChatAction_ACTION_FromString(char* ACTION){
     int stringToReturn = 0;
     char *ACTIONArray[] =  { "NULL", "typing", "upload_photo", "record_video", "upload_video", "record_voice", "upload_voice", "upload_document", "choose_sticker", "find_location", "record_video_note", "upload_video_note" };
     size_t sizeofArray = sizeof(ACTIONArray) / sizeof(ACTIONArray[0]);
@@ -208,12 +208,12 @@ static telegram_bot_api_sendChatActionPost_action_e sendChatActionPost_ACTION_Fr
 }
 
 /*
-// Function sendChatActionPost_ACTION_convertToJSON is not currently used,
+// Function postSendChatAction_ACTION_convertToJSON is not currently used,
 // since conversion to JSON passes through the conversion of the model, and ToString. The function is kept for future reference.
 //
-static cJSON *sendChatActionPost_ACTION_convertToJSON(telegram_bot_api_sendChatActionPost_action_e ACTION) {
+static cJSON *postSendChatAction_ACTION_convertToJSON(telegram_bot_api_postSendChatAction_action_e ACTION) {
     cJSON *item = cJSON_CreateObject();
-    if(cJSON_AddStringToObject(item, "action", sendChatActionPost_ACTION_ToString(ACTION)) == NULL) {
+    if(cJSON_AddStringToObject(item, "action", postSendChatAction_ACTION_ToString(ACTION)) == NULL) {
         goto fail;
     }
     return item;
@@ -222,31 +222,31 @@ static cJSON *sendChatActionPost_ACTION_convertToJSON(telegram_bot_api_sendChatA
     return NULL;
 }
 
-// Function sendChatActionPost_ACTION_parseFromJSON is not currently used,
+// Function postSendChatAction_ACTION_parseFromJSON is not currently used,
 // since conversion from JSON passes through the conversion of the model, and FromString. The function is kept for future reference.
 //
-static telegram_bot_api_sendChatActionPost_action_e sendChatActionPost_ACTION_parseFromJSON(cJSON* ACTIONJSON) {
-    telegram_bot_api_sendChatActionPost_action_e ACTIONVariable = 0;
+static telegram_bot_api_postSendChatAction_action_e postSendChatAction_ACTION_parseFromJSON(cJSON* ACTIONJSON) {
+    telegram_bot_api_postSendChatAction_action_e ACTIONVariable = 0;
     cJSON *ACTIONVar = cJSON_GetObjectItemCaseSensitive(ACTIONJSON, "action");
     if(!cJSON_IsString(ACTIONVar) || (ACTIONVar->valuestring == NULL))
     {
         goto end;
     }
-    ACTIONVariable = sendChatActionPost_ACTION_FromString(ACTIONVar->valuestring);
+    ACTIONVariable = postSendChatAction_ACTION_FromString(ACTIONVar->valuestring);
     return ACTIONVariable;
 end:
     return 0;
 }
 */
 
-// Functions for enum EMOJI for DefaultAPI_sendDicePost
+// Functions for enum EMOJI for DefaultAPI_postSendDice
 
-static char* sendDicePost_EMOJI_ToString(telegram_bot_api_sendDicePost_emoji_e EMOJI){
+static char* postSendDice_EMOJI_ToString(telegram_bot_api_postSendDice_emoji_e EMOJI){
     char *EMOJIArray[] =  { "NULL", "🎲", "🎯", "🏀", "⚽", "🎳", "🎰" };
     return EMOJIArray[EMOJI];
 }
 
-static telegram_bot_api_sendDicePost_emoji_e sendDicePost_EMOJI_FromString(char* EMOJI){
+static telegram_bot_api_postSendDice_emoji_e postSendDice_EMOJI_FromString(char* EMOJI){
     int stringToReturn = 0;
     char *EMOJIArray[] =  { "NULL", "🎲", "🎯", "🏀", "⚽", "🎳", "🎰" };
     size_t sizeofArray = sizeof(EMOJIArray) / sizeof(EMOJIArray[0]);
@@ -260,12 +260,12 @@ static telegram_bot_api_sendDicePost_emoji_e sendDicePost_EMOJI_FromString(char*
 }
 
 /*
-// Function sendDicePost_EMOJI_convertToJSON is not currently used,
+// Function postSendDice_EMOJI_convertToJSON is not currently used,
 // since conversion to JSON passes through the conversion of the model, and ToString. The function is kept for future reference.
 //
-static cJSON *sendDicePost_EMOJI_convertToJSON(telegram_bot_api_sendDicePost_emoji_e EMOJI) {
+static cJSON *postSendDice_EMOJI_convertToJSON(telegram_bot_api_postSendDice_emoji_e EMOJI) {
     cJSON *item = cJSON_CreateObject();
-    if(cJSON_AddStringToObject(item, "emoji", sendDicePost_EMOJI_ToString(EMOJI)) == NULL) {
+    if(cJSON_AddStringToObject(item, "emoji", postSendDice_EMOJI_ToString(EMOJI)) == NULL) {
         goto fail;
     }
     return item;
@@ -274,31 +274,31 @@ static cJSON *sendDicePost_EMOJI_convertToJSON(telegram_bot_api_sendDicePost_emo
     return NULL;
 }
 
-// Function sendDicePost_EMOJI_parseFromJSON is not currently used,
+// Function postSendDice_EMOJI_parseFromJSON is not currently used,
 // since conversion from JSON passes through the conversion of the model, and FromString. The function is kept for future reference.
 //
-static telegram_bot_api_sendDicePost_emoji_e sendDicePost_EMOJI_parseFromJSON(cJSON* EMOJIJSON) {
-    telegram_bot_api_sendDicePost_emoji_e EMOJIVariable = 0;
+static telegram_bot_api_postSendDice_emoji_e postSendDice_EMOJI_parseFromJSON(cJSON* EMOJIJSON) {
+    telegram_bot_api_postSendDice_emoji_e EMOJIVariable = 0;
     cJSON *EMOJIVar = cJSON_GetObjectItemCaseSensitive(EMOJIJSON, "emoji");
     if(!cJSON_IsString(EMOJIVar) || (EMOJIVar->valuestring == NULL))
     {
         goto end;
     }
-    EMOJIVariable = sendDicePost_EMOJI_FromString(EMOJIVar->valuestring);
+    EMOJIVariable = postSendDice_EMOJI_FromString(EMOJIVar->valuestring);
     return EMOJIVariable;
 end:
     return 0;
 }
 */
 
-// Functions for enum TYPE for DefaultAPI_sendPollPost
+// Functions for enum TYPE for DefaultAPI_postSendPoll
 
-static char* sendPollPost_TYPE_ToString(telegram_bot_api_sendPollPost_type_e TYPE){
+static char* postSendPoll_TYPE_ToString(telegram_bot_api_postSendPoll_type_e TYPE){
     char *TYPEArray[] =  { "NULL", "quiz", "regular" };
     return TYPEArray[TYPE];
 }
 
-static telegram_bot_api_sendPollPost_type_e sendPollPost_TYPE_FromString(char* TYPE){
+static telegram_bot_api_postSendPoll_type_e postSendPoll_TYPE_FromString(char* TYPE){
     int stringToReturn = 0;
     char *TYPEArray[] =  { "NULL", "quiz", "regular" };
     size_t sizeofArray = sizeof(TYPEArray) / sizeof(TYPEArray[0]);
@@ -312,12 +312,12 @@ static telegram_bot_api_sendPollPost_type_e sendPollPost_TYPE_FromString(char* T
 }
 
 /*
-// Function sendPollPost_TYPE_convertToJSON is not currently used,
+// Function postSendPoll_TYPE_convertToJSON is not currently used,
 // since conversion to JSON passes through the conversion of the model, and ToString. The function is kept for future reference.
 //
-static cJSON *sendPollPost_TYPE_convertToJSON(telegram_bot_api_sendPollPost_type_e TYPE) {
+static cJSON *postSendPoll_TYPE_convertToJSON(telegram_bot_api_postSendPoll_type_e TYPE) {
     cJSON *item = cJSON_CreateObject();
-    if(cJSON_AddStringToObject(item, "type", sendPollPost_TYPE_ToString(TYPE)) == NULL) {
+    if(cJSON_AddStringToObject(item, "type", postSendPoll_TYPE_ToString(TYPE)) == NULL) {
         goto fail;
     }
     return item;
@@ -326,31 +326,31 @@ static cJSON *sendPollPost_TYPE_convertToJSON(telegram_bot_api_sendPollPost_type
     return NULL;
 }
 
-// Function sendPollPost_TYPE_parseFromJSON is not currently used,
+// Function postSendPoll_TYPE_parseFromJSON is not currently used,
 // since conversion from JSON passes through the conversion of the model, and FromString. The function is kept for future reference.
 //
-static telegram_bot_api_sendPollPost_type_e sendPollPost_TYPE_parseFromJSON(cJSON* TYPEJSON) {
-    telegram_bot_api_sendPollPost_type_e TYPEVariable = 0;
+static telegram_bot_api_postSendPoll_type_e postSendPoll_TYPE_parseFromJSON(cJSON* TYPEJSON) {
+    telegram_bot_api_postSendPoll_type_e TYPEVariable = 0;
     cJSON *TYPEVar = cJSON_GetObjectItemCaseSensitive(TYPEJSON, "type");
     if(!cJSON_IsString(TYPEVar) || (TYPEVar->valuestring == NULL))
     {
         goto end;
     }
-    TYPEVariable = sendPollPost_TYPE_FromString(TYPEVar->valuestring);
+    TYPEVariable = postSendPoll_TYPE_FromString(TYPEVar->valuestring);
     return TYPEVariable;
 end:
     return 0;
 }
 */
 
-// Functions for enum FORMAT for DefaultAPI_setStickerSetThumbnailPost
+// Functions for enum FORMAT for DefaultAPI_postSetStickerSetThumbnail
 
-static char* setStickerSetThumbnailPost_FORMAT_ToString(telegram_bot_api_setStickerSetThumbnailPost_format_e FORMAT){
+static char* postSetStickerSetThumbnail_FORMAT_ToString(telegram_bot_api_postSetStickerSetThumbnail_format_e FORMAT){
     char *FORMATArray[] =  { "NULL", "static", "animated", "video" };
     return FORMATArray[FORMAT];
 }
 
-static telegram_bot_api_setStickerSetThumbnailPost_format_e setStickerSetThumbnailPost_FORMAT_FromString(char* FORMAT){
+static telegram_bot_api_postSetStickerSetThumbnail_format_e postSetStickerSetThumbnail_FORMAT_FromString(char* FORMAT){
     int stringToReturn = 0;
     char *FORMATArray[] =  { "NULL", "static", "animated", "video" };
     size_t sizeofArray = sizeof(FORMATArray) / sizeof(FORMATArray[0]);
@@ -364,12 +364,12 @@ static telegram_bot_api_setStickerSetThumbnailPost_format_e setStickerSetThumbna
 }
 
 /*
-// Function setStickerSetThumbnailPost_FORMAT_convertToJSON is not currently used,
+// Function postSetStickerSetThumbnail_FORMAT_convertToJSON is not currently used,
 // since conversion to JSON passes through the conversion of the model, and ToString. The function is kept for future reference.
 //
-static cJSON *setStickerSetThumbnailPost_FORMAT_convertToJSON(telegram_bot_api_setStickerSetThumbnailPost_format_e FORMAT) {
+static cJSON *postSetStickerSetThumbnail_FORMAT_convertToJSON(telegram_bot_api_postSetStickerSetThumbnail_format_e FORMAT) {
     cJSON *item = cJSON_CreateObject();
-    if(cJSON_AddStringToObject(item, "format", setStickerSetThumbnailPost_FORMAT_ToString(FORMAT)) == NULL) {
+    if(cJSON_AddStringToObject(item, "format", postSetStickerSetThumbnail_FORMAT_ToString(FORMAT)) == NULL) {
         goto fail;
     }
     return item;
@@ -378,31 +378,31 @@ static cJSON *setStickerSetThumbnailPost_FORMAT_convertToJSON(telegram_bot_api_s
     return NULL;
 }
 
-// Function setStickerSetThumbnailPost_FORMAT_parseFromJSON is not currently used,
+// Function postSetStickerSetThumbnail_FORMAT_parseFromJSON is not currently used,
 // since conversion from JSON passes through the conversion of the model, and FromString. The function is kept for future reference.
 //
-static telegram_bot_api_setStickerSetThumbnailPost_format_e setStickerSetThumbnailPost_FORMAT_parseFromJSON(cJSON* FORMATJSON) {
-    telegram_bot_api_setStickerSetThumbnailPost_format_e FORMATVariable = 0;
+static telegram_bot_api_postSetStickerSetThumbnail_format_e postSetStickerSetThumbnail_FORMAT_parseFromJSON(cJSON* FORMATJSON) {
+    telegram_bot_api_postSetStickerSetThumbnail_format_e FORMATVariable = 0;
     cJSON *FORMATVar = cJSON_GetObjectItemCaseSensitive(FORMATJSON, "format");
     if(!cJSON_IsString(FORMATVar) || (FORMATVar->valuestring == NULL))
     {
         goto end;
     }
-    FORMATVariable = setStickerSetThumbnailPost_FORMAT_FromString(FORMATVar->valuestring);
+    FORMATVariable = postSetStickerSetThumbnail_FORMAT_FromString(FORMATVar->valuestring);
     return FORMATVariable;
 end:
     return 0;
 }
 */
 
-// Functions for enum STICKERFORMAT for DefaultAPI_uploadStickerFilePost
+// Functions for enum STICKERFORMAT for DefaultAPI_postUploadStickerFile
 
-static char* uploadStickerFilePost_STICKERFORMAT_ToString(telegram_bot_api_uploadStickerFilePost_sticker_format_e STICKERFORMAT){
+static char* postUploadStickerFile_STICKERFORMAT_ToString(telegram_bot_api_postUploadStickerFile_sticker_format_e STICKERFORMAT){
     char *STICKERFORMATArray[] =  { "NULL", "static", "animated", "video" };
     return STICKERFORMATArray[STICKERFORMAT];
 }
 
-static telegram_bot_api_uploadStickerFilePost_sticker_format_e uploadStickerFilePost_STICKERFORMAT_FromString(char* STICKERFORMAT){
+static telegram_bot_api_postUploadStickerFile_sticker_format_e postUploadStickerFile_STICKERFORMAT_FromString(char* STICKERFORMAT){
     int stringToReturn = 0;
     char *STICKERFORMATArray[] =  { "NULL", "static", "animated", "video" };
     size_t sizeofArray = sizeof(STICKERFORMATArray) / sizeof(STICKERFORMATArray[0]);
@@ -416,12 +416,12 @@ static telegram_bot_api_uploadStickerFilePost_sticker_format_e uploadStickerFile
 }
 
 /*
-// Function uploadStickerFilePost_STICKERFORMAT_convertToJSON is not currently used,
+// Function postUploadStickerFile_STICKERFORMAT_convertToJSON is not currently used,
 // since conversion to JSON passes through the conversion of the model, and ToString. The function is kept for future reference.
 //
-static cJSON *uploadStickerFilePost_STICKERFORMAT_convertToJSON(telegram_bot_api_uploadStickerFilePost_sticker_format_e STICKERFORMAT) {
+static cJSON *postUploadStickerFile_STICKERFORMAT_convertToJSON(telegram_bot_api_postUploadStickerFile_sticker_format_e STICKERFORMAT) {
     cJSON *item = cJSON_CreateObject();
-    if(cJSON_AddStringToObject(item, "sticker_format", uploadStickerFilePost_STICKERFORMAT_ToString(STICKERFORMAT)) == NULL) {
+    if(cJSON_AddStringToObject(item, "sticker_format", postUploadStickerFile_STICKERFORMAT_ToString(STICKERFORMAT)) == NULL) {
         goto fail;
     }
     return item;
@@ -430,17 +430,17 @@ static cJSON *uploadStickerFilePost_STICKERFORMAT_convertToJSON(telegram_bot_api
     return NULL;
 }
 
-// Function uploadStickerFilePost_STICKERFORMAT_parseFromJSON is not currently used,
+// Function postUploadStickerFile_STICKERFORMAT_parseFromJSON is not currently used,
 // since conversion from JSON passes through the conversion of the model, and FromString. The function is kept for future reference.
 //
-static telegram_bot_api_uploadStickerFilePost_sticker_format_e uploadStickerFilePost_STICKERFORMAT_parseFromJSON(cJSON* STICKERFORMATJSON) {
-    telegram_bot_api_uploadStickerFilePost_sticker_format_e STICKERFORMATVariable = 0;
+static telegram_bot_api_postUploadStickerFile_sticker_format_e postUploadStickerFile_STICKERFORMAT_parseFromJSON(cJSON* STICKERFORMATJSON) {
+    telegram_bot_api_postUploadStickerFile_sticker_format_e STICKERFORMATVariable = 0;
     cJSON *STICKERFORMATVar = cJSON_GetObjectItemCaseSensitive(STICKERFORMATJSON, "sticker_format");
     if(!cJSON_IsString(STICKERFORMATVar) || (STICKERFORMATVar->valuestring == NULL))
     {
         goto end;
     }
-    STICKERFORMATVariable = uploadStickerFilePost_STICKERFORMAT_FromString(STICKERFORMATVar->valuestring);
+    STICKERFORMATVariable = postUploadStickerFile_STICKERFORMAT_FromString(STICKERFORMATVar->valuestring);
     return STICKERFORMATVariable;
 end:
     return 0;
@@ -448,10 +448,12 @@ end:
 */
 
 
+// addStickerToSet
+//
 // Use this method to add a new sticker to a set created by the bot. Emoji sticker sets can have up to 200 stickers. Other sticker sets can have up to 120 stickers. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_addStickerToSetPost(apiClient_t *apiClient, int *user_id, char *name, input_sticker_t *sticker)
+post_set_webhook_200_response_t*
+DefaultAPI_postAddStickerToSet(apiClient_t *apiClient, int *user_id, char *name, input_sticker_t *sticker)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -525,14 +527,18 @@ DefaultAPI_addStickerToSetPost(apiClient_t *apiClient, int *user_id, char *name,
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -577,10 +583,12 @@ end:
 
 }
 
+// answerCallbackQuery
+//
 // Use this method to send answers to callback queries sent from [inline keyboards](https://core.telegram.org/bots/features#inline-keyboards). The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, *True* is returned.  Alternatively, the user can be redirected to the specified Game URL. For this option to work, you must first create a game for your bot via [@BotFather](https://t.me/botfather) and accept the terms. Otherwise, you may use links like `t.me/your_bot?start=XXXX` that open your bot with a parameter.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_answerCallbackQueryPost(apiClient_t *apiClient, char *callback_query_id, char *text, int *show_alert, char *url, int *cache_time)
+post_set_webhook_200_response_t*
+DefaultAPI_postAnswerCallbackQuery(apiClient_t *apiClient, char *callback_query_id, char *text, int *show_alert, char *url, int *cache_time)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -681,14 +689,18 @@ DefaultAPI_answerCallbackQueryPost(apiClient_t *apiClient, char *callback_query_
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -751,10 +763,12 @@ end:
 
 }
 
+// answerInlineQuery
+//
 // Use this method to send answers to an inline query. On success, *True* is returned.   No more than **50** results per query are allowed.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_answerInlineQueryPost(apiClient_t *apiClient, char *inline_query_id, list_t *results, int *cache_time, int *is_personal, char *next_offset, inline_query_results_button_t *button)
+post_set_webhook_200_response_t*
+DefaultAPI_postAnswerInlineQuery(apiClient_t *apiClient, char *inline_query_id, list_t *results, int *cache_time, int *is_personal, char *next_offset, inline_query_results_button_t *button)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -867,14 +881,18 @@ DefaultAPI_answerInlineQueryPost(apiClient_t *apiClient, char *inline_query_id, 
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -938,10 +956,12 @@ end:
 
 }
 
+// answerPreCheckoutQuery
+//
 // Once the user has confirmed their payment and shipping details, the Bot API sends the final confirmation in the form of an [Update](https://core.telegram.org/bots/api/#update) with the field *pre\\_checkout\\_query*. Use this method to respond to such pre-checkout queries. On success, *True* is returned. **Note:** The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_answerPreCheckoutQueryPost(apiClient_t *apiClient, char *pre_checkout_query_id, int *ok, char *error_message)
+post_set_webhook_200_response_t*
+DefaultAPI_postAnswerPreCheckoutQuery(apiClient_t *apiClient, char *pre_checkout_query_id, int *ok, char *error_message)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -1017,14 +1037,18 @@ DefaultAPI_answerPreCheckoutQueryPost(apiClient_t *apiClient, char *pre_checkout
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -1073,10 +1097,12 @@ end:
 
 }
 
+// answerShippingQuery
+//
 // If you sent an invoice requesting a shipping address and the parameter *is\\_flexible* was specified, the Bot API will send an [Update](https://core.telegram.org/bots/api/#update) with a *shipping\\_query* field to the bot. Use this method to reply to shipping queries. On success, *True* is returned.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_answerShippingQueryPost(apiClient_t *apiClient, char *shipping_query_id, int *ok, list_t *shipping_options, char *error_message)
+post_set_webhook_200_response_t*
+DefaultAPI_postAnswerShippingQuery(apiClient_t *apiClient, char *shipping_query_id, int *ok, list_t *shipping_options, char *error_message)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -1164,14 +1190,18 @@ DefaultAPI_answerShippingQueryPost(apiClient_t *apiClient, char *shipping_query_
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -1225,10 +1255,12 @@ end:
 
 }
 
+// answerWebAppQuery
+//
 // Use this method to set the result of an interaction with a [Web App](https://core.telegram.org/bots/webapps) and send a corresponding message on behalf of the user to the chat from which the query originated. On success, a [SentWebAppMessage](https://core.telegram.org/bots/api/#sentwebappmessage) object is returned.
 //
-_answer_web_app_query_post_200_response_t*
-DefaultAPI_answerWebAppQueryPost(apiClient_t *apiClient, char *web_app_query_id, inline_query_result_t *result)
+post_answer_web_app_query_200_response_t*
+DefaultAPI_postAnswerWebAppQuery(apiClient_t *apiClient, char *web_app_query_id, inline_query_result_t *result)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -1291,14 +1323,18 @@ DefaultAPI_answerWebAppQueryPost(apiClient_t *apiClient, char *web_app_query_id,
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _answer_web_app_query_post_200_response_t *elementToReturn = NULL;
+    post_answer_web_app_query_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _answer_web_app_query_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_answer_web_app_query_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -1338,10 +1374,12 @@ end:
 
 }
 
+// approveChatJoinRequest
+//
 // Use this method to approve a chat join request. The bot must be an administrator in the chat for this to work and must have the *can\\_invite\\_users* administrator right. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_approveChatJoinRequestPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, int *user_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postApproveChatJoinRequest(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, int *user_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -1363,7 +1401,7 @@ DefaultAPI_approveChatJoinRequestPost(apiClient_t *apiClient, _send_message_post
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -1405,14 +1443,18 @@ DefaultAPI_approveChatJoinRequestPost(apiClient_t *apiClient, _send_message_post
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -1448,10 +1490,12 @@ end:
 
 }
 
+// banChatMember
+//
 // Use this method to ban a user in a group, a supergroup or a channel. In the case of supergroups and channels, the user will not be able to return to the chat on their own using invite links, etc., unless [unbanned](https://core.telegram.org/bots/api/#unbanchatmember) first. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_banChatMemberPost(apiClient_t *apiClient, _ban_chat_member_post_request_chat_id_t *chat_id, int *user_id, int *until_date, int *revoke_messages)
+post_set_webhook_200_response_t*
+DefaultAPI_postBanChatMember(apiClient_t *apiClient, post_ban_chat_member_request_chat_id_t *chat_id, int *user_id, int *until_date, int *revoke_messages)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -1473,7 +1517,7 @@ DefaultAPI_banChatMemberPost(apiClient_t *apiClient, _ban_chat_member_post_reque
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _ban_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_ban_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -1541,14 +1585,18 @@ DefaultAPI_banChatMemberPost(apiClient_t *apiClient, _ban_chat_member_post_reque
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -1594,10 +1642,12 @@ end:
 
 }
 
+// banChatSenderChat
+//
 // Use this method to ban a channel chat in a supergroup or a channel. Until the chat is [unbanned](https://core.telegram.org/bots/api/#unbanchatsenderchat), the owner of the banned chat won't be able to send messages on behalf of **any of their channels**. The bot must be an administrator in the supergroup or channel for this to work and must have the appropriate administrator rights. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_banChatSenderChatPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, int *sender_chat_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postBanChatSenderChat(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, int *sender_chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -1619,7 +1669,7 @@ DefaultAPI_banChatSenderChatPost(apiClient_t *apiClient, _send_message_post_requ
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -1661,14 +1711,18 @@ DefaultAPI_banChatSenderChatPost(apiClient_t *apiClient, _send_message_post_requ
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -1704,10 +1758,90 @@ end:
 
 }
 
+// close
+//
+// Use this method to close the bot instance before moving it from one local server to another. You need to delete the webhook before calling this method to ensure that the bot isn't launched again after server restart. The method will return error 429 in the first 10 minutes after the bot is launched. Returns *True* on success. Requires no parameters.
+//
+post_set_webhook_200_response_t*
+DefaultAPI_postClose(apiClient_t *apiClient)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+    size_t     localVarBodyLength = 0;
+
+    // clear the error code from the previous api call
+    apiClient->response_code = 0;
+
+    // create the path
+    char *localVarPath = strdup("/close");
+
+
+
+
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    localVarBodyLength,
+                    "POST");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","");
+    //}
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 0) {
+    //    printf("%s\n","");
+    //}
+    //nonprimitive not container
+    post_set_webhook_200_response_t *elementToReturn = NULL;
+    if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
+        cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        cJSON_Delete(DefaultAPIlocalVarJSON);
+        if(elementToReturn == NULL) {
+            // return 0;
+        }
+    }
+
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// closeForumTopic
+//
 // Use this method to close an open topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the *can\\_manage\\_topics* administrator rights, unless it is the creator of the topic. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_closeForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id, int *message_thread_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postCloseForumTopic(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id, int *message_thread_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -1729,7 +1863,7 @@ DefaultAPI_closeForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_pos
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -1771,14 +1905,18 @@ DefaultAPI_closeForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_pos
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -1814,10 +1952,12 @@ end:
 
 }
 
+// closeGeneralForumTopic
+//
 // Use this method to close an open 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the *can\\_manage\\_topics* administrator rights. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_closeGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postCloseGeneralForumTopic(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -1839,7 +1979,7 @@ DefaultAPI_closeGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_mem
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -1868,14 +2008,18 @@ DefaultAPI_closeGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_mem
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -1906,82 +2050,12 @@ end:
 
 }
 
-// Use this method to close the bot instance before moving it from one local server to another. You need to delete the webhook before calling this method to ensure that the bot isn't launched again after server restart. The method will return error 429 in the first 10 minutes after the bot is launched. Returns *True* on success. Requires no parameters.
+// convertGiftToStars
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_closePost(apiClient_t *apiClient)
-{
-    list_t    *localVarQueryParameters = NULL;
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = NULL;
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = NULL;
-    char      *localVarBodyParameters = NULL;
-    size_t     localVarBodyLength = 0;
-
-    // clear the error code from the previous api call
-    apiClient->response_code = 0;
-
-    // create the path
-    char *localVarPath = strdup("/close");
-
-
-
-
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    localVarBodyLength,
-                    "POST");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","");
-    //}
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 0) {
-    //    printf("%s\n","");
-    //}
-    //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
-    if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
-        cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
-        cJSON_Delete(DefaultAPIlocalVarJSON);
-        if(elementToReturn == NULL) {
-            // return 0;
-        }
-    }
-
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    
-    
-    
-    list_freeList(localVarHeaderType);
-    
-    free(localVarPath);
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
 // Converts a given regular gift to Telegram Stars. Requires the *can\\_convert\\_gifts\\_to\\_stars* business bot right. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_convertGiftToStarsPost(apiClient_t *apiClient, char *business_connection_id, char *owned_gift_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postConvertGiftToStars(apiClient_t *apiClient, char *business_connection_id, char *owned_gift_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -2044,14 +2118,18 @@ DefaultAPI_convertGiftToStarsPost(apiClient_t *apiClient, char *business_connect
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -2095,10 +2173,12 @@ end:
 
 }
 
+// copyMessage
+//
 // Use this method to copy messages of any kind. Service messages, paid media messages, giveaway messages, giveaway winners messages, and invoice messages can't be copied. A quiz [poll](https://core.telegram.org/bots/api/#poll) can be copied only if the value of the field *correct\\_option\\_id* is known to the bot. The method is analogous to the method [forwardMessage](https://core.telegram.org/bots/api/#forwardmessage), but the copied message doesn't have a link to the original message. Returns the [MessageId](https://core.telegram.org/bots/api/#messageid) of the sent message on success.
 //
-_copy_message_post_200_response_t*
-DefaultAPI_copyMessagePost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, _forward_message_post_request_from_chat_id_t *from_chat_id, int *message_id, int *message_thread_id, int *video_start_timestamp, char *caption, char *parse_mode, list_t *caption_entities, int *show_caption_above_media, int *disable_notification, int *protect_content, int *allow_paid_broadcast, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_copy_message_200_response_t*
+DefaultAPI_postCopyMessage(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, post_forward_message_request_from_chat_id_t *from_chat_id, int *message_id, int *message_thread_id, int *video_start_timestamp, char *caption, char *parse_mode, list_t *caption_entities, int *show_caption_above_media, int *disable_notification, int *protect_content, int *allow_paid_broadcast, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -2120,7 +2200,7 @@ DefaultAPI_copyMessagePost(apiClient_t *apiClient, _send_message_post_request_ch
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -2145,7 +2225,7 @@ DefaultAPI_copyMessagePost(apiClient_t *apiClient, _send_message_post_request_ch
 
     // form parameters
     char *keyForm_from_chat_id = NULL;
-    _forward_message_post_request_from_chat_id_t * valueForm_from_chat_id = 0;
+    post_forward_message_request_from_chat_id_t * valueForm_from_chat_id = 0;
     keyValuePair_t *keyPairForm_from_chat_id = 0;
     if (from_chat_id != NULL)
     {
@@ -2283,7 +2363,7 @@ DefaultAPI_copyMessagePost(apiClient_t *apiClient, _send_message_post_request_ch
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -2312,14 +2392,18 @@ DefaultAPI_copyMessagePost(apiClient_t *apiClient, _send_message_post_request_ch
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _copy_message_post_200_response_t *elementToReturn = NULL;
+    post_copy_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _copy_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_copy_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -2423,10 +2507,12 @@ end:
 
 }
 
+// copyMessages
+//
 // Use this method to copy messages of any kind. If some of the specified messages can't be found or copied, they are skipped. Service messages, paid media messages, giveaway messages, giveaway winners messages, and invoice messages can't be copied. A quiz [poll](https://core.telegram.org/bots/api/#poll) can be copied only if the value of the field *correct\\_option\\_id* is known to the bot. The method is analogous to the method [forwardMessages](https://core.telegram.org/bots/api/#forwardmessages), but the copied messages don't have a link to the original message. Album grouping is kept for copied messages. On success, an array of [MessageId](https://core.telegram.org/bots/api/#messageid) of the sent messages is returned.
 //
-_forward_messages_post_200_response_t*
-DefaultAPI_copyMessagesPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, _forward_messages_post_request_from_chat_id_t *from_chat_id, list_t *message_ids, int *message_thread_id, int *disable_notification, int *protect_content, int *remove_caption)
+post_forward_messages_200_response_t*
+DefaultAPI_postCopyMessages(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, post_forward_messages_request_from_chat_id_t *from_chat_id, list_t *message_ids, int *message_thread_id, int *disable_notification, int *protect_content, int *remove_caption)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -2448,7 +2534,7 @@ DefaultAPI_copyMessagesPost(apiClient_t *apiClient, _send_message_post_request_c
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -2473,7 +2559,7 @@ DefaultAPI_copyMessagesPost(apiClient_t *apiClient, _send_message_post_request_c
 
     // form parameters
     char *keyForm_from_chat_id = NULL;
-    _forward_messages_post_request_from_chat_id_t * valueForm_from_chat_id = 0;
+    post_forward_messages_request_from_chat_id_t * valueForm_from_chat_id = 0;
     keyValuePair_t *keyPairForm_from_chat_id = 0;
     if (from_chat_id != NULL)
     {
@@ -2553,14 +2639,18 @@ DefaultAPI_copyMessagesPost(apiClient_t *apiClient, _send_message_post_request_c
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _forward_messages_post_200_response_t *elementToReturn = NULL;
+    post_forward_messages_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _forward_messages_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_forward_messages_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -2621,10 +2711,12 @@ end:
 
 }
 
+// createChatInviteLink
+//
 // Use this method to create an additional invite link for a chat. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. The link can be revoked using the method [revokeChatInviteLink](https://core.telegram.org/bots/api/#revokechatinvitelink). Returns the new invite link as [ChatInviteLink](https://core.telegram.org/bots/api/#chatinvitelink) object.
 //
-_create_chat_invite_link_post_200_response_t*
-DefaultAPI_createChatInviteLinkPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, char *name, int *expire_date, int *member_limit, int *creates_join_request)
+post_create_chat_invite_link_200_response_t*
+DefaultAPI_postCreateChatInviteLink(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, char *name, int *expire_date, int *member_limit, int *creates_join_request)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -2646,7 +2738,7 @@ DefaultAPI_createChatInviteLinkPost(apiClient_t *apiClient, _send_message_post_r
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -2726,14 +2818,18 @@ DefaultAPI_createChatInviteLinkPost(apiClient_t *apiClient, _send_message_post_r
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _create_chat_invite_link_post_200_response_t *elementToReturn = NULL;
+    post_create_chat_invite_link_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _create_chat_invite_link_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_create_chat_invite_link_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -2788,10 +2884,12 @@ end:
 
 }
 
+// createChatSubscriptionInviteLink
+//
 // Use this method to create a [subscription invite link](https://telegram.org/blog/superchannels-star-reactions-subscriptions#star-subscriptions) for a channel chat. The bot must have the *can\\_invite\\_users* administrator rights. The link can be edited using the method [editChatSubscriptionInviteLink](https://core.telegram.org/bots/api/#editchatsubscriptioninvitelink) or revoked using the method [revokeChatInviteLink](https://core.telegram.org/bots/api/#revokechatinvitelink). Returns the new invite link as a [ChatInviteLink](https://core.telegram.org/bots/api/#chatinvitelink) object.
 //
-_create_chat_invite_link_post_200_response_t*
-DefaultAPI_createChatSubscriptionInviteLinkPost(apiClient_t *apiClient, _create_chat_subscription_invite_link_post_request_chat_id_t *chat_id, int *subscription_period, int *subscription_price, char *name)
+post_create_chat_invite_link_200_response_t*
+DefaultAPI_postCreateChatSubscriptionInviteLink(apiClient_t *apiClient, post_create_chat_subscription_invite_link_request_chat_id_t *chat_id, int *subscription_period, int *subscription_price, char *name)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -2813,7 +2911,7 @@ DefaultAPI_createChatSubscriptionInviteLinkPost(apiClient_t *apiClient, _create_
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _create_chat_subscription_invite_link_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_create_chat_subscription_invite_link_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -2880,14 +2978,18 @@ DefaultAPI_createChatSubscriptionInviteLinkPost(apiClient_t *apiClient, _create_
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _create_chat_invite_link_post_200_response_t *elementToReturn = NULL;
+    post_create_chat_invite_link_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _create_chat_invite_link_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_create_chat_invite_link_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -2937,10 +3039,12 @@ end:
 
 }
 
+// createForumTopic
+//
 // Use this method to create a topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the *can\\_manage\\_topics* administrator rights. Returns information about the created topic as a [ForumTopic](https://core.telegram.org/bots/api/#forumtopic) object.
 //
-_create_forum_topic_post_200_response_t*
-DefaultAPI_createForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id, char *name, int *icon_color, char *icon_custom_emoji_id)
+post_create_forum_topic_200_response_t*
+DefaultAPI_postCreateForumTopic(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id, char *name, int *icon_color, char *icon_custom_emoji_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -2962,7 +3066,7 @@ DefaultAPI_createForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_po
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -3028,14 +3132,18 @@ DefaultAPI_createForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_po
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _create_forum_topic_post_200_response_t *elementToReturn = NULL;
+    post_create_forum_topic_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _create_forum_topic_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_create_forum_topic_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -3089,10 +3197,12 @@ end:
 
 }
 
+// createInvoiceLink
+//
 // Use this method to create a link for an invoice. Returns the created invoice link as *String* on success.
 //
-_export_chat_invite_link_post_200_response_t*
-DefaultAPI_createInvoiceLinkPost(apiClient_t *apiClient, char *title, char *description, char *payload, char *currency, list_t *prices, char *business_connection_id, char *provider_token, int *subscription_period, int *max_tip_amount, list_t *suggested_tip_amounts, char *provider_data, char *photo_url, int *photo_size, int *photo_width, int *photo_height, int *need_name, int *need_phone_number, int *need_email, int *need_shipping_address, int *send_phone_number_to_provider, int *send_email_to_provider, int *is_flexible)
+post_export_chat_invite_link_200_response_t*
+DefaultAPI_postCreateInvoiceLink(apiClient_t *apiClient, char *title, char *description, char *payload, char *currency, list_t *prices, char *business_connection_id, char *provider_token, int *subscription_period, int *max_tip_amount, list_t *suggested_tip_amounts, char *provider_data, char *photo_url, int *photo_size, int *photo_width, int *photo_height, int *need_name, int *need_phone_number, int *need_email, int *need_shipping_address, int *send_phone_number_to_provider, int *send_email_to_provider, int *is_flexible)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -3407,14 +3517,18 @@ DefaultAPI_createInvoiceLinkPost(apiClient_t *apiClient, char *title, char *desc
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _export_chat_invite_link_post_200_response_t *elementToReturn = NULL;
+    post_export_chat_invite_link_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _export_chat_invite_link_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_export_chat_invite_link_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -3582,10 +3696,12 @@ end:
 
 }
 
+// createNewStickerSet
+//
 // Use this method to create a new sticker set owned by a user. The bot will be able to edit the sticker set thus created. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_createNewStickerSetPost(apiClient_t *apiClient, int *user_id, char *name, char *title, list_t *stickers, telegram_bot_api_createNewStickerSetPost_sticker_type_e sticker_type, int *needs_repainting)
+post_set_webhook_200_response_t*
+DefaultAPI_postCreateNewStickerSet(apiClient_t *apiClient, int *user_id, char *name, char *title, list_t *stickers, telegram_bot_api_postCreateNewStickerSet_sticker_type_e sticker_type, int *needs_repainting)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -3656,7 +3772,7 @@ DefaultAPI_createNewStickerSetPost(apiClient_t *apiClient, int *user_id, char *n
 
     // form parameters
     char *keyForm_sticker_type = NULL;
-    telegram_bot_api_createNewStickerSetPost_sticker_type_e valueForm_sticker_type = 0;
+    telegram_bot_api_postCreateNewStickerSet_sticker_type_e valueForm_sticker_type = 0;
     keyValuePair_t *keyPairForm_sticker_type = 0;
     if (sticker_type != 0)
     {
@@ -3696,14 +3812,18 @@ DefaultAPI_createNewStickerSetPost(apiClient_t *apiClient, int *user_id, char *n
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -3770,10 +3890,12 @@ end:
 
 }
 
+// declineChatJoinRequest
+//
 // Use this method to decline a chat join request. The bot must be an administrator in the chat for this to work and must have the *can\\_invite\\_users* administrator right. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_declineChatJoinRequestPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, int *user_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postDeclineChatJoinRequest(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, int *user_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -3795,7 +3917,7 @@ DefaultAPI_declineChatJoinRequestPost(apiClient_t *apiClient, _send_message_post
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -3837,14 +3959,18 @@ DefaultAPI_declineChatJoinRequestPost(apiClient_t *apiClient, _send_message_post
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -3880,10 +4006,12 @@ end:
 
 }
 
+// deleteBusinessMessages
+//
 // Delete messages on behalf of a business account. Requires the *can\\_delete\\_sent\\_messages* business bot right to delete messages sent by the bot itself, or the *can\\_delete\\_all\\_messages* business bot right to delete any message. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_deleteBusinessMessagesPost(apiClient_t *apiClient, char *business_connection_id, list_t *message_ids)
+post_set_webhook_200_response_t*
+DefaultAPI_postDeleteBusinessMessages(apiClient_t *apiClient, char *business_connection_id, list_t *message_ids)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -3946,14 +4074,18 @@ DefaultAPI_deleteBusinessMessagesPost(apiClient_t *apiClient, char *business_con
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -3993,10 +4125,12 @@ end:
 
 }
 
+// deleteChatPhoto
+//
 // Use this method to delete a chat photo. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_deleteChatPhotoPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postDeleteChatPhoto(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -4018,7 +4152,7 @@ DefaultAPI_deleteChatPhotoPost(apiClient_t *apiClient, _send_message_post_reques
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -4047,14 +4181,18 @@ DefaultAPI_deleteChatPhotoPost(apiClient_t *apiClient, _send_message_post_reques
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -4085,10 +4223,12 @@ end:
 
 }
 
+// deleteChatStickerSet
+//
 // Use this method to delete a group sticker set from a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Use the field *can\\_set\\_sticker\\_set* optionally returned in [getChat](https://core.telegram.org/bots/api/#getchat) requests to check if the bot can use this method. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_deleteChatStickerSetPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postDeleteChatStickerSet(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -4110,7 +4250,7 @@ DefaultAPI_deleteChatStickerSetPost(apiClient_t *apiClient, _restrict_chat_membe
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -4139,14 +4279,18 @@ DefaultAPI_deleteChatStickerSetPost(apiClient_t *apiClient, _restrict_chat_membe
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -4177,10 +4321,12 @@ end:
 
 }
 
+// deleteForumTopic
+//
 // Use this method to delete a forum topic along with all its messages in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the *can\\_delete\\_messages* administrator rights. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_deleteForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id, int *message_thread_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postDeleteForumTopic(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id, int *message_thread_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -4202,7 +4348,7 @@ DefaultAPI_deleteForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_po
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -4244,14 +4390,18 @@ DefaultAPI_deleteForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_po
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -4287,10 +4437,12 @@ end:
 
 }
 
+// deleteMessage
+//
 // Use this method to delete a message, including service messages, with the following limitations:   \\- A message can only be deleted if it was sent less than 48 hours ago.   \\- Service messages about a supergroup, channel, or forum topic creation can't be deleted.   \\- A dice message in a private chat can only be deleted if it was sent more than 24 hours ago.   \\- Bots can delete outgoing messages in private chats, groups, and supergroups.   \\- Bots can delete incoming messages in private chats.   \\- Bots granted *can\\_post\\_messages* permissions can delete outgoing messages in channels.   \\- If the bot is an administrator of a group, it can delete any message there.   \\- If the bot has *can\\_delete\\_messages* permission in a supergroup or a channel, it can delete any message there.   Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_deleteMessagePost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, int *message_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postDeleteMessage(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, int *message_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -4312,7 +4464,7 @@ DefaultAPI_deleteMessagePost(apiClient_t *apiClient, _send_message_post_request_
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -4354,14 +4506,18 @@ DefaultAPI_deleteMessagePost(apiClient_t *apiClient, _send_message_post_request_
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -4397,10 +4553,12 @@ end:
 
 }
 
+// deleteMessages
+//
 // Use this method to delete multiple messages simultaneously. If some of the specified messages can't be found, they are skipped. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_deleteMessagesPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, list_t *message_ids)
+post_set_webhook_200_response_t*
+DefaultAPI_postDeleteMessages(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, list_t *message_ids)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -4422,7 +4580,7 @@ DefaultAPI_deleteMessagesPost(apiClient_t *apiClient, _send_message_post_request
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -4463,14 +4621,18 @@ DefaultAPI_deleteMessagesPost(apiClient_t *apiClient, _send_message_post_request
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -4506,10 +4668,12 @@ end:
 
 }
 
+// deleteMyCommands
+//
 // Use this method to delete the list of the bot's commands for the given scope and user language. After deletion, [higher level commands](https://core.telegram.org/bots/api/#determining-list-of-commands) will be shown to affected users. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_deleteMyCommandsPost(apiClient_t *apiClient, bot_command_scope_t *scope, char *language_code)
+post_set_webhook_200_response_t*
+DefaultAPI_postDeleteMyCommands(apiClient_t *apiClient, bot_command_scope_t *scope, char *language_code)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -4572,14 +4736,18 @@ DefaultAPI_deleteMyCommandsPost(apiClient_t *apiClient, bot_command_scope_t *sco
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -4619,10 +4787,12 @@ end:
 
 }
 
+// deleteStickerFromSet
+//
 // Use this method to delete a sticker from a set created by the bot. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_deleteStickerFromSetPost(apiClient_t *apiClient, char *sticker)
+post_set_webhook_200_response_t*
+DefaultAPI_postDeleteStickerFromSet(apiClient_t *apiClient, char *sticker)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -4673,14 +4843,18 @@ DefaultAPI_deleteStickerFromSetPost(apiClient_t *apiClient, char *sticker)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -4715,10 +4889,12 @@ end:
 
 }
 
+// deleteStickerSet
+//
 // Use this method to delete a sticker set that was created by the bot. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_deleteStickerSetPost(apiClient_t *apiClient, char *name)
+post_set_webhook_200_response_t*
+DefaultAPI_postDeleteStickerSet(apiClient_t *apiClient, char *name)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -4769,14 +4945,18 @@ DefaultAPI_deleteStickerSetPost(apiClient_t *apiClient, char *name)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -4811,10 +4991,12 @@ end:
 
 }
 
+// deleteStory
+//
 // Deletes a story previously posted by the bot on behalf of a managed business account. Requires the *can\\_manage\\_stories* business bot right. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_deleteStoryPost(apiClient_t *apiClient, char *business_connection_id, int *story_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postDeleteStory(apiClient_t *apiClient, char *business_connection_id, int *story_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -4878,14 +5060,18 @@ DefaultAPI_deleteStoryPost(apiClient_t *apiClient, char *business_connection_id,
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -4925,10 +5111,12 @@ end:
 
 }
 
+// deleteWebhook
+//
 // Use this method to remove webhook integration if you decide to switch back to [getUpdates](https://core.telegram.org/bots/api/#getupdates). Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_deleteWebhookPost(apiClient_t *apiClient, int *drop_pending_updates)
+post_set_webhook_200_response_t*
+DefaultAPI_postDeleteWebhook(apiClient_t *apiClient, int *drop_pending_updates)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -4980,14 +5168,18 @@ DefaultAPI_deleteWebhookPost(apiClient_t *apiClient, int *drop_pending_updates)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -5018,10 +5210,12 @@ end:
 
 }
 
+// editChatInviteLink
+//
 // Use this method to edit a non-primary invite link created by the bot. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Returns the edited invite link as a [ChatInviteLink](https://core.telegram.org/bots/api/#chatinvitelink) object.
 //
-_create_chat_invite_link_post_200_response_t*
-DefaultAPI_editChatInviteLinkPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, char *invite_link, char *name, int *expire_date, int *member_limit, int *creates_join_request)
+post_create_chat_invite_link_200_response_t*
+DefaultAPI_postEditChatInviteLink(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, char *invite_link, char *name, int *expire_date, int *member_limit, int *creates_join_request)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -5043,7 +5237,7 @@ DefaultAPI_editChatInviteLinkPost(apiClient_t *apiClient, _send_message_post_req
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -5135,14 +5329,18 @@ DefaultAPI_editChatInviteLinkPost(apiClient_t *apiClient, _send_message_post_req
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _create_chat_invite_link_post_200_response_t *elementToReturn = NULL;
+    post_create_chat_invite_link_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _create_chat_invite_link_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_create_chat_invite_link_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -5206,10 +5404,12 @@ end:
 
 }
 
+// editChatSubscriptionInviteLink
+//
 // Use this method to edit a subscription invite link created by the bot. The bot must have the *can\\_invite\\_users* administrator rights. Returns the edited invite link as a [ChatInviteLink](https://core.telegram.org/bots/api/#chatinvitelink) object.
 //
-_create_chat_invite_link_post_200_response_t*
-DefaultAPI_editChatSubscriptionInviteLinkPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, char *invite_link, char *name)
+post_create_chat_invite_link_200_response_t*
+DefaultAPI_postEditChatSubscriptionInviteLink(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, char *invite_link, char *name)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -5231,7 +5431,7 @@ DefaultAPI_editChatSubscriptionInviteLinkPost(apiClient_t *apiClient, _send_mess
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -5284,14 +5484,18 @@ DefaultAPI_editChatSubscriptionInviteLinkPost(apiClient_t *apiClient, _send_mess
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _create_chat_invite_link_post_200_response_t *elementToReturn = NULL;
+    post_create_chat_invite_link_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _create_chat_invite_link_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_create_chat_invite_link_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -5340,10 +5544,12 @@ end:
 
 }
 
+// editForumTopic
+//
 // Use this method to edit name and icon of a topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the *can\\_manage\\_topics* administrator rights, unless it is the creator of the topic. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_editForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id, int *message_thread_id, char *name, char *icon_custom_emoji_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postEditForumTopic(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id, int *message_thread_id, char *name, char *icon_custom_emoji_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -5365,7 +5571,7 @@ DefaultAPI_editForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_post
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -5431,14 +5637,18 @@ DefaultAPI_editForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_post
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -5492,10 +5702,12 @@ end:
 
 }
 
+// editGeneralForumTopic
+//
 // Use this method to edit the name of the 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the *can\\_manage\\_topics* administrator rights. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_editGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id, char *name)
+post_set_webhook_200_response_t*
+DefaultAPI_postEditGeneralForumTopic(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id, char *name)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -5517,7 +5729,7 @@ DefaultAPI_editGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_memb
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -5558,14 +5770,18 @@ DefaultAPI_editGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_memb
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -5605,10 +5821,12 @@ end:
 
 }
 
+// editMessageCaption
+//
 // Use this method to edit captions of messages. On success, if the edited message is not an inline message, the edited [Message](https://core.telegram.org/bots/api/#message) is returned, otherwise *True* is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within **48 hours** from the time they were sent.
 //
-_edit_message_text_post_200_response_t*
-DefaultAPI_editMessageCaptionPost(apiClient_t *apiClient, char *business_connection_id, _edit_message_text_post_request_chat_id_t *chat_id, int *message_id, char *inline_message_id, char *caption, char *parse_mode, list_t *caption_entities, int *show_caption_above_media, inline_keyboard_markup_t *reply_markup)
+post_edit_message_text_200_response_t*
+DefaultAPI_postEditMessageCaption(apiClient_t *apiClient, char *business_connection_id, post_edit_message_text_request_chat_id_t *chat_id, int *message_id, char *inline_message_id, char *caption, char *parse_mode, list_t *caption_entities, int *show_caption_above_media, inline_keyboard_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -5642,7 +5860,7 @@ DefaultAPI_editMessageCaptionPost(apiClient_t *apiClient, char *business_connect
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _edit_message_text_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_edit_message_text_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -5757,14 +5975,18 @@ DefaultAPI_editMessageCaptionPost(apiClient_t *apiClient, char *business_connect
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _edit_message_text_post_200_response_t *elementToReturn = NULL;
+    post_edit_message_text_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _edit_message_text_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_edit_message_text_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -5851,10 +6073,12 @@ end:
 
 }
 
+// editMessageLiveLocation
+//
 // Use this method to edit live location messages. A location can be edited until its *live\\_period* expires or editing is explicitly disabled by a call to [stopMessageLiveLocation](https://core.telegram.org/bots/api/#stopmessagelivelocation). On success, if the edited message is not an inline message, the edited [Message](https://core.telegram.org/bots/api/#message) is returned, otherwise *True* is returned.
 //
-_edit_message_text_post_200_response_t*
-DefaultAPI_editMessageLiveLocationPost(apiClient_t *apiClient, double latitude, double longitude, char *business_connection_id, _edit_message_text_post_request_chat_id_t *chat_id, int *message_id, char *inline_message_id, int *live_period, double horizontal_accuracy, int *heading, int *proximity_alert_radius, inline_keyboard_markup_t *reply_markup)
+post_edit_message_text_200_response_t*
+DefaultAPI_postEditMessageLiveLocation(apiClient_t *apiClient, double latitude, double longitude, char *business_connection_id, post_edit_message_text_request_chat_id_t *chat_id, int *message_id, char *inline_message_id, int *live_period, double horizontal_accuracy, int *heading, int *proximity_alert_radius, inline_keyboard_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -5888,7 +6112,7 @@ DefaultAPI_editMessageLiveLocationPost(apiClient_t *apiClient, double latitude, 
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _edit_message_text_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_edit_message_text_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -6029,14 +6253,18 @@ DefaultAPI_editMessageLiveLocationPost(apiClient_t *apiClient, double latitude, 
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _edit_message_text_post_200_response_t *elementToReturn = NULL;
+    post_edit_message_text_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _edit_message_text_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_edit_message_text_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -6125,10 +6353,12 @@ end:
 
 }
 
+// editMessageMedia
+//
 // Use this method to edit animation, audio, document, photo, or video messages, or to add media to text messages. If a message is part of a message album, then it can be edited only to an audio for audio albums, only to a document for document albums and to a photo or a video otherwise. When an inline message is edited, a new file can't be uploaded; use a previously uploaded file via its file\\_id or specify a URL. On success, if the edited message is not an inline message, the edited [Message](https://core.telegram.org/bots/api/#message) is returned, otherwise *True* is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within **48 hours** from the time they were sent.
 //
-_edit_message_text_post_200_response_t*
-DefaultAPI_editMessageMediaPost(apiClient_t *apiClient, input_media_t *media, char *business_connection_id, _edit_message_text_post_request_chat_id_t *chat_id, int *message_id, char *inline_message_id, inline_keyboard_markup_t *reply_markup)
+post_edit_message_text_200_response_t*
+DefaultAPI_postEditMessageMedia(apiClient_t *apiClient, input_media_t *media, char *business_connection_id, post_edit_message_text_request_chat_id_t *chat_id, int *message_id, char *inline_message_id, inline_keyboard_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -6162,7 +6392,7 @@ DefaultAPI_editMessageMediaPost(apiClient_t *apiClient, input_media_t *media, ch
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _edit_message_text_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_edit_message_text_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -6238,14 +6468,18 @@ DefaultAPI_editMessageMediaPost(apiClient_t *apiClient, input_media_t *media, ch
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _edit_message_text_post_200_response_t *elementToReturn = NULL;
+    post_edit_message_text_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _edit_message_text_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_edit_message_text_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -6309,10 +6543,12 @@ end:
 
 }
 
+// editMessageReplyMarkup
+//
 // Use this method to edit only the reply markup of messages. On success, if the edited message is not an inline message, the edited [Message](https://core.telegram.org/bots/api/#message) is returned, otherwise *True* is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within **48 hours** from the time they were sent.
 //
-_edit_message_text_post_200_response_t*
-DefaultAPI_editMessageReplyMarkupPost(apiClient_t *apiClient, char *business_connection_id, _edit_message_text_post_request_chat_id_t *chat_id, int *message_id, char *inline_message_id, inline_keyboard_markup_t *reply_markup)
+post_edit_message_text_200_response_t*
+DefaultAPI_postEditMessageReplyMarkup(apiClient_t *apiClient, char *business_connection_id, post_edit_message_text_request_chat_id_t *chat_id, int *message_id, char *inline_message_id, inline_keyboard_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -6346,7 +6582,7 @@ DefaultAPI_editMessageReplyMarkupPost(apiClient_t *apiClient, char *business_con
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _edit_message_text_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_edit_message_text_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -6412,14 +6648,18 @@ DefaultAPI_editMessageReplyMarkupPost(apiClient_t *apiClient, char *business_con
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _edit_message_text_post_200_response_t *elementToReturn = NULL;
+    post_edit_message_text_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _edit_message_text_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_edit_message_text_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -6478,10 +6718,12 @@ end:
 
 }
 
+// editMessageText
+//
 // Use this method to edit text and [game](https://core.telegram.org/bots/api/#games) messages. On success, if the edited message is not an inline message, the edited [Message](https://core.telegram.org/bots/api/#message) is returned, otherwise *True* is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within **48 hours** from the time they were sent.
 //
-_edit_message_text_post_200_response_t*
-DefaultAPI_editMessageTextPost(apiClient_t *apiClient, char *text, char *business_connection_id, _edit_message_text_post_request_chat_id_t *chat_id, int *message_id, char *inline_message_id, char *parse_mode, list_t *entities, link_preview_options_t *link_preview_options, inline_keyboard_markup_t *reply_markup)
+post_edit_message_text_200_response_t*
+DefaultAPI_postEditMessageText(apiClient_t *apiClient, char *text, char *business_connection_id, post_edit_message_text_request_chat_id_t *chat_id, int *message_id, char *inline_message_id, char *parse_mode, list_t *entities, link_preview_options_t *link_preview_options, inline_keyboard_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -6515,7 +6757,7 @@ DefaultAPI_editMessageTextPost(apiClient_t *apiClient, char *text, char *busines
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _edit_message_text_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_edit_message_text_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -6629,14 +6871,18 @@ DefaultAPI_editMessageTextPost(apiClient_t *apiClient, char *text, char *busines
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _edit_message_text_post_200_response_t *elementToReturn = NULL;
+    post_edit_message_text_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _edit_message_text_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_edit_message_text_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -6723,10 +6969,12 @@ end:
 
 }
 
+// editStory
+//
 // Edits a story previously posted by the bot on behalf of a managed business account. Requires the *can\\_manage\\_stories* business bot right. Returns [Story](https://core.telegram.org/bots/api/#story) on success.
 //
-_post_story_post_200_response_t*
-DefaultAPI_editStoryPost(apiClient_t *apiClient, char *business_connection_id, int *story_id, input_story_content_t *content, char *caption, char *parse_mode, list_t *caption_entities, list_t *areas)
+post_post_story_200_response_t*
+DefaultAPI_postEditStory(apiClient_t *apiClient, char *business_connection_id, int *story_id, input_story_content_t *content, char *caption, char *parse_mode, list_t *caption_entities, list_t *areas)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -6848,14 +7096,18 @@ DefaultAPI_editStoryPost(apiClient_t *apiClient, char *business_connection_id, i
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _post_story_post_200_response_t *elementToReturn = NULL;
+    post_post_story_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _post_story_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_post_story_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -6928,10 +7180,12 @@ end:
 
 }
 
+// editUserStarSubscription
+//
 // Allows the bot to cancel or re-enable extension of a subscription paid in Telegram Stars. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_editUserStarSubscriptionPost(apiClient_t *apiClient, int *user_id, char *telegram_payment_charge_id, int *is_canceled)
+post_set_webhook_200_response_t*
+DefaultAPI_postEditUserStarSubscription(apiClient_t *apiClient, int *user_id, char *telegram_payment_charge_id, int *is_canceled)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -7008,14 +7262,18 @@ DefaultAPI_editUserStarSubscriptionPost(apiClient_t *apiClient, int *user_id, ch
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -7060,10 +7318,12 @@ end:
 
 }
 
+// exportChatInviteLink
+//
 // Use this method to generate a new primary invite link for a chat; any previously generated primary link is revoked. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Returns the new invite link as *String* on success.
 //
-_export_chat_invite_link_post_200_response_t*
-DefaultAPI_exportChatInviteLinkPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id)
+post_export_chat_invite_link_200_response_t*
+DefaultAPI_postExportChatInviteLink(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -7085,7 +7345,7 @@ DefaultAPI_exportChatInviteLinkPost(apiClient_t *apiClient, _send_message_post_r
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -7114,14 +7374,18 @@ DefaultAPI_exportChatInviteLinkPost(apiClient_t *apiClient, _send_message_post_r
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _export_chat_invite_link_post_200_response_t *elementToReturn = NULL;
+    post_export_chat_invite_link_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _export_chat_invite_link_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_export_chat_invite_link_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -7152,10 +7416,12 @@ end:
 
 }
 
+// forwardMessage
+//
 // Use this method to forward messages of any kind. Service messages and messages with protected content can't be forwarded. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
 //
-_send_message_post_200_response_t*
-DefaultAPI_forwardMessagePost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, _forward_message_post_request_from_chat_id_t *from_chat_id, int *message_id, int *message_thread_id, int *video_start_timestamp, int *disable_notification, int *protect_content)
+post_send_message_200_response_t*
+DefaultAPI_postForwardMessage(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, post_forward_message_request_from_chat_id_t *from_chat_id, int *message_id, int *message_thread_id, int *video_start_timestamp, int *disable_notification, int *protect_content)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -7177,7 +7443,7 @@ DefaultAPI_forwardMessagePost(apiClient_t *apiClient, _send_message_post_request
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -7202,7 +7468,7 @@ DefaultAPI_forwardMessagePost(apiClient_t *apiClient, _send_message_post_request
 
     // form parameters
     char *keyForm_from_chat_id = NULL;
-    _forward_message_post_request_from_chat_id_t * valueForm_from_chat_id = 0;
+    post_forward_message_request_from_chat_id_t * valueForm_from_chat_id = 0;
     keyValuePair_t *keyPairForm_from_chat_id = 0;
     if (from_chat_id != NULL)
     {
@@ -7283,14 +7549,18 @@ DefaultAPI_forwardMessagePost(apiClient_t *apiClient, _send_message_post_request
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -7351,10 +7621,12 @@ end:
 
 }
 
+// forwardMessages
+//
 // Use this method to forward multiple messages of any kind. If some of the specified messages can't be found or forwarded, they are skipped. Service messages and messages with protected content can't be forwarded. Album grouping is kept for forwarded messages. On success, an array of [MessageId](https://core.telegram.org/bots/api/#messageid) of the sent messages is returned.
 //
-_forward_messages_post_200_response_t*
-DefaultAPI_forwardMessagesPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, _forward_messages_post_request_from_chat_id_t *from_chat_id, list_t *message_ids, int *message_thread_id, int *disable_notification, int *protect_content)
+post_forward_messages_200_response_t*
+DefaultAPI_postForwardMessages(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, post_forward_messages_request_from_chat_id_t *from_chat_id, list_t *message_ids, int *message_thread_id, int *disable_notification, int *protect_content)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -7376,7 +7648,7 @@ DefaultAPI_forwardMessagesPost(apiClient_t *apiClient, _send_message_post_reques
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -7401,7 +7673,7 @@ DefaultAPI_forwardMessagesPost(apiClient_t *apiClient, _send_message_post_reques
 
     // form parameters
     char *keyForm_from_chat_id = NULL;
-    _forward_messages_post_request_from_chat_id_t * valueForm_from_chat_id = 0;
+    post_forward_messages_request_from_chat_id_t * valueForm_from_chat_id = 0;
     keyValuePair_t *keyPairForm_from_chat_id = 0;
     if (from_chat_id != NULL)
     {
@@ -7468,14 +7740,18 @@ DefaultAPI_forwardMessagesPost(apiClient_t *apiClient, _send_message_post_reques
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _forward_messages_post_200_response_t *elementToReturn = NULL;
+    post_forward_messages_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _forward_messages_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_forward_messages_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -7531,10 +7807,12 @@ end:
 
 }
 
+// getAvailableGifts
+//
 // Returns the list of gifts that can be sent by the bot to users and channel chats. Requires no parameters. Returns a [Gifts](https://core.telegram.org/bots/api/#gifts) object.
 //
-_get_available_gifts_post_200_response_t*
-DefaultAPI_getAvailableGiftsPost(apiClient_t *apiClient)
+post_get_available_gifts_200_response_t*
+DefaultAPI_postGetAvailableGifts(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -7570,14 +7848,18 @@ DefaultAPI_getAvailableGiftsPost(apiClient_t *apiClient)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_available_gifts_post_200_response_t *elementToReturn = NULL;
+    post_get_available_gifts_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_available_gifts_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_available_gifts_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -7603,10 +7885,12 @@ end:
 
 }
 
+// getBusinessAccountGifts
+//
 // Returns the gifts received and owned by a managed business account. Requires the *can\\_view\\_gifts\\_and\\_stars* business bot right. Returns [OwnedGifts](https://core.telegram.org/bots/api/#ownedgifts) on success.
 //
-_get_business_account_gifts_post_200_response_t*
-DefaultAPI_getBusinessAccountGiftsPost(apiClient_t *apiClient, char *business_connection_id, int *exclude_unsaved, int *exclude_saved, int *exclude_unlimited, int *exclude_limited, int *exclude_unique, int *sort_by_price, char *offset, int *limit)
+post_get_business_account_gifts_200_response_t*
+DefaultAPI_postGetBusinessAccountGifts(apiClient_t *apiClient, char *business_connection_id, int *exclude_unsaved, int *exclude_saved, int *exclude_unlimited, int *exclude_limited, int *exclude_unique, int *sort_by_price, char *offset, int *limit)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -7760,14 +8044,18 @@ DefaultAPI_getBusinessAccountGiftsPost(apiClient_t *apiClient, char *business_co
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_business_account_gifts_post_200_response_t *elementToReturn = NULL;
+    post_get_business_account_gifts_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_business_account_gifts_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_business_account_gifts_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -7846,10 +8134,12 @@ end:
 
 }
 
+// getBusinessAccountStarBalance
+//
 // Returns the amount of Telegram Stars owned by a managed business account. Requires the *can\\_view\\_gifts\\_and\\_stars* business bot right. Returns [StarAmount](https://core.telegram.org/bots/api/#staramount) on success.
 //
-_get_business_account_star_balance_post_200_response_t*
-DefaultAPI_getBusinessAccountStarBalancePost(apiClient_t *apiClient, char *business_connection_id)
+post_get_business_account_star_balance_200_response_t*
+DefaultAPI_postGetBusinessAccountStarBalance(apiClient_t *apiClient, char *business_connection_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -7900,14 +8190,18 @@ DefaultAPI_getBusinessAccountStarBalancePost(apiClient_t *apiClient, char *busin
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_business_account_star_balance_post_200_response_t *elementToReturn = NULL;
+    post_get_business_account_star_balance_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_business_account_star_balance_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_business_account_star_balance_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -7942,10 +8236,12 @@ end:
 
 }
 
+// getBusinessConnection
+//
 // Use this method to get information about the connection of the bot with a business account. Returns a [BusinessConnection](https://core.telegram.org/bots/api/#businessconnection) object on success.
 //
-_get_business_connection_post_200_response_t*
-DefaultAPI_getBusinessConnectionPost(apiClient_t *apiClient, char *business_connection_id)
+post_get_business_connection_200_response_t*
+DefaultAPI_postGetBusinessConnection(apiClient_t *apiClient, char *business_connection_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -7996,14 +8292,18 @@ DefaultAPI_getBusinessConnectionPost(apiClient_t *apiClient, char *business_conn
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_business_connection_post_200_response_t *elementToReturn = NULL;
+    post_get_business_connection_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_business_connection_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_business_connection_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -8038,10 +8338,110 @@ end:
 
 }
 
+// getChat
+//
+// Use this method to get up-to-date information about the chat. Returns a [ChatFullInfo](https://core.telegram.org/bots/api/#chatfullinfo) object on success.
+//
+post_get_chat_200_response_t*
+DefaultAPI_postGetChat(apiClient_t *apiClient, post_leave_chat_request_chat_id_t *chat_id)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = list_createList();
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = list_createList();
+    char      *localVarBodyParameters = NULL;
+    size_t     localVarBodyLength = 0;
+
+    // clear the error code from the previous api call
+    apiClient->response_code = 0;
+
+    // create the path
+    char *localVarPath = strdup("/getChat");
+
+
+
+
+
+    // form parameters
+    char *keyForm_chat_id = NULL;
+    post_leave_chat_request_chat_id_t * valueForm_chat_id = 0;
+    keyValuePair_t *keyPairForm_chat_id = 0;
+    if (chat_id != NULL)
+    {
+        keyForm_chat_id = strdup("chat_id");
+        valueForm_chat_id = (chat_id);
+        keyPairForm_chat_id = keyValuePair_create(keyForm_chat_id,&valueForm_chat_id);
+        list_addElement(localVarFormParameters,keyPairForm_chat_id);
+    }
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarContentType,"application/x-www-form-urlencoded"); //consumes
+    list_addElement(localVarContentType,"multipart/form-data"); //consumes
+    list_addElement(localVarContentType,"application/json"); //consumes
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    localVarBodyLength,
+                    "POST");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","");
+    //}
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 0) {
+    //    printf("%s\n","");
+    //}
+    //nonprimitive not container
+    post_get_chat_200_response_t *elementToReturn = NULL;
+    if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
+        cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+        elementToReturn = post_get_chat_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        cJSON_Delete(DefaultAPIlocalVarJSON);
+        if(elementToReturn == NULL) {
+            // return 0;
+        }
+    }
+
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    list_freeList(localVarFormParameters);
+    list_freeList(localVarHeaderType);
+    list_freeList(localVarContentType);
+    free(localVarPath);
+    if (keyForm_chat_id) {
+        free(keyForm_chat_id);
+        keyForm_chat_id = NULL;
+    }
+    free(keyPairForm_chat_id);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// getChatAdministrators
+//
 // Use this method to get a list of administrators in a chat, which aren't bots. Returns an Array of [ChatMember](https://core.telegram.org/bots/api/#chatmember) objects.
 //
-_get_chat_administrators_post_200_response_t*
-DefaultAPI_getChatAdministratorsPost(apiClient_t *apiClient, _leave_chat_post_request_chat_id_t *chat_id)
+post_get_chat_administrators_200_response_t*
+DefaultAPI_postGetChatAdministrators(apiClient_t *apiClient, post_leave_chat_request_chat_id_t *chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -8063,7 +8463,7 @@ DefaultAPI_getChatAdministratorsPost(apiClient_t *apiClient, _leave_chat_post_re
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _leave_chat_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_leave_chat_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -8092,14 +8492,18 @@ DefaultAPI_getChatAdministratorsPost(apiClient_t *apiClient, _leave_chat_post_re
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_chat_administrators_post_200_response_t *elementToReturn = NULL;
+    post_get_chat_administrators_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_chat_administrators_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_chat_administrators_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -8130,102 +8534,12 @@ end:
 
 }
 
-// Use this method to get the number of members in a chat. Returns *Int* on success.
+// getChatMember
 //
-_get_chat_member_count_post_200_response_t*
-DefaultAPI_getChatMemberCountPost(apiClient_t *apiClient, _leave_chat_post_request_chat_id_t *chat_id)
-{
-    list_t    *localVarQueryParameters = NULL;
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = list_createList();
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = list_createList();
-    char      *localVarBodyParameters = NULL;
-    size_t     localVarBodyLength = 0;
-
-    // clear the error code from the previous api call
-    apiClient->response_code = 0;
-
-    // create the path
-    char *localVarPath = strdup("/getChatMemberCount");
-
-
-
-
-
-    // form parameters
-    char *keyForm_chat_id = NULL;
-    _leave_chat_post_request_chat_id_t * valueForm_chat_id = 0;
-    keyValuePair_t *keyPairForm_chat_id = 0;
-    if (chat_id != NULL)
-    {
-        keyForm_chat_id = strdup("chat_id");
-        valueForm_chat_id = (chat_id);
-        keyPairForm_chat_id = keyValuePair_create(keyForm_chat_id,&valueForm_chat_id);
-        list_addElement(localVarFormParameters,keyPairForm_chat_id);
-    }
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarContentType,"application/x-www-form-urlencoded"); //consumes
-    list_addElement(localVarContentType,"multipart/form-data"); //consumes
-    list_addElement(localVarContentType,"application/json"); //consumes
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    localVarBodyLength,
-                    "POST");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","");
-    //}
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 0) {
-    //    printf("%s\n","");
-    //}
-    //nonprimitive not container
-    _get_chat_member_count_post_200_response_t *elementToReturn = NULL;
-    if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
-        cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_chat_member_count_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
-        cJSON_Delete(DefaultAPIlocalVarJSON);
-        if(elementToReturn == NULL) {
-            // return 0;
-        }
-    }
-
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    
-    
-    list_freeList(localVarFormParameters);
-    list_freeList(localVarHeaderType);
-    list_freeList(localVarContentType);
-    free(localVarPath);
-    if (keyForm_chat_id) {
-        free(keyForm_chat_id);
-        keyForm_chat_id = NULL;
-    }
-    free(keyPairForm_chat_id);
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
 // Use this method to get information about a member of a chat. The method is only guaranteed to work for other users if the bot is an administrator in the chat. Returns a [ChatMember](https://core.telegram.org/bots/api/#chatmember) object on success.
 //
-_get_chat_member_post_200_response_t*
-DefaultAPI_getChatMemberPost(apiClient_t *apiClient, _leave_chat_post_request_chat_id_t *chat_id, int *user_id)
+post_get_chat_member_200_response_t*
+DefaultAPI_postGetChatMember(apiClient_t *apiClient, post_leave_chat_request_chat_id_t *chat_id, int *user_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -8247,7 +8561,7 @@ DefaultAPI_getChatMemberPost(apiClient_t *apiClient, _leave_chat_post_request_ch
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _leave_chat_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_leave_chat_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -8289,14 +8603,18 @@ DefaultAPI_getChatMemberPost(apiClient_t *apiClient, _leave_chat_post_request_ch
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_chat_member_post_200_response_t *elementToReturn = NULL;
+    post_get_chat_member_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_chat_member_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_chat_member_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -8332,10 +8650,110 @@ end:
 
 }
 
+// getChatMemberCount
+//
+// Use this method to get the number of members in a chat. Returns *Int* on success.
+//
+post_get_chat_member_count_200_response_t*
+DefaultAPI_postGetChatMemberCount(apiClient_t *apiClient, post_leave_chat_request_chat_id_t *chat_id)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = list_createList();
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = list_createList();
+    char      *localVarBodyParameters = NULL;
+    size_t     localVarBodyLength = 0;
+
+    // clear the error code from the previous api call
+    apiClient->response_code = 0;
+
+    // create the path
+    char *localVarPath = strdup("/getChatMemberCount");
+
+
+
+
+
+    // form parameters
+    char *keyForm_chat_id = NULL;
+    post_leave_chat_request_chat_id_t * valueForm_chat_id = 0;
+    keyValuePair_t *keyPairForm_chat_id = 0;
+    if (chat_id != NULL)
+    {
+        keyForm_chat_id = strdup("chat_id");
+        valueForm_chat_id = (chat_id);
+        keyPairForm_chat_id = keyValuePair_create(keyForm_chat_id,&valueForm_chat_id);
+        list_addElement(localVarFormParameters,keyPairForm_chat_id);
+    }
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarContentType,"application/x-www-form-urlencoded"); //consumes
+    list_addElement(localVarContentType,"multipart/form-data"); //consumes
+    list_addElement(localVarContentType,"application/json"); //consumes
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    localVarBodyLength,
+                    "POST");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","");
+    //}
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 0) {
+    //    printf("%s\n","");
+    //}
+    //nonprimitive not container
+    post_get_chat_member_count_200_response_t *elementToReturn = NULL;
+    if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
+        cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+        elementToReturn = post_get_chat_member_count_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        cJSON_Delete(DefaultAPIlocalVarJSON);
+        if(elementToReturn == NULL) {
+            // return 0;
+        }
+    }
+
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    list_freeList(localVarFormParameters);
+    list_freeList(localVarHeaderType);
+    list_freeList(localVarContentType);
+    free(localVarPath);
+    if (keyForm_chat_id) {
+        free(keyForm_chat_id);
+        keyForm_chat_id = NULL;
+    }
+    free(keyPairForm_chat_id);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// getChatMenuButton
+//
 // Use this method to get the current value of the bot's menu button in a private chat, or the default menu button. Returns [MenuButton](https://core.telegram.org/bots/api/#menubutton) on success.
 //
-_get_chat_menu_button_post_200_response_t*
-DefaultAPI_getChatMenuButtonPost(apiClient_t *apiClient, int *chat_id)
+post_get_chat_menu_button_200_response_t*
+DefaultAPI_postGetChatMenuButton(apiClient_t *apiClient, int *chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -8387,14 +8805,18 @@ DefaultAPI_getChatMenuButtonPost(apiClient_t *apiClient, int *chat_id)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_chat_menu_button_post_200_response_t *elementToReturn = NULL;
+    post_get_chat_menu_button_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_chat_menu_button_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_chat_menu_button_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -8425,102 +8847,12 @@ end:
 
 }
 
-// Use this method to get up-to-date information about the chat. Returns a [ChatFullInfo](https://core.telegram.org/bots/api/#chatfullinfo) object on success.
+// getCustomEmojiStickers
 //
-_get_chat_post_200_response_t*
-DefaultAPI_getChatPost(apiClient_t *apiClient, _leave_chat_post_request_chat_id_t *chat_id)
-{
-    list_t    *localVarQueryParameters = NULL;
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = list_createList();
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = list_createList();
-    char      *localVarBodyParameters = NULL;
-    size_t     localVarBodyLength = 0;
-
-    // clear the error code from the previous api call
-    apiClient->response_code = 0;
-
-    // create the path
-    char *localVarPath = strdup("/getChat");
-
-
-
-
-
-    // form parameters
-    char *keyForm_chat_id = NULL;
-    _leave_chat_post_request_chat_id_t * valueForm_chat_id = 0;
-    keyValuePair_t *keyPairForm_chat_id = 0;
-    if (chat_id != NULL)
-    {
-        keyForm_chat_id = strdup("chat_id");
-        valueForm_chat_id = (chat_id);
-        keyPairForm_chat_id = keyValuePair_create(keyForm_chat_id,&valueForm_chat_id);
-        list_addElement(localVarFormParameters,keyPairForm_chat_id);
-    }
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarContentType,"application/x-www-form-urlencoded"); //consumes
-    list_addElement(localVarContentType,"multipart/form-data"); //consumes
-    list_addElement(localVarContentType,"application/json"); //consumes
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    localVarBodyLength,
-                    "POST");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","");
-    //}
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 0) {
-    //    printf("%s\n","");
-    //}
-    //nonprimitive not container
-    _get_chat_post_200_response_t *elementToReturn = NULL;
-    if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
-        cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_chat_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
-        cJSON_Delete(DefaultAPIlocalVarJSON);
-        if(elementToReturn == NULL) {
-            // return 0;
-        }
-    }
-
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    
-    
-    list_freeList(localVarFormParameters);
-    list_freeList(localVarHeaderType);
-    list_freeList(localVarContentType);
-    free(localVarPath);
-    if (keyForm_chat_id) {
-        free(keyForm_chat_id);
-        keyForm_chat_id = NULL;
-    }
-    free(keyPairForm_chat_id);
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
 // Use this method to get information about custom emoji stickers by their identifiers. Returns an Array of [Sticker](https://core.telegram.org/bots/api/#sticker) objects.
 //
-_get_forum_topic_icon_stickers_post_200_response_t*
-DefaultAPI_getCustomEmojiStickersPost(apiClient_t *apiClient, list_t *custom_emoji_ids)
+post_get_forum_topic_icon_stickers_200_response_t*
+DefaultAPI_postGetCustomEmojiStickers(apiClient_t *apiClient, list_t *custom_emoji_ids)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -8571,14 +8903,18 @@ DefaultAPI_getCustomEmojiStickersPost(apiClient_t *apiClient, list_t *custom_emo
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_forum_topic_icon_stickers_post_200_response_t *elementToReturn = NULL;
+    post_get_forum_topic_icon_stickers_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_forum_topic_icon_stickers_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_forum_topic_icon_stickers_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -8609,10 +8945,12 @@ end:
 
 }
 
+// getFile
+//
 // Use this method to get basic information about a file and prepare it for downloading. For the moment, bots can download files of up to 20MB in size. On success, a [File](https://core.telegram.org/bots/api/#file) object is returned. The file can then be downloaded via the link `https://api.telegram.org/file/bot<token>/<file_path>`, where `<file_path>` is taken from the response. It is guaranteed that the link will be valid for at least 1 hour. When the link expires, a new one can be requested by calling [getFile](https://core.telegram.org/bots/api/#getfile) again.
 //
-_get_file_post_200_response_t*
-DefaultAPI_getFilePost(apiClient_t *apiClient, char *file_id)
+post_get_file_200_response_t*
+DefaultAPI_postGetFile(apiClient_t *apiClient, char *file_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -8663,14 +9001,18 @@ DefaultAPI_getFilePost(apiClient_t *apiClient, char *file_id)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_file_post_200_response_t *elementToReturn = NULL;
+    post_get_file_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_file_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_file_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -8705,10 +9047,12 @@ end:
 
 }
 
+// getForumTopicIconStickers
+//
 // Use this method to get custom emoji stickers, which can be used as a forum topic icon by any user. Requires no parameters. Returns an Array of [Sticker](https://core.telegram.org/bots/api/#sticker) objects.
 //
-_get_forum_topic_icon_stickers_post_200_response_t*
-DefaultAPI_getForumTopicIconStickersPost(apiClient_t *apiClient)
+post_get_forum_topic_icon_stickers_200_response_t*
+DefaultAPI_postGetForumTopicIconStickers(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -8744,14 +9088,18 @@ DefaultAPI_getForumTopicIconStickersPost(apiClient_t *apiClient)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_forum_topic_icon_stickers_post_200_response_t *elementToReturn = NULL;
+    post_get_forum_topic_icon_stickers_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_forum_topic_icon_stickers_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_forum_topic_icon_stickers_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -8777,10 +9125,12 @@ end:
 
 }
 
+// getGameHighScores
+//
 // Use this method to get data for high score tables. Will return the score of the specified user and several of their neighbors in a game. Returns an Array of [GameHighScore](https://core.telegram.org/bots/api/#gamehighscore) objects.  This method will currently return scores for the target user, plus two of their closest neighbors on each side. Will also return the top three users if the user and their neighbors are not among them. Please note that this behavior is subject to change.
 //
-_get_game_high_scores_post_200_response_t*
-DefaultAPI_getGameHighScoresPost(apiClient_t *apiClient, int *user_id, int *chat_id, int *message_id, char *inline_message_id)
+post_get_game_high_scores_200_response_t*
+DefaultAPI_postGetGameHighScores(apiClient_t *apiClient, int *user_id, int *chat_id, int *message_id, char *inline_message_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -8870,14 +9220,18 @@ DefaultAPI_getGameHighScoresPost(apiClient_t *apiClient, int *user_id, int *chat
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_game_high_scores_post_200_response_t *elementToReturn = NULL;
+    post_get_game_high_scores_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_game_high_scores_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_game_high_scores_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -8927,10 +9281,12 @@ end:
 
 }
 
+// getMe
+//
 // A simple method for testing your bot's authentication token. Requires no parameters. Returns basic information about the bot in form of a [User](https://core.telegram.org/bots/api/#user) object.
 //
-_get_me_post_200_response_t*
-DefaultAPI_getMePost(apiClient_t *apiClient)
+post_get_me_200_response_t*
+DefaultAPI_postGetMe(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -8966,14 +9322,18 @@ DefaultAPI_getMePost(apiClient_t *apiClient)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_me_post_200_response_t *elementToReturn = NULL;
+    post_get_me_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_me_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_me_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -8999,10 +9359,12 @@ end:
 
 }
 
+// getMyCommands
+//
 // Use this method to get the current list of the bot's commands for the given scope and user language. Returns an Array of [BotCommand](https://core.telegram.org/bots/api/#botcommand) objects. If commands aren't set, an empty list is returned.
 //
-_get_my_commands_post_200_response_t*
-DefaultAPI_getMyCommandsPost(apiClient_t *apiClient, bot_command_scope_t *scope, char *language_code)
+post_get_my_commands_200_response_t*
+DefaultAPI_postGetMyCommands(apiClient_t *apiClient, bot_command_scope_t *scope, char *language_code)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -9065,14 +9427,18 @@ DefaultAPI_getMyCommandsPost(apiClient_t *apiClient, bot_command_scope_t *scope,
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_my_commands_post_200_response_t *elementToReturn = NULL;
+    post_get_my_commands_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_my_commands_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_my_commands_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -9112,10 +9478,12 @@ end:
 
 }
 
+// getMyDefaultAdministratorRights
+//
 // Use this method to get the current default administrator rights of the bot. Returns [ChatAdministratorRights](https://core.telegram.org/bots/api/#chatadministratorrights) on success.
 //
-_get_my_default_administrator_rights_post_200_response_t*
-DefaultAPI_getMyDefaultAdministratorRightsPost(apiClient_t *apiClient, int *for_channels)
+post_get_my_default_administrator_rights_200_response_t*
+DefaultAPI_postGetMyDefaultAdministratorRights(apiClient_t *apiClient, int *for_channels)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -9167,14 +9535,18 @@ DefaultAPI_getMyDefaultAdministratorRightsPost(apiClient_t *apiClient, int *for_
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_my_default_administrator_rights_post_200_response_t *elementToReturn = NULL;
+    post_get_my_default_administrator_rights_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_my_default_administrator_rights_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_my_default_administrator_rights_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -9205,10 +9577,12 @@ end:
 
 }
 
+// getMyDescription
+//
 // Use this method to get the current bot description for the given user language. Returns [BotDescription](https://core.telegram.org/bots/api/#botdescription) on success.
 //
-_get_my_description_post_200_response_t*
-DefaultAPI_getMyDescriptionPost(apiClient_t *apiClient, char *language_code)
+post_get_my_description_200_response_t*
+DefaultAPI_postGetMyDescription(apiClient_t *apiClient, char *language_code)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -9259,14 +9633,18 @@ DefaultAPI_getMyDescriptionPost(apiClient_t *apiClient, char *language_code)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_my_description_post_200_response_t *elementToReturn = NULL;
+    post_get_my_description_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_my_description_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_my_description_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -9301,10 +9679,12 @@ end:
 
 }
 
+// getMyName
+//
 // Use this method to get the current bot name for the given user language. Returns [BotName](https://core.telegram.org/bots/api/#botname) on success.
 //
-_get_my_name_post_200_response_t*
-DefaultAPI_getMyNamePost(apiClient_t *apiClient, char *language_code)
+post_get_my_name_200_response_t*
+DefaultAPI_postGetMyName(apiClient_t *apiClient, char *language_code)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -9355,14 +9735,18 @@ DefaultAPI_getMyNamePost(apiClient_t *apiClient, char *language_code)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_my_name_post_200_response_t *elementToReturn = NULL;
+    post_get_my_name_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_my_name_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_my_name_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -9397,10 +9781,12 @@ end:
 
 }
 
+// getMyShortDescription
+//
 // Use this method to get the current bot short description for the given user language. Returns [BotShortDescription](https://core.telegram.org/bots/api/#botshortdescription) on success.
 //
-_get_my_short_description_post_200_response_t*
-DefaultAPI_getMyShortDescriptionPost(apiClient_t *apiClient, char *language_code)
+post_get_my_short_description_200_response_t*
+DefaultAPI_postGetMyShortDescription(apiClient_t *apiClient, char *language_code)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -9451,14 +9837,18 @@ DefaultAPI_getMyShortDescriptionPost(apiClient_t *apiClient, char *language_code
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_my_short_description_post_200_response_t *elementToReturn = NULL;
+    post_get_my_short_description_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_my_short_description_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_my_short_description_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -9493,10 +9883,12 @@ end:
 
 }
 
+// getStarTransactions
+//
 // Returns the bot's Telegram Star transactions in chronological order. On success, returns a [StarTransactions](https://core.telegram.org/bots/api/#startransactions) object.
 //
-_get_star_transactions_post_200_response_t*
-DefaultAPI_getStarTransactionsPost(apiClient_t *apiClient, int *offset, int *limit)
+post_get_star_transactions_200_response_t*
+DefaultAPI_postGetStarTransactions(apiClient_t *apiClient, int *offset, int *limit)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -9561,14 +9953,18 @@ DefaultAPI_getStarTransactionsPost(apiClient_t *apiClient, int *offset, int *lim
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_star_transactions_post_200_response_t *elementToReturn = NULL;
+    post_get_star_transactions_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_star_transactions_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_star_transactions_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -9604,10 +10000,12 @@ end:
 
 }
 
+// getStickerSet
+//
 // Use this method to get a sticker set. On success, a [StickerSet](https://core.telegram.org/bots/api/#stickerset) object is returned.
 //
-_get_sticker_set_post_200_response_t*
-DefaultAPI_getStickerSetPost(apiClient_t *apiClient, char *name)
+post_get_sticker_set_200_response_t*
+DefaultAPI_postGetStickerSet(apiClient_t *apiClient, char *name)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -9658,14 +10056,18 @@ DefaultAPI_getStickerSetPost(apiClient_t *apiClient, char *name)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_sticker_set_post_200_response_t *elementToReturn = NULL;
+    post_get_sticker_set_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_sticker_set_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_sticker_set_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -9700,10 +10102,12 @@ end:
 
 }
 
+// getUpdates
+//
 // Use this method to receive incoming updates using long polling ([wiki](https://en.wikipedia.org/wiki/Push_technology#Long_polling)). Returns an Array of [Update](https://core.telegram.org/bots/api/#update) objects.
 //
-_get_updates_post_200_response_t*
-DefaultAPI_getUpdatesPost(apiClient_t *apiClient, int *offset, int *limit, int *timeout, list_t *allowed_updates)
+post_get_updates_200_response_t*
+DefaultAPI_postGetUpdates(apiClient_t *apiClient, int *offset, int *limit, int *timeout, list_t *allowed_updates)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -9793,14 +10197,18 @@ DefaultAPI_getUpdatesPost(apiClient_t *apiClient, int *offset, int *limit, int *
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_updates_post_200_response_t *elementToReturn = NULL;
+    post_get_updates_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_updates_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_updates_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -9846,10 +10254,12 @@ end:
 
 }
 
+// getUserChatBoosts
+//
 // Use this method to get the list of boosts added to a chat by a user. Requires administrator rights in the chat. Returns a [UserChatBoosts](https://core.telegram.org/bots/api/#userchatboosts) object.
 //
-_get_user_chat_boosts_post_200_response_t*
-DefaultAPI_getUserChatBoostsPost(apiClient_t *apiClient, _get_user_chat_boosts_post_request_chat_id_t *chat_id, int *user_id)
+post_get_user_chat_boosts_200_response_t*
+DefaultAPI_postGetUserChatBoosts(apiClient_t *apiClient, post_get_user_chat_boosts_request_chat_id_t *chat_id, int *user_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -9871,7 +10281,7 @@ DefaultAPI_getUserChatBoostsPost(apiClient_t *apiClient, _get_user_chat_boosts_p
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _get_user_chat_boosts_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_get_user_chat_boosts_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -9913,14 +10323,18 @@ DefaultAPI_getUserChatBoostsPost(apiClient_t *apiClient, _get_user_chat_boosts_p
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_user_chat_boosts_post_200_response_t *elementToReturn = NULL;
+    post_get_user_chat_boosts_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_user_chat_boosts_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_user_chat_boosts_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -9956,10 +10370,12 @@ end:
 
 }
 
+// getUserProfilePhotos
+//
 // Use this method to get a list of profile pictures for a user. Returns a [UserProfilePhotos](https://core.telegram.org/bots/api/#userprofilephotos) object.
 //
-_get_user_profile_photos_post_200_response_t*
-DefaultAPI_getUserProfilePhotosPost(apiClient_t *apiClient, int *user_id, int *offset, int *limit)
+post_get_user_profile_photos_200_response_t*
+DefaultAPI_postGetUserProfilePhotos(apiClient_t *apiClient, int *user_id, int *offset, int *limit)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -10037,14 +10453,18 @@ DefaultAPI_getUserProfilePhotosPost(apiClient_t *apiClient, int *user_id, int *o
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_user_profile_photos_post_200_response_t *elementToReturn = NULL;
+    post_get_user_profile_photos_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_user_profile_photos_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_user_profile_photos_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -10085,10 +10505,12 @@ end:
 
 }
 
+// getWebhookInfo
+//
 // Use this method to get current webhook status. Requires no parameters. On success, returns a [WebhookInfo](https://core.telegram.org/bots/api/#webhookinfo) object. If the bot is using [getUpdates](https://core.telegram.org/bots/api/#getupdates), will return an object with the *url* field empty.
 //
-_get_webhook_info_post_200_response_t*
-DefaultAPI_getWebhookInfoPost(apiClient_t *apiClient)
+post_get_webhook_info_200_response_t*
+DefaultAPI_postGetWebhookInfo(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -10124,14 +10546,18 @@ DefaultAPI_getWebhookInfoPost(apiClient_t *apiClient)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_webhook_info_post_200_response_t *elementToReturn = NULL;
+    post_get_webhook_info_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_webhook_info_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_webhook_info_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -10157,10 +10583,12 @@ end:
 
 }
 
+// giftPremiumSubscription
+//
 // Gifts a Telegram Premium subscription to the given user. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_giftPremiumSubscriptionPost(apiClient_t *apiClient, int *user_id, int *month_count, int *star_count, char *text, char *text_parse_mode, list_t *text_entities)
+post_set_webhook_200_response_t*
+DefaultAPI_postGiftPremiumSubscription(apiClient_t *apiClient, int *user_id, int *month_count, int *star_count, char *text, char *text_parse_mode, list_t *text_entities)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -10274,14 +10702,18 @@ DefaultAPI_giftPremiumSubscriptionPost(apiClient_t *apiClient, int *user_id, int
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -10345,10 +10777,12 @@ end:
 
 }
 
+// hideGeneralForumTopic
+//
 // Use this method to hide the 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the *can\\_manage\\_topics* administrator rights. The topic will be automatically closed if it was open. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_hideGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postHideGeneralForumTopic(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -10370,7 +10804,7 @@ DefaultAPI_hideGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_memb
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -10399,14 +10833,18 @@ DefaultAPI_hideGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_memb
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -10437,10 +10875,12 @@ end:
 
 }
 
+// leaveChat
+//
 // Use this method for your bot to leave a group, supergroup or channel. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_leaveChatPost(apiClient_t *apiClient, _leave_chat_post_request_chat_id_t *chat_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postLeaveChat(apiClient_t *apiClient, post_leave_chat_request_chat_id_t *chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -10462,7 +10902,7 @@ DefaultAPI_leaveChatPost(apiClient_t *apiClient, _leave_chat_post_request_chat_i
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _leave_chat_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_leave_chat_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -10491,14 +10931,18 @@ DefaultAPI_leaveChatPost(apiClient_t *apiClient, _leave_chat_post_request_chat_i
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -10529,10 +10973,12 @@ end:
 
 }
 
+// logOut
+//
 // Use this method to log out from the cloud Bot API server before launching the bot locally. You **must** log out the bot before running it locally, otherwise there is no guarantee that the bot will receive updates. After a successful call, you can immediately log in on a local server, but will not be able to log in back to the cloud Bot API server for 10 minutes. Returns *True* on success. Requires no parameters.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_logOutPost(apiClient_t *apiClient)
+post_set_webhook_200_response_t*
+DefaultAPI_postLogOut(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -10568,14 +11014,18 @@ DefaultAPI_logOutPost(apiClient_t *apiClient)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -10601,10 +11051,12 @@ end:
 
 }
 
+// pinChatMessage
+//
 // Use this method to add a message to the list of pinned messages in a chat. If the chat is not a private chat, the bot must be an administrator in the chat for this to work and must have the 'can\\_pin\\_messages' administrator right in a supergroup or 'can\\_edit\\_messages' administrator right in a channel. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_pinChatMessagePost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, int *message_id, char *business_connection_id, int *disable_notification)
+post_set_webhook_200_response_t*
+DefaultAPI_postPinChatMessage(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, int *message_id, char *business_connection_id, int *disable_notification)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -10638,7 +11090,7 @@ DefaultAPI_pinChatMessagePost(apiClient_t *apiClient, _send_message_post_request
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -10693,14 +11145,18 @@ DefaultAPI_pinChatMessagePost(apiClient_t *apiClient, _send_message_post_request
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -10750,10 +11206,12 @@ end:
 
 }
 
+// postStory
+//
 // Posts a story on behalf of a managed business account. Requires the *can\\_manage\\_stories* business bot right. Returns [Story](https://core.telegram.org/bots/api/#story) on success.
 //
-_post_story_post_200_response_t*
-DefaultAPI_postStoryPost(apiClient_t *apiClient, char *business_connection_id, input_story_content_t *content, int *active_period, char *caption, char *parse_mode, list_t *caption_entities, list_t *areas, int *post_to_chat_page, int *protect_content)
+post_post_story_200_response_t*
+DefaultAPI_postPostStory(apiClient_t *apiClient, char *business_connection_id, input_story_content_t *content, int *active_period, char *caption, char *parse_mode, list_t *caption_entities, list_t *areas, int *post_to_chat_page, int *protect_content)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -10901,14 +11359,18 @@ DefaultAPI_postStoryPost(apiClient_t *apiClient, char *business_connection_id, i
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _post_story_post_200_response_t *elementToReturn = NULL;
+    post_post_story_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _post_story_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_post_story_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -10991,10 +11453,12 @@ end:
 
 }
 
+// promoteChatMember
+//
 // Use this method to promote or demote a user in a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Pass *False* for all boolean parameters to demote a user. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_promoteChatMemberPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, int *user_id, int *is_anonymous, int *can_manage_chat, int *can_delete_messages, int *can_manage_video_chats, int *can_restrict_members, int *can_promote_members, int *can_change_info, int *can_invite_users, int *can_post_stories, int *can_edit_stories, int *can_delete_stories, int *can_post_messages, int *can_edit_messages, int *can_pin_messages, int *can_manage_topics)
+post_set_webhook_200_response_t*
+DefaultAPI_postPromoteChatMember(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, int *user_id, int *is_anonymous, int *can_manage_chat, int *can_delete_messages, int *can_manage_video_chats, int *can_restrict_members, int *can_promote_members, int *can_change_info, int *can_invite_users, int *can_post_stories, int *can_edit_stories, int *can_delete_stories, int *can_post_messages, int *can_edit_messages, int *can_pin_messages, int *can_manage_topics)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -11016,7 +11480,7 @@ DefaultAPI_promoteChatMemberPost(apiClient_t *apiClient, _send_message_post_requ
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -11253,14 +11717,18 @@ DefaultAPI_promoteChatMemberPost(apiClient_t *apiClient, _send_message_post_requ
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -11371,10 +11839,12 @@ end:
 
 }
 
+// readBusinessMessage
+//
 // Marks incoming message as read on behalf of a business account. Requires the *can\\_read\\_messages* business bot right. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_readBusinessMessagePost(apiClient_t *apiClient, char *business_connection_id, int *chat_id, int *message_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postReadBusinessMessage(apiClient_t *apiClient, char *business_connection_id, int *chat_id, int *message_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -11451,14 +11921,18 @@ DefaultAPI_readBusinessMessagePost(apiClient_t *apiClient, char *business_connec
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -11503,10 +11977,12 @@ end:
 
 }
 
+// refundStarPayment
+//
 // Refunds a successful payment in [Telegram Stars](https://t.me/BotNews/90). Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_refundStarPaymentPost(apiClient_t *apiClient, int *user_id, char *telegram_payment_charge_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postRefundStarPayment(apiClient_t *apiClient, int *user_id, char *telegram_payment_charge_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -11570,14 +12046,18 @@ DefaultAPI_refundStarPaymentPost(apiClient_t *apiClient, int *user_id, char *tel
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -11617,10 +12097,12 @@ end:
 
 }
 
+// removeBusinessAccountProfilePhoto
+//
 // Removes the current profile photo of a managed business account. Requires the *can\\_edit\\_profile\\_photo* business bot right. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_removeBusinessAccountProfilePhotoPost(apiClient_t *apiClient, char *business_connection_id, int *is_public)
+post_set_webhook_200_response_t*
+DefaultAPI_postRemoveBusinessAccountProfilePhoto(apiClient_t *apiClient, char *business_connection_id, int *is_public)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -11684,14 +12166,18 @@ DefaultAPI_removeBusinessAccountProfilePhotoPost(apiClient_t *apiClient, char *b
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -11731,10 +12217,12 @@ end:
 
 }
 
+// removeChatVerification
+//
 // Removes verification from a chat that is currently verified [on behalf of the organization](https://telegram.org/verify#third-party-verification) represented by the bot. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_removeChatVerificationPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postRemoveChatVerification(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -11756,7 +12244,7 @@ DefaultAPI_removeChatVerificationPost(apiClient_t *apiClient, _send_message_post
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -11785,14 +12273,18 @@ DefaultAPI_removeChatVerificationPost(apiClient_t *apiClient, _send_message_post
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -11823,10 +12315,12 @@ end:
 
 }
 
+// removeUserVerification
+//
 // Removes verification from a user who is currently verified [on behalf of the organization](https://telegram.org/verify#third-party-verification) represented by the bot. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_removeUserVerificationPost(apiClient_t *apiClient, int *user_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postRemoveUserVerification(apiClient_t *apiClient, int *user_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -11878,14 +12372,18 @@ DefaultAPI_removeUserVerificationPost(apiClient_t *apiClient, int *user_id)
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -11916,10 +12414,12 @@ end:
 
 }
 
+// reopenForumTopic
+//
 // Use this method to reopen a closed topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the *can\\_manage\\_topics* administrator rights, unless it is the creator of the topic. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_reopenForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id, int *message_thread_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postReopenForumTopic(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id, int *message_thread_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -11941,7 +12441,7 @@ DefaultAPI_reopenForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_po
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -11983,14 +12483,18 @@ DefaultAPI_reopenForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_po
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -12026,10 +12530,12 @@ end:
 
 }
 
+// reopenGeneralForumTopic
+//
 // Use this method to reopen a closed 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the *can\\_manage\\_topics* administrator rights. The topic will be automatically unhidden if it was hidden. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_reopenGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postReopenGeneralForumTopic(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -12051,7 +12557,7 @@ DefaultAPI_reopenGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_me
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -12080,14 +12586,18 @@ DefaultAPI_reopenGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_me
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -12118,10 +12628,12 @@ end:
 
 }
 
+// replaceStickerInSet
+//
 // Use this method to replace an existing sticker in a sticker set with a new one. The method is equivalent to calling [deleteStickerFromSet](https://core.telegram.org/bots/api/#deletestickerfromset), then [addStickerToSet](https://core.telegram.org/bots/api/#addstickertoset), then [setStickerPositionInSet](https://core.telegram.org/bots/api/#setstickerpositioninset). Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_replaceStickerInSetPost(apiClient_t *apiClient, int *user_id, char *name, char *old_sticker, input_sticker_t *sticker)
+post_set_webhook_200_response_t*
+DefaultAPI_postReplaceStickerInSet(apiClient_t *apiClient, int *user_id, char *name, char *old_sticker, input_sticker_t *sticker)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -12207,14 +12719,18 @@ DefaultAPI_replaceStickerInSetPost(apiClient_t *apiClient, int *user_id, char *n
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -12268,10 +12784,12 @@ end:
 
 }
 
+// restrictChatMember
+//
 // Use this method to restrict a user in a supergroup. The bot must be an administrator in the supergroup for this to work and must have the appropriate administrator rights. Pass *True* for all permissions to lift restrictions from a user. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_restrictChatMemberPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id, int *user_id, chat_permissions_t *permissions, int *use_independent_chat_permissions, int *until_date)
+post_set_webhook_200_response_t*
+DefaultAPI_postRestrictChatMember(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id, int *user_id, chat_permissions_t *permissions, int *use_independent_chat_permissions, int *until_date)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -12293,7 +12811,7 @@ DefaultAPI_restrictChatMemberPost(apiClient_t *apiClient, _restrict_chat_member_
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -12373,14 +12891,18 @@ DefaultAPI_restrictChatMemberPost(apiClient_t *apiClient, _restrict_chat_member_
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -12431,10 +12953,12 @@ end:
 
 }
 
+// revokeChatInviteLink
+//
 // Use this method to revoke an invite link created by the bot. If the primary link is revoked, a new link is automatically generated. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Returns the revoked invite link as [ChatInviteLink](https://core.telegram.org/bots/api/#chatinvitelink) object.
 //
-_create_chat_invite_link_post_200_response_t*
-DefaultAPI_revokeChatInviteLinkPost(apiClient_t *apiClient, _revoke_chat_invite_link_post_request_chat_id_t *chat_id, char *invite_link)
+post_create_chat_invite_link_200_response_t*
+DefaultAPI_postRevokeChatInviteLink(apiClient_t *apiClient, post_revoke_chat_invite_link_request_chat_id_t *chat_id, char *invite_link)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -12456,7 +12980,7 @@ DefaultAPI_revokeChatInviteLinkPost(apiClient_t *apiClient, _revoke_chat_invite_
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _revoke_chat_invite_link_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_revoke_chat_invite_link_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -12497,14 +13021,18 @@ DefaultAPI_revokeChatInviteLinkPost(apiClient_t *apiClient, _revoke_chat_invite_
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _create_chat_invite_link_post_200_response_t *elementToReturn = NULL;
+    post_create_chat_invite_link_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _create_chat_invite_link_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_create_chat_invite_link_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -12544,10 +13072,12 @@ end:
 
 }
 
+// savePreparedInlineMessage
+//
 // Stores a message that can be sent by a user of a Mini App. Returns a [PreparedInlineMessage](https://core.telegram.org/bots/api/#preparedinlinemessage) object.
 //
-_save_prepared_inline_message_post_200_response_t*
-DefaultAPI_savePreparedInlineMessagePost(apiClient_t *apiClient, int *user_id, inline_query_result_t *result, int *allow_user_chats, int *allow_bot_chats, int *allow_group_chats, int *allow_channel_chats)
+post_save_prepared_inline_message_200_response_t*
+DefaultAPI_postSavePreparedInlineMessage(apiClient_t *apiClient, int *user_id, inline_query_result_t *result, int *allow_user_chats, int *allow_bot_chats, int *allow_group_chats, int *allow_channel_chats)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -12663,14 +13193,18 @@ DefaultAPI_savePreparedInlineMessagePost(apiClient_t *apiClient, int *user_id, i
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _save_prepared_inline_message_post_200_response_t *elementToReturn = NULL;
+    post_save_prepared_inline_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _save_prepared_inline_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_save_prepared_inline_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -12726,10 +13260,12 @@ end:
 
 }
 
+// sendAnimation
+//
 // Use this method to send animation files (GIF or H.264/MPEG-4 AVC video without sound). On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned. Bots can currently send animation files of up to 50 MB in size, this limit may be changed in the future.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendAnimationPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, _send_animation_post_request_animation_t *animation, char *business_connection_id, int *message_thread_id, int *duration, int *width, int *height, _send_audio_post_request_thumbnail_t *thumbnail, char *caption, char *parse_mode, list_t *caption_entities, int *show_caption_above_media, int *has_spoiler, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendAnimation(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, post_send_animation_request_animation_t *animation, char *business_connection_id, int *message_thread_id, int *duration, int *width, int *height, post_send_audio_request_thumbnail_t *thumbnail, char *caption, char *parse_mode, list_t *caption_entities, int *show_caption_above_media, int *has_spoiler, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -12763,7 +13299,7 @@ DefaultAPI_sendAnimationPost(apiClient_t *apiClient, _send_message_post_request_
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -12788,7 +13324,7 @@ DefaultAPI_sendAnimationPost(apiClient_t *apiClient, _send_message_post_request_
 
     // form parameters
     char *keyForm_animation = NULL;
-    _send_animation_post_request_animation_t * valueForm_animation = 0;
+    post_send_animation_request_animation_t * valueForm_animation = 0;
     keyValuePair_t *keyPairForm_animation = 0;
     if (animation != NULL)
     {
@@ -12839,7 +13375,7 @@ DefaultAPI_sendAnimationPost(apiClient_t *apiClient, _send_message_post_request_
 
     // form parameters
     char *keyForm_thumbnail = NULL;
-    _send_audio_post_request_thumbnail_t * valueForm_thumbnail = 0;
+    post_send_audio_request_thumbnail_t * valueForm_thumbnail = 0;
     keyValuePair_t *keyPairForm_thumbnail = 0;
     if (thumbnail != NULL)
     {
@@ -12976,7 +13512,7 @@ DefaultAPI_sendAnimationPost(apiClient_t *apiClient, _send_message_post_request_
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -13003,14 +13539,18 @@ DefaultAPI_sendAnimationPost(apiClient_t *apiClient, _send_message_post_request_
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -13147,10 +13687,12 @@ end:
 
 }
 
+// sendAudio
+//
 // Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .MP3 or .M4A format. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.  For sending voice messages, use the [sendVoice](https://core.telegram.org/bots/api/#sendvoice) method instead.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendAudioPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, _send_audio_post_request_audio_t *audio, char *business_connection_id, int *message_thread_id, char *caption, char *parse_mode, list_t *caption_entities, int *duration, char *performer, char *title, _send_audio_post_request_thumbnail_t *thumbnail, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendAudio(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, post_send_audio_request_audio_t *audio, char *business_connection_id, int *message_thread_id, char *caption, char *parse_mode, list_t *caption_entities, int *duration, char *performer, char *title, post_send_audio_request_thumbnail_t *thumbnail, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -13184,7 +13726,7 @@ DefaultAPI_sendAudioPost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -13209,7 +13751,7 @@ DefaultAPI_sendAudioPost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_audio = NULL;
-    _send_audio_post_request_audio_t * valueForm_audio = 0;
+    post_send_audio_request_audio_t * valueForm_audio = 0;
     keyValuePair_t *keyPairForm_audio = 0;
     if (audio != NULL)
     {
@@ -13294,7 +13836,7 @@ DefaultAPI_sendAudioPost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_thumbnail = NULL;
-    _send_audio_post_request_thumbnail_t * valueForm_thumbnail = 0;
+    post_send_audio_request_thumbnail_t * valueForm_thumbnail = 0;
     keyValuePair_t *keyPairForm_thumbnail = 0;
     if (thumbnail != NULL)
     {
@@ -13369,7 +13911,7 @@ DefaultAPI_sendAudioPost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -13396,14 +13938,18 @@ DefaultAPI_sendAudioPost(apiClient_t *apiClient, _send_message_post_request_chat
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -13538,10 +14084,12 @@ end:
 
 }
 
+// sendChatAction
+//
 // Use this method when you need to tell the user that something is happening on the bot's side. The status is set for 5 seconds or less (when a message arrives from your bot, Telegram clients clear its typing status). Returns *True* on success.  Example: The [ImageBot](https://t.me/imagebot) needs some time to process a request and upload the image. Instead of sending a text message along the lines of “Retrieving image, please wait…”, the bot may use [sendChatAction](https://core.telegram.org/bots/api/#sendchataction) with *action* = *upload\\_photo*. The user will see a “sending photo” status for the bot.  We only recommend using this method when a response from the bot will take a **noticeable** amount of time to arrive.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_sendChatActionPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, telegram_bot_api_sendChatActionPost_action_e action, char *business_connection_id, int *message_thread_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postSendChatAction(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, telegram_bot_api_postSendChatAction_action_e action, char *business_connection_id, int *message_thread_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -13575,7 +14123,7 @@ DefaultAPI_sendChatActionPost(apiClient_t *apiClient, _send_message_post_request
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -13600,7 +14148,7 @@ DefaultAPI_sendChatActionPost(apiClient_t *apiClient, _send_message_post_request
 
     // form parameters
     char *keyForm_action = NULL;
-    telegram_bot_api_sendChatActionPost_action_e valueForm_action = 0;
+    telegram_bot_api_postSendChatAction_action_e valueForm_action = 0;
     keyValuePair_t *keyPairForm_action = 0;
     if (action != 0)
     {
@@ -13629,14 +14177,18 @@ DefaultAPI_sendChatActionPost(apiClient_t *apiClient, _send_message_post_request
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -13689,10 +14241,12 @@ end:
 
 }
 
+// sendContact
+//
 // Use this method to send phone contacts. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendContactPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, char *phone_number, char *first_name, char *business_connection_id, int *message_thread_id, char *last_name, char *vcard, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendContact(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, char *phone_number, char *first_name, char *business_connection_id, int *message_thread_id, char *last_name, char *vcard, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -13726,7 +14280,7 @@ DefaultAPI_sendContactPost(apiClient_t *apiClient, _send_message_post_request_ch
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -13862,7 +14416,7 @@ DefaultAPI_sendContactPost(apiClient_t *apiClient, _send_message_post_request_ch
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -13891,14 +14445,18 @@ DefaultAPI_sendContactPost(apiClient_t *apiClient, _send_message_post_request_ch
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -14013,10 +14571,12 @@ end:
 
 }
 
+// sendDice
+//
 // Use this method to send an animated emoji that will display a random value. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendDicePost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, char *business_connection_id, int *message_thread_id, telegram_bot_api_sendDicePost_emoji_e emoji, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendDice(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, char *business_connection_id, int *message_thread_id, telegram_bot_api_postSendDice_emoji_e emoji, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -14050,7 +14610,7 @@ DefaultAPI_sendDicePost(apiClient_t *apiClient, _send_message_post_request_chat_
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -14075,7 +14635,7 @@ DefaultAPI_sendDicePost(apiClient_t *apiClient, _send_message_post_request_chat_
 
     // form parameters
     char *keyForm_emoji = NULL;
-    telegram_bot_api_sendDicePost_emoji_e valueForm_emoji = 0;
+    telegram_bot_api_postSendDice_emoji_e valueForm_emoji = 0;
     keyValuePair_t *keyPairForm_emoji = 0;
     if (emoji != 0)
     {
@@ -14150,7 +14710,7 @@ DefaultAPI_sendDicePost(apiClient_t *apiClient, _send_message_post_request_chat_
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -14179,14 +14739,18 @@ DefaultAPI_sendDicePost(apiClient_t *apiClient, _send_message_post_request_chat_
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -14273,10 +14837,12 @@ end:
 
 }
 
+// sendDocument
+//
 // Use this method to send general files. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned. Bots can currently send files of any type of up to 50 MB in size, this limit may be changed in the future.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendDocumentPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, _send_document_post_request_document_t *document, char *business_connection_id, int *message_thread_id, _send_audio_post_request_thumbnail_t *thumbnail, char *caption, char *parse_mode, list_t *caption_entities, int *disable_content_type_detection, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendDocument(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, post_send_document_request_document_t *document, char *business_connection_id, int *message_thread_id, post_send_audio_request_thumbnail_t *thumbnail, char *caption, char *parse_mode, list_t *caption_entities, int *disable_content_type_detection, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -14310,7 +14876,7 @@ DefaultAPI_sendDocumentPost(apiClient_t *apiClient, _send_message_post_request_c
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -14335,7 +14901,7 @@ DefaultAPI_sendDocumentPost(apiClient_t *apiClient, _send_message_post_request_c
 
     // form parameters
     char *keyForm_document = NULL;
-    _send_document_post_request_document_t * valueForm_document = 0;
+    post_send_document_request_document_t * valueForm_document = 0;
     keyValuePair_t *keyPairForm_document = 0;
     if (document != NULL)
     {
@@ -14347,7 +14913,7 @@ DefaultAPI_sendDocumentPost(apiClient_t *apiClient, _send_message_post_request_c
 
     // form parameters
     char *keyForm_thumbnail = NULL;
-    _send_audio_post_request_thumbnail_t * valueForm_thumbnail = 0;
+    post_send_audio_request_thumbnail_t * valueForm_thumbnail = 0;
     keyValuePair_t *keyPairForm_thumbnail = 0;
     if (thumbnail != NULL)
     {
@@ -14471,7 +15037,7 @@ DefaultAPI_sendDocumentPost(apiClient_t *apiClient, _send_message_post_request_c
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -14498,14 +15064,18 @@ DefaultAPI_sendDocumentPost(apiClient_t *apiClient, _send_message_post_request_c
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -14622,10 +15192,12 @@ end:
 
 }
 
+// sendGame
+//
 // Use this method to send a game. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendGamePost(apiClient_t *apiClient, int *chat_id, char *game_short_name, char *business_connection_id, int *message_thread_id, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, inline_keyboard_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendGame(apiClient_t *apiClient, int *chat_id, char *game_short_name, char *business_connection_id, int *message_thread_id, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, inline_keyboard_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -14789,14 +15361,18 @@ DefaultAPI_sendGamePost(apiClient_t *apiClient, int *chat_id, char *game_short_n
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -14884,10 +15460,12 @@ end:
 
 }
 
+// sendGift
+//
 // Sends a gift to the given user or channel chat. The gift can't be converted to Telegram Stars by the receiver. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_sendGiftPost(apiClient_t *apiClient, char *gift_id, int *user_id, _send_gift_post_request_chat_id_t *chat_id, int *pay_for_upgrade, char *text, char *text_parse_mode, list_t *text_entities)
+post_set_webhook_200_response_t*
+DefaultAPI_postSendGift(apiClient_t *apiClient, char *gift_id, int *user_id, post_send_gift_request_chat_id_t *chat_id, int *pay_for_upgrade, char *text, char *text_parse_mode, list_t *text_entities)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -14922,7 +15500,7 @@ DefaultAPI_sendGiftPost(apiClient_t *apiClient, char *gift_id, int *user_id, _se
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_gift_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_gift_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -15012,14 +15590,18 @@ DefaultAPI_sendGiftPost(apiClient_t *apiClient, char *gift_id, int *user_id, _se
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -15092,10 +15674,12 @@ end:
 
 }
 
+// sendInvoice
+//
 // Use this method to send invoices. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendInvoicePost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, char *title, char *description, char *payload, char *currency, list_t *prices, int *message_thread_id, char *provider_token, int *max_tip_amount, list_t *suggested_tip_amounts, char *start_parameter, char *provider_data, char *photo_url, int *photo_size, int *photo_width, int *photo_height, int *need_name, int *need_phone_number, int *need_email, int *need_shipping_address, int *send_phone_number_to_provider, int *send_email_to_provider, int *is_flexible, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, inline_keyboard_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendInvoice(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, char *title, char *description, char *payload, char *currency, list_t *prices, int *message_thread_id, char *provider_token, int *max_tip_amount, list_t *suggested_tip_amounts, char *start_parameter, char *provider_data, char *photo_url, int *photo_size, int *photo_width, int *photo_height, int *need_name, int *need_phone_number, int *need_email, int *need_shipping_address, int *send_phone_number_to_provider, int *send_email_to_provider, int *is_flexible, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, inline_keyboard_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -15117,7 +15701,7 @@ DefaultAPI_sendInvoicePost(apiClient_t *apiClient, _send_message_post_request_ch
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -15497,14 +16081,18 @@ DefaultAPI_sendInvoicePost(apiClient_t *apiClient, _send_message_post_request_ch
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -15711,10 +16299,12 @@ end:
 
 }
 
+// sendLocation
+//
 // Use this method to send point on the map. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendLocationPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, double latitude, double longitude, char *business_connection_id, int *message_thread_id, double horizontal_accuracy, int *live_period, int *heading, int *proximity_alert_radius, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendLocation(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, double latitude, double longitude, char *business_connection_id, int *message_thread_id, double horizontal_accuracy, int *live_period, int *heading, int *proximity_alert_radius, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -15748,7 +16338,7 @@ DefaultAPI_sendLocationPost(apiClient_t *apiClient, _send_message_post_request_c
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -15911,7 +16501,7 @@ DefaultAPI_sendLocationPost(apiClient_t *apiClient, _send_message_post_request_c
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -15940,14 +16530,18 @@ DefaultAPI_sendLocationPost(apiClient_t *apiClient, _send_message_post_request_c
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -16056,10 +16650,12 @@ end:
 
 }
 
+// sendMediaGroup
+//
 // Use this method to send a group of photos, videos, documents or audios as an album. Documents and audio files can be only grouped in an album with messages of the same type. On success, an array of [Messages](https://core.telegram.org/bots/api/#message) that were sent is returned.
 //
-_send_media_group_post_200_response_t*
-DefaultAPI_sendMediaGroupPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, list_t *media, char *business_connection_id, int *message_thread_id, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters)
+post_send_media_group_200_response_t*
+DefaultAPI_postSendMediaGroup(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, list_t *media, char *business_connection_id, int *message_thread_id, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -16093,7 +16689,7 @@ DefaultAPI_sendMediaGroupPost(apiClient_t *apiClient, _send_message_post_request
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -16208,14 +16804,18 @@ DefaultAPI_sendMediaGroupPost(apiClient_t *apiClient, _send_message_post_request
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_media_group_post_200_response_t *elementToReturn = NULL;
+    post_send_media_group_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_media_group_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_media_group_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -16294,10 +16894,12 @@ end:
 
 }
 
+// sendMessage
+//
 // Use this method to send text messages. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendMessagePost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, char *text, char *business_connection_id, int *message_thread_id, char *parse_mode, list_t *entities, link_preview_options_t *link_preview_options, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendMessage(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, char *text, char *business_connection_id, int *message_thread_id, char *parse_mode, list_t *entities, link_preview_options_t *link_preview_options, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -16331,7 +16933,7 @@ DefaultAPI_sendMessagePost(apiClient_t *apiClient, _send_message_post_request_ch
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -16467,7 +17069,7 @@ DefaultAPI_sendMessagePost(apiClient_t *apiClient, _send_message_post_request_ch
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -16496,14 +17098,18 @@ DefaultAPI_sendMessagePost(apiClient_t *apiClient, _send_message_post_request_ch
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -16610,10 +17216,12 @@ end:
 
 }
 
+// sendPaidMedia
+//
 // Use this method to send paid media. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendPaidMediaPost(apiClient_t *apiClient, _send_paid_media_post_request_chat_id_t *chat_id, int *star_count, list_t *media, char *business_connection_id, char *payload, char *caption, char *parse_mode, list_t *caption_entities, int *show_caption_above_media, int *disable_notification, int *protect_content, int *allow_paid_broadcast, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendPaidMedia(apiClient_t *apiClient, post_send_paid_media_request_chat_id_t *chat_id, int *star_count, list_t *media, char *business_connection_id, char *payload, char *caption, char *parse_mode, list_t *caption_entities, int *show_caption_above_media, int *disable_notification, int *protect_content, int *allow_paid_broadcast, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -16647,7 +17255,7 @@ DefaultAPI_sendPaidMediaPost(apiClient_t *apiClient, _send_paid_media_post_reque
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_paid_media_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_paid_media_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -16796,7 +17404,7 @@ DefaultAPI_sendPaidMediaPost(apiClient_t *apiClient, _send_paid_media_post_reque
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -16823,14 +17431,18 @@ DefaultAPI_sendPaidMediaPost(apiClient_t *apiClient, _send_paid_media_post_reque
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -16942,10 +17554,12 @@ end:
 
 }
 
+// sendPhoto
+//
 // Use this method to send photos. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendPhotoPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, _send_photo_post_request_photo_t *photo, char *business_connection_id, int *message_thread_id, char *caption, char *parse_mode, list_t *caption_entities, int *show_caption_above_media, int *has_spoiler, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendPhoto(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, post_send_photo_request_photo_t *photo, char *business_connection_id, int *message_thread_id, char *caption, char *parse_mode, list_t *caption_entities, int *show_caption_above_media, int *has_spoiler, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -16979,7 +17593,7 @@ DefaultAPI_sendPhotoPost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -17004,7 +17618,7 @@ DefaultAPI_sendPhotoPost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_photo = NULL;
-    _send_photo_post_request_photo_t * valueForm_photo = 0;
+    post_send_photo_request_photo_t * valueForm_photo = 0;
     keyValuePair_t *keyPairForm_photo = 0;
     if (photo != NULL)
     {
@@ -17141,7 +17755,7 @@ DefaultAPI_sendPhotoPost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -17168,14 +17782,18 @@ DefaultAPI_sendPhotoPost(apiClient_t *apiClient, _send_message_post_request_chat
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -17292,10 +17910,12 @@ end:
 
 }
 
+// sendPoll
+//
 // Use this method to send a native poll. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendPollPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, char *question, list_t *options, char *business_connection_id, int *message_thread_id, char *question_parse_mode, list_t *question_entities, int *is_anonymous, telegram_bot_api_sendPollPost_type_e type, int *allows_multiple_answers, int *correct_option_id, char *explanation, char *explanation_parse_mode, list_t *explanation_entities, int *open_period, int *close_date, int *is_closed, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendPoll(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, char *question, list_t *options, char *business_connection_id, int *message_thread_id, char *question_parse_mode, list_t *question_entities, int *is_anonymous, telegram_bot_api_postSendPoll_type_e type, int *allows_multiple_answers, int *correct_option_id, char *explanation, char *explanation_parse_mode, list_t *explanation_entities, int *open_period, int *close_date, int *is_closed, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -17329,7 +17949,7 @@ DefaultAPI_sendPollPost(apiClient_t *apiClient, _send_message_post_request_chat_
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -17415,7 +18035,7 @@ DefaultAPI_sendPollPost(apiClient_t *apiClient, _send_message_post_request_chat_
 
     // form parameters
     char *keyForm_type = NULL;
-    telegram_bot_api_sendPollPost_type_e valueForm_type = 0;
+    telegram_bot_api_postSendPoll_type_e valueForm_type = 0;
     keyValuePair_t *keyPairForm_type = 0;
     if (type != 0)
     {
@@ -17591,7 +18211,7 @@ DefaultAPI_sendPollPost(apiClient_t *apiClient, _send_message_post_request_chat_
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -17620,14 +18240,18 @@ DefaultAPI_sendPollPost(apiClient_t *apiClient, _send_message_post_request_chat_
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -17795,10 +18419,12 @@ end:
 
 }
 
+// sendSticker
+//
 // Use this method to send static .WEBP, [animated](https://telegram.org/blog/animated-stickers) .TGS, or [video](https://telegram.org/blog/video-stickers-better-reactions) .WEBM stickers. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendStickerPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, _send_sticker_post_request_sticker_t *sticker, char *business_connection_id, int *message_thread_id, char *emoji, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendSticker(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, post_send_sticker_request_sticker_t *sticker, char *business_connection_id, int *message_thread_id, char *emoji, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -17832,7 +18458,7 @@ DefaultAPI_sendStickerPost(apiClient_t *apiClient, _send_message_post_request_ch
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -17857,7 +18483,7 @@ DefaultAPI_sendStickerPost(apiClient_t *apiClient, _send_message_post_request_ch
 
     // form parameters
     char *keyForm_sticker = NULL;
-    _send_sticker_post_request_sticker_t * valueForm_sticker = 0;
+    post_send_sticker_request_sticker_t * valueForm_sticker = 0;
     keyValuePair_t *keyPairForm_sticker = 0;
     if (sticker != NULL)
     {
@@ -17944,7 +18570,7 @@ DefaultAPI_sendStickerPost(apiClient_t *apiClient, _send_message_post_request_ch
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -17971,14 +18597,18 @@ DefaultAPI_sendStickerPost(apiClient_t *apiClient, _send_message_post_request_ch
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -18071,10 +18701,12 @@ end:
 
 }
 
+// sendVenue
+//
 // Use this method to send information about a venue. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendVenuePost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, double latitude, double longitude, char *title, char *address, char *business_connection_id, int *message_thread_id, char *foursquare_id, char *foursquare_type, char *google_place_id, char *google_place_type, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendVenue(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, double latitude, double longitude, char *title, char *address, char *business_connection_id, int *message_thread_id, char *foursquare_id, char *foursquare_type, char *google_place_id, char *google_place_type, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -18108,7 +18740,7 @@ DefaultAPI_sendVenuePost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -18292,7 +18924,7 @@ DefaultAPI_sendVenuePost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -18321,14 +18953,18 @@ DefaultAPI_sendVenuePost(apiClient_t *apiClient, _send_message_post_request_chat
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -18471,318 +19107,12 @@ end:
 
 }
 
-// As of [v.4.0](https://telegram.org/blog/video-messages-and-telescope), Telegram clients support rounded square MPEG4 videos of up to 1 minute long. Use this method to send video messages. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
+// sendVideo
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendVideoNotePost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, _send_video_note_post_request_video_note_t *video_note, char *business_connection_id, int *message_thread_id, int *duration, int *length, _send_audio_post_request_thumbnail_t *thumbnail, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
-{
-    list_t    *localVarQueryParameters = NULL;
-    list_t    *localVarHeaderParameters = NULL;
-    list_t    *localVarFormParameters = list_createList();
-    list_t *localVarHeaderType = list_createList();
-    list_t *localVarContentType = list_createList();
-    char      *localVarBodyParameters = NULL;
-    size_t     localVarBodyLength = 0;
-
-    // clear the error code from the previous api call
-    apiClient->response_code = 0;
-
-    // create the path
-    char *localVarPath = strdup("/sendVideoNote");
-
-
-
-
-
-    // form parameters
-    char *keyForm_business_connection_id = NULL;
-    char * valueForm_business_connection_id = 0;
-    keyValuePair_t *keyPairForm_business_connection_id = 0;
-    if (business_connection_id != NULL)
-    {
-        keyForm_business_connection_id = strdup("business_connection_id");
-        valueForm_business_connection_id = strdup((business_connection_id));
-        keyPairForm_business_connection_id = keyValuePair_create(keyForm_business_connection_id,valueForm_business_connection_id);
-        list_addElement(localVarFormParameters,keyPairForm_business_connection_id);
-    }
-
-    // form parameters
-    char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
-    keyValuePair_t *keyPairForm_chat_id = 0;
-    if (chat_id != NULL)
-    {
-        keyForm_chat_id = strdup("chat_id");
-        valueForm_chat_id = (chat_id);
-        keyPairForm_chat_id = keyValuePair_create(keyForm_chat_id,&valueForm_chat_id);
-        list_addElement(localVarFormParameters,keyPairForm_chat_id);
-    }
-
-    // form parameters
-    char *keyForm_message_thread_id = NULL;
-    int valueForm_message_thread_id = 0;
-    keyValuePair_t *keyPairForm_message_thread_id = 0;
-    if (message_thread_id != NULL)
-    {
-        keyForm_message_thread_id = strdup("message_thread_id");
-        valueForm_message_thread_id = calloc(1,MAX_NUMBER_LENGTH);
-        snprintf(valueForm_message_thread_id, MAX_NUMBER_LENGTH, "%d", *message_thread_id);
-        keyPairForm_message_thread_id = keyValuePair_create(keyForm_message_thread_id,&valueForm_message_thread_id);
-        list_addElement(localVarFormParameters,keyPairForm_message_thread_id);
-    }
-
-    // form parameters
-    char *keyForm_video_note = NULL;
-    _send_video_note_post_request_video_note_t * valueForm_video_note = 0;
-    keyValuePair_t *keyPairForm_video_note = 0;
-    if (video_note != NULL)
-    {
-        keyForm_video_note = strdup("video_note");
-        valueForm_video_note = (video_note);
-        keyPairForm_video_note = keyValuePair_create(keyForm_video_note,&valueForm_video_note);
-        list_addElement(localVarFormParameters,keyPairForm_video_note);
-    }
-
-    // form parameters
-    char *keyForm_duration = NULL;
-    int valueForm_duration = 0;
-    keyValuePair_t *keyPairForm_duration = 0;
-    if (duration != NULL)
-    {
-        keyForm_duration = strdup("duration");
-        valueForm_duration = calloc(1,MAX_NUMBER_LENGTH);
-        snprintf(valueForm_duration, MAX_NUMBER_LENGTH, "%d", *duration);
-        keyPairForm_duration = keyValuePair_create(keyForm_duration,&valueForm_duration);
-        list_addElement(localVarFormParameters,keyPairForm_duration);
-    }
-
-    // form parameters
-    char *keyForm_length = NULL;
-    int valueForm_length = 0;
-    keyValuePair_t *keyPairForm_length = 0;
-    if (length != NULL)
-    {
-        keyForm_length = strdup("length");
-        valueForm_length = calloc(1,MAX_NUMBER_LENGTH);
-        snprintf(valueForm_length, MAX_NUMBER_LENGTH, "%d", *length);
-        keyPairForm_length = keyValuePair_create(keyForm_length,&valueForm_length);
-        list_addElement(localVarFormParameters,keyPairForm_length);
-    }
-
-    // form parameters
-    char *keyForm_thumbnail = NULL;
-    _send_audio_post_request_thumbnail_t * valueForm_thumbnail = 0;
-    keyValuePair_t *keyPairForm_thumbnail = 0;
-    if (thumbnail != NULL)
-    {
-        keyForm_thumbnail = strdup("thumbnail");
-        valueForm_thumbnail = (thumbnail);
-        keyPairForm_thumbnail = keyValuePair_create(keyForm_thumbnail,&valueForm_thumbnail);
-        list_addElement(localVarFormParameters,keyPairForm_thumbnail);
-    }
-
-    // form parameters
-    char *keyForm_disable_notification = NULL;
-    char * valueForm_disable_notification = 0;
-    keyValuePair_t *keyPairForm_disable_notification = 0;
-    if (disable_notification != NULL)
-    {
-        keyForm_disable_notification = strdup("disable_notification");
-        valueForm_disable_notification = calloc(1,MAX_NUMBER_LENGTH);
-        snprintf(valueForm_disable_notification, MAX_NUMBER_LENGTH, "%d", *disable_notification);
-        keyPairForm_disable_notification = keyValuePair_create(keyForm_disable_notification,valueForm_disable_notification);
-        list_addElement(localVarFormParameters,keyPairForm_disable_notification);
-    }
-
-    // form parameters
-    char *keyForm_protect_content = NULL;
-    char * valueForm_protect_content = 0;
-    keyValuePair_t *keyPairForm_protect_content = 0;
-    if (protect_content != NULL)
-    {
-        keyForm_protect_content = strdup("protect_content");
-        valueForm_protect_content = calloc(1,MAX_NUMBER_LENGTH);
-        snprintf(valueForm_protect_content, MAX_NUMBER_LENGTH, "%d", *protect_content);
-        keyPairForm_protect_content = keyValuePair_create(keyForm_protect_content,valueForm_protect_content);
-        list_addElement(localVarFormParameters,keyPairForm_protect_content);
-    }
-
-    // form parameters
-    char *keyForm_allow_paid_broadcast = NULL;
-    char * valueForm_allow_paid_broadcast = 0;
-    keyValuePair_t *keyPairForm_allow_paid_broadcast = 0;
-    if (allow_paid_broadcast != NULL)
-    {
-        keyForm_allow_paid_broadcast = strdup("allow_paid_broadcast");
-        valueForm_allow_paid_broadcast = calloc(1,MAX_NUMBER_LENGTH);
-        snprintf(valueForm_allow_paid_broadcast, MAX_NUMBER_LENGTH, "%d", *allow_paid_broadcast);
-        keyPairForm_allow_paid_broadcast = keyValuePair_create(keyForm_allow_paid_broadcast,valueForm_allow_paid_broadcast);
-        list_addElement(localVarFormParameters,keyPairForm_allow_paid_broadcast);
-    }
-
-    // form parameters
-    char *keyForm_message_effect_id = NULL;
-    char * valueForm_message_effect_id = 0;
-    keyValuePair_t *keyPairForm_message_effect_id = 0;
-    if (message_effect_id != NULL)
-    {
-        keyForm_message_effect_id = strdup("message_effect_id");
-        valueForm_message_effect_id = strdup((message_effect_id));
-        keyPairForm_message_effect_id = keyValuePair_create(keyForm_message_effect_id,valueForm_message_effect_id);
-        list_addElement(localVarFormParameters,keyPairForm_message_effect_id);
-    }
-
-    // form parameters
-    char *keyForm_reply_parameters = NULL;
-    reply_parameters_t * valueForm_reply_parameters = 0;
-    keyValuePair_t *keyPairForm_reply_parameters = 0;
-    if (reply_parameters != NULL)
-    {
-        keyForm_reply_parameters = strdup("reply_parameters");
-        valueForm_reply_parameters = (reply_parameters);
-        keyPairForm_reply_parameters = keyValuePair_create(keyForm_reply_parameters,&valueForm_reply_parameters);
-        list_addElement(localVarFormParameters,keyPairForm_reply_parameters);
-    }
-
-    // form parameters
-    char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
-    keyValuePair_t *keyPairForm_reply_markup = 0;
-    if (reply_markup != NULL)
-    {
-        keyForm_reply_markup = strdup("reply_markup");
-        valueForm_reply_markup = (reply_markup);
-        keyPairForm_reply_markup = keyValuePair_create(keyForm_reply_markup,&valueForm_reply_markup);
-        list_addElement(localVarFormParameters,keyPairForm_reply_markup);
-    }
-    list_addElement(localVarHeaderType,"application/json"); //produces
-    list_addElement(localVarContentType,"multipart/form-data"); //consumes
-    apiClient_invoke(apiClient,
-                    localVarPath,
-                    localVarQueryParameters,
-                    localVarHeaderParameters,
-                    localVarFormParameters,
-                    localVarHeaderType,
-                    localVarContentType,
-                    localVarBodyParameters,
-                    localVarBodyLength,
-                    "POST");
-
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 200) {
-    //    printf("%s\n","");
-    //}
-    // uncomment below to debug the error response
-    //if (apiClient->response_code == 0) {
-    //    printf("%s\n","");
-    //}
-    //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
-    if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
-        cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
-        cJSON_Delete(DefaultAPIlocalVarJSON);
-        if(elementToReturn == NULL) {
-            // return 0;
-        }
-    }
-
-    //return type
-    if (apiClient->dataReceived) {
-        free(apiClient->dataReceived);
-        apiClient->dataReceived = NULL;
-        apiClient->dataReceivedLen = 0;
-    }
-    
-    
-    list_freeList(localVarFormParameters);
-    list_freeList(localVarHeaderType);
-    list_freeList(localVarContentType);
-    free(localVarPath);
-    if (keyForm_business_connection_id) {
-        free(keyForm_business_connection_id);
-        keyForm_business_connection_id = NULL;
-    }
-    if (valueForm_business_connection_id) {
-        free(valueForm_business_connection_id);
-        valueForm_business_connection_id = NULL;
-    }
-    free(keyPairForm_business_connection_id);
-    if (keyForm_chat_id) {
-        free(keyForm_chat_id);
-        keyForm_chat_id = NULL;
-    }
-    free(keyPairForm_chat_id);
-    if (keyForm_message_thread_id) {
-        free(keyForm_message_thread_id);
-        keyForm_message_thread_id = NULL;
-    }
-    free(keyPairForm_message_thread_id);
-    if (keyForm_video_note) {
-        free(keyForm_video_note);
-        keyForm_video_note = NULL;
-    }
-    free(keyPairForm_video_note);
-    if (keyForm_duration) {
-        free(keyForm_duration);
-        keyForm_duration = NULL;
-    }
-    free(keyPairForm_duration);
-    if (keyForm_length) {
-        free(keyForm_length);
-        keyForm_length = NULL;
-    }
-    free(keyPairForm_length);
-    if (keyForm_thumbnail) {
-        free(keyForm_thumbnail);
-        keyForm_thumbnail = NULL;
-    }
-    free(keyPairForm_thumbnail);
-    if (keyForm_disable_notification) {
-        free(keyForm_disable_notification);
-        keyForm_disable_notification = NULL;
-    }
-    free(keyPairForm_disable_notification);
-    if (keyForm_protect_content) {
-        free(keyForm_protect_content);
-        keyForm_protect_content = NULL;
-    }
-    free(keyPairForm_protect_content);
-    if (keyForm_allow_paid_broadcast) {
-        free(keyForm_allow_paid_broadcast);
-        keyForm_allow_paid_broadcast = NULL;
-    }
-    free(keyPairForm_allow_paid_broadcast);
-    if (keyForm_message_effect_id) {
-        free(keyForm_message_effect_id);
-        keyForm_message_effect_id = NULL;
-    }
-    if (valueForm_message_effect_id) {
-        free(valueForm_message_effect_id);
-        valueForm_message_effect_id = NULL;
-    }
-    free(keyPairForm_message_effect_id);
-    if (keyForm_reply_parameters) {
-        free(keyForm_reply_parameters);
-        keyForm_reply_parameters = NULL;
-    }
-    free(keyPairForm_reply_parameters);
-    if (keyForm_reply_markup) {
-        free(keyForm_reply_markup);
-        keyForm_reply_markup = NULL;
-    }
-    free(keyPairForm_reply_markup);
-    return elementToReturn;
-end:
-    free(localVarPath);
-    return NULL;
-
-}
-
 // Use this method to send video files, Telegram clients support MPEG4 videos (other formats may be sent as [Document](https://core.telegram.org/bots/api/#document)). On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned. Bots can currently send video files of up to 50 MB in size, this limit may be changed in the future.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendVideoPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, _send_video_post_request_video_t *video, char *business_connection_id, int *message_thread_id, int *duration, int *width, int *height, _send_audio_post_request_thumbnail_t *thumbnail, _send_video_post_request_cover_t *cover, int *start_timestamp, char *caption, char *parse_mode, list_t *caption_entities, int *show_caption_above_media, int *has_spoiler, int *supports_streaming, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendVideo(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, post_send_video_request_video_t *video, char *business_connection_id, int *message_thread_id, int *duration, int *width, int *height, post_send_audio_request_thumbnail_t *thumbnail, post_send_video_request_cover_t *cover, int *start_timestamp, char *caption, char *parse_mode, list_t *caption_entities, int *show_caption_above_media, int *has_spoiler, int *supports_streaming, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -18816,7 +19146,7 @@ DefaultAPI_sendVideoPost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -18841,7 +19171,7 @@ DefaultAPI_sendVideoPost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_video = NULL;
-    _send_video_post_request_video_t * valueForm_video = 0;
+    post_send_video_request_video_t * valueForm_video = 0;
     keyValuePair_t *keyPairForm_video = 0;
     if (video != NULL)
     {
@@ -18892,7 +19222,7 @@ DefaultAPI_sendVideoPost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_thumbnail = NULL;
-    _send_audio_post_request_thumbnail_t * valueForm_thumbnail = 0;
+    post_send_audio_request_thumbnail_t * valueForm_thumbnail = 0;
     keyValuePair_t *keyPairForm_thumbnail = 0;
     if (thumbnail != NULL)
     {
@@ -18904,7 +19234,7 @@ DefaultAPI_sendVideoPost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_cover = NULL;
-    _send_video_post_request_cover_t * valueForm_cover = 0;
+    post_send_video_request_cover_t * valueForm_cover = 0;
     keyValuePair_t *keyPairForm_cover = 0;
     if (cover != NULL)
     {
@@ -19067,7 +19397,7 @@ DefaultAPI_sendVideoPost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -19094,14 +19424,18 @@ DefaultAPI_sendVideoPost(apiClient_t *apiClient, _send_message_post_request_chat
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -19253,10 +19587,326 @@ end:
 
 }
 
+// sendVideoNote
+//
+// As of [v.4.0](https://telegram.org/blog/video-messages-and-telescope), Telegram clients support rounded square MPEG4 videos of up to 1 minute long. Use this method to send video messages. On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned.
+//
+post_send_message_200_response_t*
+DefaultAPI_postSendVideoNote(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, post_send_video_note_request_video_note_t *video_note, char *business_connection_id, int *message_thread_id, int *duration, int *length, post_send_audio_request_thumbnail_t *thumbnail, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
+{
+    list_t    *localVarQueryParameters = NULL;
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = list_createList();
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = list_createList();
+    char      *localVarBodyParameters = NULL;
+    size_t     localVarBodyLength = 0;
+
+    // clear the error code from the previous api call
+    apiClient->response_code = 0;
+
+    // create the path
+    char *localVarPath = strdup("/sendVideoNote");
+
+
+
+
+
+    // form parameters
+    char *keyForm_business_connection_id = NULL;
+    char * valueForm_business_connection_id = 0;
+    keyValuePair_t *keyPairForm_business_connection_id = 0;
+    if (business_connection_id != NULL)
+    {
+        keyForm_business_connection_id = strdup("business_connection_id");
+        valueForm_business_connection_id = strdup((business_connection_id));
+        keyPairForm_business_connection_id = keyValuePair_create(keyForm_business_connection_id,valueForm_business_connection_id);
+        list_addElement(localVarFormParameters,keyPairForm_business_connection_id);
+    }
+
+    // form parameters
+    char *keyForm_chat_id = NULL;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
+    keyValuePair_t *keyPairForm_chat_id = 0;
+    if (chat_id != NULL)
+    {
+        keyForm_chat_id = strdup("chat_id");
+        valueForm_chat_id = (chat_id);
+        keyPairForm_chat_id = keyValuePair_create(keyForm_chat_id,&valueForm_chat_id);
+        list_addElement(localVarFormParameters,keyPairForm_chat_id);
+    }
+
+    // form parameters
+    char *keyForm_message_thread_id = NULL;
+    int valueForm_message_thread_id = 0;
+    keyValuePair_t *keyPairForm_message_thread_id = 0;
+    if (message_thread_id != NULL)
+    {
+        keyForm_message_thread_id = strdup("message_thread_id");
+        valueForm_message_thread_id = calloc(1,MAX_NUMBER_LENGTH);
+        snprintf(valueForm_message_thread_id, MAX_NUMBER_LENGTH, "%d", *message_thread_id);
+        keyPairForm_message_thread_id = keyValuePair_create(keyForm_message_thread_id,&valueForm_message_thread_id);
+        list_addElement(localVarFormParameters,keyPairForm_message_thread_id);
+    }
+
+    // form parameters
+    char *keyForm_video_note = NULL;
+    post_send_video_note_request_video_note_t * valueForm_video_note = 0;
+    keyValuePair_t *keyPairForm_video_note = 0;
+    if (video_note != NULL)
+    {
+        keyForm_video_note = strdup("video_note");
+        valueForm_video_note = (video_note);
+        keyPairForm_video_note = keyValuePair_create(keyForm_video_note,&valueForm_video_note);
+        list_addElement(localVarFormParameters,keyPairForm_video_note);
+    }
+
+    // form parameters
+    char *keyForm_duration = NULL;
+    int valueForm_duration = 0;
+    keyValuePair_t *keyPairForm_duration = 0;
+    if (duration != NULL)
+    {
+        keyForm_duration = strdup("duration");
+        valueForm_duration = calloc(1,MAX_NUMBER_LENGTH);
+        snprintf(valueForm_duration, MAX_NUMBER_LENGTH, "%d", *duration);
+        keyPairForm_duration = keyValuePair_create(keyForm_duration,&valueForm_duration);
+        list_addElement(localVarFormParameters,keyPairForm_duration);
+    }
+
+    // form parameters
+    char *keyForm_length = NULL;
+    int valueForm_length = 0;
+    keyValuePair_t *keyPairForm_length = 0;
+    if (length != NULL)
+    {
+        keyForm_length = strdup("length");
+        valueForm_length = calloc(1,MAX_NUMBER_LENGTH);
+        snprintf(valueForm_length, MAX_NUMBER_LENGTH, "%d", *length);
+        keyPairForm_length = keyValuePair_create(keyForm_length,&valueForm_length);
+        list_addElement(localVarFormParameters,keyPairForm_length);
+    }
+
+    // form parameters
+    char *keyForm_thumbnail = NULL;
+    post_send_audio_request_thumbnail_t * valueForm_thumbnail = 0;
+    keyValuePair_t *keyPairForm_thumbnail = 0;
+    if (thumbnail != NULL)
+    {
+        keyForm_thumbnail = strdup("thumbnail");
+        valueForm_thumbnail = (thumbnail);
+        keyPairForm_thumbnail = keyValuePair_create(keyForm_thumbnail,&valueForm_thumbnail);
+        list_addElement(localVarFormParameters,keyPairForm_thumbnail);
+    }
+
+    // form parameters
+    char *keyForm_disable_notification = NULL;
+    char * valueForm_disable_notification = 0;
+    keyValuePair_t *keyPairForm_disable_notification = 0;
+    if (disable_notification != NULL)
+    {
+        keyForm_disable_notification = strdup("disable_notification");
+        valueForm_disable_notification = calloc(1,MAX_NUMBER_LENGTH);
+        snprintf(valueForm_disable_notification, MAX_NUMBER_LENGTH, "%d", *disable_notification);
+        keyPairForm_disable_notification = keyValuePair_create(keyForm_disable_notification,valueForm_disable_notification);
+        list_addElement(localVarFormParameters,keyPairForm_disable_notification);
+    }
+
+    // form parameters
+    char *keyForm_protect_content = NULL;
+    char * valueForm_protect_content = 0;
+    keyValuePair_t *keyPairForm_protect_content = 0;
+    if (protect_content != NULL)
+    {
+        keyForm_protect_content = strdup("protect_content");
+        valueForm_protect_content = calloc(1,MAX_NUMBER_LENGTH);
+        snprintf(valueForm_protect_content, MAX_NUMBER_LENGTH, "%d", *protect_content);
+        keyPairForm_protect_content = keyValuePair_create(keyForm_protect_content,valueForm_protect_content);
+        list_addElement(localVarFormParameters,keyPairForm_protect_content);
+    }
+
+    // form parameters
+    char *keyForm_allow_paid_broadcast = NULL;
+    char * valueForm_allow_paid_broadcast = 0;
+    keyValuePair_t *keyPairForm_allow_paid_broadcast = 0;
+    if (allow_paid_broadcast != NULL)
+    {
+        keyForm_allow_paid_broadcast = strdup("allow_paid_broadcast");
+        valueForm_allow_paid_broadcast = calloc(1,MAX_NUMBER_LENGTH);
+        snprintf(valueForm_allow_paid_broadcast, MAX_NUMBER_LENGTH, "%d", *allow_paid_broadcast);
+        keyPairForm_allow_paid_broadcast = keyValuePair_create(keyForm_allow_paid_broadcast,valueForm_allow_paid_broadcast);
+        list_addElement(localVarFormParameters,keyPairForm_allow_paid_broadcast);
+    }
+
+    // form parameters
+    char *keyForm_message_effect_id = NULL;
+    char * valueForm_message_effect_id = 0;
+    keyValuePair_t *keyPairForm_message_effect_id = 0;
+    if (message_effect_id != NULL)
+    {
+        keyForm_message_effect_id = strdup("message_effect_id");
+        valueForm_message_effect_id = strdup((message_effect_id));
+        keyPairForm_message_effect_id = keyValuePair_create(keyForm_message_effect_id,valueForm_message_effect_id);
+        list_addElement(localVarFormParameters,keyPairForm_message_effect_id);
+    }
+
+    // form parameters
+    char *keyForm_reply_parameters = NULL;
+    reply_parameters_t * valueForm_reply_parameters = 0;
+    keyValuePair_t *keyPairForm_reply_parameters = 0;
+    if (reply_parameters != NULL)
+    {
+        keyForm_reply_parameters = strdup("reply_parameters");
+        valueForm_reply_parameters = (reply_parameters);
+        keyPairForm_reply_parameters = keyValuePair_create(keyForm_reply_parameters,&valueForm_reply_parameters);
+        list_addElement(localVarFormParameters,keyPairForm_reply_parameters);
+    }
+
+    // form parameters
+    char *keyForm_reply_markup = NULL;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
+    keyValuePair_t *keyPairForm_reply_markup = 0;
+    if (reply_markup != NULL)
+    {
+        keyForm_reply_markup = strdup("reply_markup");
+        valueForm_reply_markup = (reply_markup);
+        keyPairForm_reply_markup = keyValuePair_create(keyForm_reply_markup,&valueForm_reply_markup);
+        list_addElement(localVarFormParameters,keyPairForm_reply_markup);
+    }
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarContentType,"multipart/form-data"); //consumes
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    localVarBodyLength,
+                    "POST");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","");
+    //}
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 0) {
+    //    printf("%s\n","");
+    //}
+    //nonprimitive not container
+    post_send_message_200_response_t *elementToReturn = NULL;
+    if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
+        cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        cJSON_Delete(DefaultAPIlocalVarJSON);
+        if(elementToReturn == NULL) {
+            // return 0;
+        }
+    }
+
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    
+    
+    list_freeList(localVarFormParameters);
+    list_freeList(localVarHeaderType);
+    list_freeList(localVarContentType);
+    free(localVarPath);
+    if (keyForm_business_connection_id) {
+        free(keyForm_business_connection_id);
+        keyForm_business_connection_id = NULL;
+    }
+    if (valueForm_business_connection_id) {
+        free(valueForm_business_connection_id);
+        valueForm_business_connection_id = NULL;
+    }
+    free(keyPairForm_business_connection_id);
+    if (keyForm_chat_id) {
+        free(keyForm_chat_id);
+        keyForm_chat_id = NULL;
+    }
+    free(keyPairForm_chat_id);
+    if (keyForm_message_thread_id) {
+        free(keyForm_message_thread_id);
+        keyForm_message_thread_id = NULL;
+    }
+    free(keyPairForm_message_thread_id);
+    if (keyForm_video_note) {
+        free(keyForm_video_note);
+        keyForm_video_note = NULL;
+    }
+    free(keyPairForm_video_note);
+    if (keyForm_duration) {
+        free(keyForm_duration);
+        keyForm_duration = NULL;
+    }
+    free(keyPairForm_duration);
+    if (keyForm_length) {
+        free(keyForm_length);
+        keyForm_length = NULL;
+    }
+    free(keyPairForm_length);
+    if (keyForm_thumbnail) {
+        free(keyForm_thumbnail);
+        keyForm_thumbnail = NULL;
+    }
+    free(keyPairForm_thumbnail);
+    if (keyForm_disable_notification) {
+        free(keyForm_disable_notification);
+        keyForm_disable_notification = NULL;
+    }
+    free(keyPairForm_disable_notification);
+    if (keyForm_protect_content) {
+        free(keyForm_protect_content);
+        keyForm_protect_content = NULL;
+    }
+    free(keyPairForm_protect_content);
+    if (keyForm_allow_paid_broadcast) {
+        free(keyForm_allow_paid_broadcast);
+        keyForm_allow_paid_broadcast = NULL;
+    }
+    free(keyPairForm_allow_paid_broadcast);
+    if (keyForm_message_effect_id) {
+        free(keyForm_message_effect_id);
+        keyForm_message_effect_id = NULL;
+    }
+    if (valueForm_message_effect_id) {
+        free(valueForm_message_effect_id);
+        valueForm_message_effect_id = NULL;
+    }
+    free(keyPairForm_message_effect_id);
+    if (keyForm_reply_parameters) {
+        free(keyForm_reply_parameters);
+        keyForm_reply_parameters = NULL;
+    }
+    free(keyPairForm_reply_parameters);
+    if (keyForm_reply_markup) {
+        free(keyForm_reply_markup);
+        keyForm_reply_markup = NULL;
+    }
+    free(keyPairForm_reply_markup);
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// sendVoice
+//
 // Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .OGG file encoded with OPUS, or in .MP3 format, or in .M4A format (other formats may be sent as [Audio](https://core.telegram.org/bots/api/#audio) or [Document](https://core.telegram.org/bots/api/#document)). On success, the sent [Message](https://core.telegram.org/bots/api/#message) is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future.
 //
-_send_message_post_200_response_t*
-DefaultAPI_sendVoicePost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, _send_voice_post_request_voice_t *voice, char *business_connection_id, int *message_thread_id, char *caption, char *parse_mode, list_t *caption_entities, int *duration, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, _send_message_post_request_reply_markup_t *reply_markup)
+post_send_message_200_response_t*
+DefaultAPI_postSendVoice(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, post_send_voice_request_voice_t *voice, char *business_connection_id, int *message_thread_id, char *caption, char *parse_mode, list_t *caption_entities, int *duration, int *disable_notification, int *protect_content, int *allow_paid_broadcast, char *message_effect_id, reply_parameters_t *reply_parameters, post_send_message_request_reply_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -19290,7 +19940,7 @@ DefaultAPI_sendVoicePost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -19315,7 +19965,7 @@ DefaultAPI_sendVoicePost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_voice = NULL;
-    _send_voice_post_request_voice_t * valueForm_voice = 0;
+    post_send_voice_request_voice_t * valueForm_voice = 0;
     keyValuePair_t *keyPairForm_voice = 0;
     if (voice != NULL)
     {
@@ -19439,7 +20089,7 @@ DefaultAPI_sendVoicePost(apiClient_t *apiClient, _send_message_post_request_chat
 
     // form parameters
     char *keyForm_reply_markup = NULL;
-    _send_message_post_request_reply_markup_t * valueForm_reply_markup = 0;
+    post_send_message_request_reply_markup_t * valueForm_reply_markup = 0;
     keyValuePair_t *keyPairForm_reply_markup = 0;
     if (reply_markup != NULL)
     {
@@ -19466,14 +20116,18 @@ DefaultAPI_sendVoicePost(apiClient_t *apiClient, _send_message_post_request_chat
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _send_message_post_200_response_t *elementToReturn = NULL;
+    post_send_message_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _send_message_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_send_message_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -19585,10 +20239,12 @@ end:
 
 }
 
+// setBusinessAccountBio
+//
 // Changes the bio of a managed business account. Requires the *can\\_change\\_bio* business bot right. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setBusinessAccountBioPost(apiClient_t *apiClient, char *business_connection_id, char *bio)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetBusinessAccountBio(apiClient_t *apiClient, char *business_connection_id, char *bio)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -19651,14 +20307,18 @@ DefaultAPI_setBusinessAccountBioPost(apiClient_t *apiClient, char *business_conn
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -19702,10 +20362,12 @@ end:
 
 }
 
+// setBusinessAccountGiftSettings
+//
 // Changes the privacy settings pertaining to incoming gifts in a managed business account. Requires the *can\\_change\\_gift\\_settings* business bot right. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setBusinessAccountGiftSettingsPost(apiClient_t *apiClient, char *business_connection_id, int *show_gift_button, accepted_gift_types_t *accepted_gift_types)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetBusinessAccountGiftSettings(apiClient_t *apiClient, char *business_connection_id, int *show_gift_button, accepted_gift_types_t *accepted_gift_types)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -19781,14 +20443,18 @@ DefaultAPI_setBusinessAccountGiftSettingsPost(apiClient_t *apiClient, char *busi
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -19833,10 +20499,12 @@ end:
 
 }
 
+// setBusinessAccountName
+//
 // Changes the first and last name of a managed business account. Requires the *can\\_change\\_name* business bot right. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setBusinessAccountNamePost(apiClient_t *apiClient, char *business_connection_id, char *first_name, char *last_name)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetBusinessAccountName(apiClient_t *apiClient, char *business_connection_id, char *first_name, char *last_name)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -19911,14 +20579,18 @@ DefaultAPI_setBusinessAccountNamePost(apiClient_t *apiClient, char *business_con
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -19971,10 +20643,12 @@ end:
 
 }
 
+// setBusinessAccountProfilePhoto
+//
 // Changes the profile photo of a managed business account. Requires the *can\\_edit\\_profile\\_photo* business bot right. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setBusinessAccountProfilePhotoPost(apiClient_t *apiClient, char *business_connection_id, input_profile_photo_t *photo, int *is_public)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetBusinessAccountProfilePhoto(apiClient_t *apiClient, char *business_connection_id, input_profile_photo_t *photo, int *is_public)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -20048,14 +20722,18 @@ DefaultAPI_setBusinessAccountProfilePhotoPost(apiClient_t *apiClient, char *busi
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -20100,10 +20778,12 @@ end:
 
 }
 
+// setBusinessAccountUsername
+//
 // Changes the username of a managed business account. Requires the *can\\_change\\_username* business bot right. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setBusinessAccountUsernamePost(apiClient_t *apiClient, char *business_connection_id, char *username)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetBusinessAccountUsername(apiClient_t *apiClient, char *business_connection_id, char *username)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -20166,14 +20846,18 @@ DefaultAPI_setBusinessAccountUsernamePost(apiClient_t *apiClient, char *business
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -20217,10 +20901,12 @@ end:
 
 }
 
+// setChatAdministratorCustomTitle
+//
 // Use this method to set a custom title for an administrator in a supergroup promoted by the bot. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setChatAdministratorCustomTitlePost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id, int *user_id, char *custom_title)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetChatAdministratorCustomTitle(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id, int *user_id, char *custom_title)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -20242,7 +20928,7 @@ DefaultAPI_setChatAdministratorCustomTitlePost(apiClient_t *apiClient, _restrict
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -20296,14 +20982,18 @@ DefaultAPI_setChatAdministratorCustomTitlePost(apiClient_t *apiClient, _restrict
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -20348,10 +21038,12 @@ end:
 
 }
 
+// setChatDescription
+//
 // Use this method to change the description of a group, a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setChatDescriptionPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, char *description)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetChatDescription(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, char *description)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -20373,7 +21065,7 @@ DefaultAPI_setChatDescriptionPost(apiClient_t *apiClient, _send_message_post_req
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -20414,14 +21106,18 @@ DefaultAPI_setChatDescriptionPost(apiClient_t *apiClient, _send_message_post_req
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -20461,10 +21157,12 @@ end:
 
 }
 
+// setChatMenuButton
+//
 // Use this method to change the bot's menu button in a private chat, or the default menu button. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setChatMenuButtonPost(apiClient_t *apiClient, int *chat_id, menu_button_t *menu_button)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetChatMenuButton(apiClient_t *apiClient, int *chat_id, menu_button_t *menu_button)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -20528,14 +21226,18 @@ DefaultAPI_setChatMenuButtonPost(apiClient_t *apiClient, int *chat_id, menu_butt
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -20571,10 +21273,12 @@ end:
 
 }
 
+// setChatPermissions
+//
 // Use this method to set default chat permissions for all members. The bot must be an administrator in the group or a supergroup for this to work and must have the *can\\_restrict\\_members* administrator rights. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setChatPermissionsPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id, chat_permissions_t *permissions, int *use_independent_chat_permissions)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetChatPermissions(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id, chat_permissions_t *permissions, int *use_independent_chat_permissions)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -20596,7 +21300,7 @@ DefaultAPI_setChatPermissionsPost(apiClient_t *apiClient, _restrict_chat_member_
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -20650,14 +21354,18 @@ DefaultAPI_setChatPermissionsPost(apiClient_t *apiClient, _restrict_chat_member_
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -20698,10 +21406,12 @@ end:
 
 }
 
+// setChatPhoto
+//
 // Use this method to set a new profile photo for the chat. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setChatPhotoPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, photo)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetChatPhoto(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, photo)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -20723,7 +21433,7 @@ DefaultAPI_setChatPhotoPost(apiClient_t *apiClient, _send_message_post_request_c
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -20762,14 +21472,18 @@ DefaultAPI_setChatPhotoPost(apiClient_t *apiClient, _send_message_post_request_c
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -20805,10 +21519,12 @@ end:
 
 }
 
+// setChatStickerSet
+//
 // Use this method to set a new group sticker set for a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Use the field *can\\_set\\_sticker\\_set* optionally returned in [getChat](https://core.telegram.org/bots/api/#getchat) requests to check if the bot can use this method. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setChatStickerSetPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id, char *sticker_set_name)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetChatStickerSet(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id, char *sticker_set_name)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -20830,7 +21546,7 @@ DefaultAPI_setChatStickerSetPost(apiClient_t *apiClient, _restrict_chat_member_p
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -20871,14 +21587,18 @@ DefaultAPI_setChatStickerSetPost(apiClient_t *apiClient, _restrict_chat_member_p
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -20918,10 +21638,12 @@ end:
 
 }
 
+// setChatTitle
+//
 // Use this method to change the title of a chat. Titles can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setChatTitlePost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, char *title)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetChatTitle(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, char *title)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -20943,7 +21665,7 @@ DefaultAPI_setChatTitlePost(apiClient_t *apiClient, _send_message_post_request_c
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -20984,14 +21706,18 @@ DefaultAPI_setChatTitlePost(apiClient_t *apiClient, _send_message_post_request_c
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -21031,10 +21757,12 @@ end:
 
 }
 
+// setCustomEmojiStickerSetThumbnail
+//
 // Use this method to set the thumbnail of a custom emoji sticker set. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setCustomEmojiStickerSetThumbnailPost(apiClient_t *apiClient, char *name, char *custom_emoji_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetCustomEmojiStickerSetThumbnail(apiClient_t *apiClient, char *name, char *custom_emoji_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -21097,14 +21825,18 @@ DefaultAPI_setCustomEmojiStickerSetThumbnailPost(apiClient_t *apiClient, char *n
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -21148,10 +21880,12 @@ end:
 
 }
 
+// setGameScore
+//
 // Use this method to set the score of the specified user in a game message. On success, if the message is not an inline message, the [Message](https://core.telegram.org/bots/api/#message) is returned, otherwise *True* is returned. Returns an error, if the new score is not greater than the user's current score in the chat and *force* is *False*.
 //
-_edit_message_text_post_200_response_t*
-DefaultAPI_setGameScorePost(apiClient_t *apiClient, int *user_id, int *score, int *force, int *disable_edit_message, int *chat_id, int *message_id, char *inline_message_id)
+post_edit_message_text_200_response_t*
+DefaultAPI_postSetGameScore(apiClient_t *apiClient, int *user_id, int *score, int *force, int *disable_edit_message, int *chat_id, int *message_id, char *inline_message_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -21280,14 +22014,18 @@ DefaultAPI_setGameScorePost(apiClient_t *apiClient, int *user_id, int *score, in
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _edit_message_text_post_200_response_t *elementToReturn = NULL;
+    post_edit_message_text_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _edit_message_text_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_edit_message_text_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -21352,10 +22090,12 @@ end:
 
 }
 
+// setMessageReaction
+//
 // Use this method to change the chosen reactions on a message. Service messages of some types can't be reacted to. Automatically forwarded messages from a channel to its discussion group have the same available reactions as messages in the channel. Bots can't use paid reactions. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setMessageReactionPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, int *message_id, list_t *reaction, int *is_big)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetMessageReaction(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, int *message_id, list_t *reaction, int *is_big)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -21377,7 +22117,7 @@ DefaultAPI_setMessageReactionPost(apiClient_t *apiClient, _send_message_post_req
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -21444,14 +22184,18 @@ DefaultAPI_setMessageReactionPost(apiClient_t *apiClient, _send_message_post_req
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -21497,10 +22241,12 @@ end:
 
 }
 
+// setMyCommands
+//
 // Use this method to change the list of the bot's commands. See [this manual](https://core.telegram.org/bots/features#commands) for more details about bot commands. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setMyCommandsPost(apiClient_t *apiClient, list_t *commands, bot_command_scope_t *scope, char *language_code)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetMyCommands(apiClient_t *apiClient, list_t *commands, bot_command_scope_t *scope, char *language_code)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -21575,14 +22321,18 @@ DefaultAPI_setMyCommandsPost(apiClient_t *apiClient, list_t *commands, bot_comma
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -21627,10 +22377,12 @@ end:
 
 }
 
+// setMyDefaultAdministratorRights
+//
 // Use this method to change the default administrator rights requested by the bot when it's added as an administrator to groups or channels. These rights will be suggested to users, but they are free to modify the list before adding the bot. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setMyDefaultAdministratorRightsPost(apiClient_t *apiClient, chat_administrator_rights_t *rights, int *for_channels)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetMyDefaultAdministratorRights(apiClient_t *apiClient, chat_administrator_rights_t *rights, int *for_channels)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -21694,14 +22446,18 @@ DefaultAPI_setMyDefaultAdministratorRightsPost(apiClient_t *apiClient, chat_admi
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -21737,10 +22493,12 @@ end:
 
 }
 
+// setMyDescription
+//
 // Use this method to change the bot's description, which is shown in the chat with the bot if the chat is empty. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setMyDescriptionPost(apiClient_t *apiClient, char *description, char *language_code)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetMyDescription(apiClient_t *apiClient, char *description, char *language_code)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -21803,14 +22561,18 @@ DefaultAPI_setMyDescriptionPost(apiClient_t *apiClient, char *description, char 
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -21854,10 +22616,12 @@ end:
 
 }
 
+// setMyName
+//
 // Use this method to change the bot's name. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setMyNamePost(apiClient_t *apiClient, char *name, char *language_code)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetMyName(apiClient_t *apiClient, char *name, char *language_code)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -21920,14 +22684,18 @@ DefaultAPI_setMyNamePost(apiClient_t *apiClient, char *name, char *language_code
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -21971,10 +22739,12 @@ end:
 
 }
 
+// setMyShortDescription
+//
 // Use this method to change the bot's short description, which is shown on the bot's profile page and is sent together with the link when users share the bot. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setMyShortDescriptionPost(apiClient_t *apiClient, char *short_description, char *language_code)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetMyShortDescription(apiClient_t *apiClient, char *short_description, char *language_code)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -22037,14 +22807,18 @@ DefaultAPI_setMyShortDescriptionPost(apiClient_t *apiClient, char *short_descrip
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -22088,10 +22862,12 @@ end:
 
 }
 
+// setPassportDataErrors
+//
 // Informs a user that some of the Telegram Passport elements they provided contains errors. The user will not be able to re-submit their Passport to you until the errors are fixed (the contents of the field for which you returned the error must change). Returns *True* on success.  Use this if the data submitted by the user doesn't satisfy the standards your service requires for any reason. For example, if a birthday date seems invalid, a submitted document is blurry, a scan shows evidence of tampering, etc. Supply some details in the error message to make sure the user knows how to correct the issues.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setPassportDataErrorsPost(apiClient_t *apiClient, int *user_id, list_t *errors)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetPassportDataErrors(apiClient_t *apiClient, int *user_id, list_t *errors)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -22155,14 +22931,18 @@ DefaultAPI_setPassportDataErrorsPost(apiClient_t *apiClient, int *user_id, list_
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -22198,10 +22978,12 @@ end:
 
 }
 
+// setStickerEmojiList
+//
 // Use this method to change the list of emoji assigned to a regular or custom emoji sticker. The sticker must belong to a sticker set created by the bot. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setStickerEmojiListPost(apiClient_t *apiClient, char *sticker, list_t *emoji_list)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetStickerEmojiList(apiClient_t *apiClient, char *sticker, list_t *emoji_list)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -22264,14 +23046,18 @@ DefaultAPI_setStickerEmojiListPost(apiClient_t *apiClient, char *sticker, list_t
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -22311,10 +23097,12 @@ end:
 
 }
 
+// setStickerKeywords
+//
 // Use this method to change search keywords assigned to a regular or custom emoji sticker. The sticker must belong to a sticker set created by the bot. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setStickerKeywordsPost(apiClient_t *apiClient, char *sticker, list_t *keywords)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetStickerKeywords(apiClient_t *apiClient, char *sticker, list_t *keywords)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -22377,14 +23165,18 @@ DefaultAPI_setStickerKeywordsPost(apiClient_t *apiClient, char *sticker, list_t 
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -22424,10 +23216,12 @@ end:
 
 }
 
+// setStickerMaskPosition
+//
 // Use this method to change the [mask position](https://core.telegram.org/bots/api/#maskposition) of a mask sticker. The sticker must belong to a sticker set that was created by the bot. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setStickerMaskPositionPost(apiClient_t *apiClient, char *sticker, mask_position_t *mask_position)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetStickerMaskPosition(apiClient_t *apiClient, char *sticker, mask_position_t *mask_position)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -22490,14 +23284,18 @@ DefaultAPI_setStickerMaskPositionPost(apiClient_t *apiClient, char *sticker, mas
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -22537,10 +23335,12 @@ end:
 
 }
 
+// setStickerPositionInSet
+//
 // Use this method to move a sticker in a set created by the bot to a specific position. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setStickerPositionInSetPost(apiClient_t *apiClient, char *sticker, int *position)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetStickerPositionInSet(apiClient_t *apiClient, char *sticker, int *position)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -22604,14 +23404,18 @@ DefaultAPI_setStickerPositionInSetPost(apiClient_t *apiClient, char *sticker, in
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -22651,10 +23455,12 @@ end:
 
 }
 
+// setStickerSetThumbnail
+//
 // Use this method to set the thumbnail of a regular or mask sticker set. The format of the thumbnail file must match the format of the stickers in the set. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setStickerSetThumbnailPost(apiClient_t *apiClient, char *name, int *user_id, telegram_bot_api_setStickerSetThumbnailPost_format_e format, _set_sticker_set_thumbnail_post_request_thumbnail_t *thumbnail)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetStickerSetThumbnail(apiClient_t *apiClient, char *name, int *user_id, telegram_bot_api_postSetStickerSetThumbnail_format_e format, post_set_sticker_set_thumbnail_request_thumbnail_t *thumbnail)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -22701,7 +23507,7 @@ DefaultAPI_setStickerSetThumbnailPost(apiClient_t *apiClient, char *name, int *u
 
     // form parameters
     char *keyForm_thumbnail = NULL;
-    _set_sticker_set_thumbnail_post_request_thumbnail_t * valueForm_thumbnail = 0;
+    post_set_sticker_set_thumbnail_request_thumbnail_t * valueForm_thumbnail = 0;
     keyValuePair_t *keyPairForm_thumbnail = 0;
     if (thumbnail != NULL)
     {
@@ -22713,7 +23519,7 @@ DefaultAPI_setStickerSetThumbnailPost(apiClient_t *apiClient, char *name, int *u
 
     // form parameters
     char *keyForm_format = NULL;
-    telegram_bot_api_setStickerSetThumbnailPost_format_e valueForm_format = 0;
+    telegram_bot_api_postSetStickerSetThumbnail_format_e valueForm_format = 0;
     keyValuePair_t *keyPairForm_format = 0;
     if (format != 0)
     {
@@ -22740,14 +23546,18 @@ DefaultAPI_setStickerSetThumbnailPost(apiClient_t *apiClient, char *name, int *u
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -22800,10 +23610,12 @@ end:
 
 }
 
+// setStickerSetTitle
+//
 // Use this method to set the title of a created sticker set. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setStickerSetTitlePost(apiClient_t *apiClient, char *name, char *title)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetStickerSetTitle(apiClient_t *apiClient, char *name, char *title)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -22866,14 +23678,18 @@ DefaultAPI_setStickerSetTitlePost(apiClient_t *apiClient, char *name, char *titl
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -22917,10 +23733,12 @@ end:
 
 }
 
+// setUserEmojiStatus
+//
 // Changes the emoji status for a given user that previously allowed the bot to manage their emoji status via the Mini App method [requestEmojiStatusAccess](https://core.telegram.org/bots/webapps#initializing-mini-apps). Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setUserEmojiStatusPost(apiClient_t *apiClient, int *user_id, char *emoji_status_custom_emoji_id, int *emoji_status_expiration_date)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetUserEmojiStatus(apiClient_t *apiClient, int *user_id, char *emoji_status_custom_emoji_id, int *emoji_status_expiration_date)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -22997,14 +23815,18 @@ DefaultAPI_setUserEmojiStatusPost(apiClient_t *apiClient, int *user_id, char *em
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -23049,10 +23871,12 @@ end:
 
 }
 
+// setWebhook
+//
 // Use this method to specify a URL and receive incoming updates via an outgoing webhook. Whenever there is an update for the bot, we will send an HTTPS POST request to the specified URL, containing a JSON-serialized [Update](https://core.telegram.org/bots/api/#update). In case of an unsuccessful request (a request with response [HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) different from `2XY`), we will repeat the request and give up after a reasonable amount of attempts. Returns *True* on success.  If you'd like to make sure that the webhook was set by you, you can specify secret data in the parameter *secret\\_token*. If specified, the request will contain a header “X-Telegram-Bot-Api-Secret-Token” with the secret token as content.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_setWebhookPost(apiClient_t *apiClient, char *url, certificate, char *ip_address, int *max_connections, list_t *allowed_updates, int *drop_pending_updates, char *secret_token)
+post_set_webhook_200_response_t*
+DefaultAPI_postSetWebhook(apiClient_t *apiClient, char *url, certificate, char *ip_address, int *max_connections, list_t *allowed_updates, int *drop_pending_updates, char *secret_token)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -23175,14 +23999,18 @@ DefaultAPI_setWebhookPost(apiClient_t *apiClient, char *url, certificate, char *
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -23255,10 +24083,12 @@ end:
 
 }
 
+// stopMessageLiveLocation
+//
 // Use this method to stop updating a live location message before *live\\_period* expires. On success, if the message is not an inline message, the edited [Message](https://core.telegram.org/bots/api/#message) is returned, otherwise *True* is returned.
 //
-_edit_message_text_post_200_response_t*
-DefaultAPI_stopMessageLiveLocationPost(apiClient_t *apiClient, char *business_connection_id, _edit_message_text_post_request_chat_id_t *chat_id, int *message_id, char *inline_message_id, inline_keyboard_markup_t *reply_markup)
+post_edit_message_text_200_response_t*
+DefaultAPI_postStopMessageLiveLocation(apiClient_t *apiClient, char *business_connection_id, post_edit_message_text_request_chat_id_t *chat_id, int *message_id, char *inline_message_id, inline_keyboard_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -23292,7 +24122,7 @@ DefaultAPI_stopMessageLiveLocationPost(apiClient_t *apiClient, char *business_co
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _edit_message_text_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_edit_message_text_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -23358,14 +24188,18 @@ DefaultAPI_stopMessageLiveLocationPost(apiClient_t *apiClient, char *business_co
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _edit_message_text_post_200_response_t *elementToReturn = NULL;
+    post_edit_message_text_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _edit_message_text_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_edit_message_text_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -23424,10 +24258,12 @@ end:
 
 }
 
+// stopPoll
+//
 // Use this method to stop a poll which was sent by the bot. On success, the stopped [Poll](https://core.telegram.org/bots/api/#poll) is returned.
 //
-_stop_poll_post_200_response_t*
-DefaultAPI_stopPollPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, int *message_id, char *business_connection_id, inline_keyboard_markup_t *reply_markup)
+post_stop_poll_200_response_t*
+DefaultAPI_postStopPoll(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, int *message_id, char *business_connection_id, inline_keyboard_markup_t *reply_markup)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -23461,7 +24297,7 @@ DefaultAPI_stopPollPost(apiClient_t *apiClient, _send_message_post_request_chat_
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -23515,14 +24351,18 @@ DefaultAPI_stopPollPost(apiClient_t *apiClient, _send_message_post_request_chat_
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _stop_poll_post_200_response_t *elementToReturn = NULL;
+    post_stop_poll_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _stop_poll_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_stop_poll_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -23572,10 +24412,12 @@ end:
 
 }
 
+// transferBusinessAccountStars
+//
 // Transfers Telegram Stars from the business account balance to the bot's balance. Requires the *can\\_transfer\\_stars* business bot right. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_transferBusinessAccountStarsPost(apiClient_t *apiClient, char *business_connection_id, int *star_count)
+post_set_webhook_200_response_t*
+DefaultAPI_postTransferBusinessAccountStars(apiClient_t *apiClient, char *business_connection_id, int *star_count)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -23639,14 +24481,18 @@ DefaultAPI_transferBusinessAccountStarsPost(apiClient_t *apiClient, char *busine
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -23686,10 +24532,12 @@ end:
 
 }
 
+// transferGift
+//
 // Transfers an owned unique gift to another user. Requires the *can\\_transfer\\_and\\_upgrade\\_gifts* business bot right. Requires *can\\_transfer\\_stars* business bot right if the transfer is paid. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_transferGiftPost(apiClient_t *apiClient, char *business_connection_id, char *owned_gift_id, int *new_owner_chat_id, int *star_count)
+post_set_webhook_200_response_t*
+DefaultAPI_postTransferGift(apiClient_t *apiClient, char *business_connection_id, char *owned_gift_id, int *new_owner_chat_id, int *star_count)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -23778,14 +24626,18 @@ DefaultAPI_transferGiftPost(apiClient_t *apiClient, char *business_connection_id
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -23839,10 +24691,12 @@ end:
 
 }
 
+// unbanChatMember
+//
 // Use this method to unban a previously banned user in a supergroup or channel. The user will **not** return to the group or channel automatically, but will be able to join via link, etc. The bot must be an administrator for this to work. By default, this method guarantees that after the call the user is not a member of the chat, but will be able to join it. So if the user is a member of the chat they will also be **removed** from the chat. If you don't want this, use the parameter *only\\_if\\_banned*. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_unbanChatMemberPost(apiClient_t *apiClient, _ban_chat_member_post_request_chat_id_t *chat_id, int *user_id, int *only_if_banned)
+post_set_webhook_200_response_t*
+DefaultAPI_postUnbanChatMember(apiClient_t *apiClient, post_ban_chat_member_request_chat_id_t *chat_id, int *user_id, int *only_if_banned)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -23864,7 +24718,7 @@ DefaultAPI_unbanChatMemberPost(apiClient_t *apiClient, _ban_chat_member_post_req
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _ban_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_ban_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -23919,14 +24773,18 @@ DefaultAPI_unbanChatMemberPost(apiClient_t *apiClient, _ban_chat_member_post_req
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -23967,10 +24825,12 @@ end:
 
 }
 
+// unbanChatSenderChat
+//
 // Use this method to unban a previously banned channel chat in a supergroup or channel. The bot must be an administrator for this to work and must have the appropriate administrator rights. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_unbanChatSenderChatPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, int *sender_chat_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postUnbanChatSenderChat(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, int *sender_chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -23992,7 +24852,7 @@ DefaultAPI_unbanChatSenderChatPost(apiClient_t *apiClient, _send_message_post_re
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -24034,14 +24894,18 @@ DefaultAPI_unbanChatSenderChatPost(apiClient_t *apiClient, _send_message_post_re
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -24077,10 +24941,12 @@ end:
 
 }
 
+// unhideGeneralForumTopic
+//
 // Use this method to unhide the 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the *can\\_manage\\_topics* administrator rights. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_unhideGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postUnhideGeneralForumTopic(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -24102,7 +24968,7 @@ DefaultAPI_unhideGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_me
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -24131,14 +24997,18 @@ DefaultAPI_unhideGeneralForumTopicPost(apiClient_t *apiClient, _restrict_chat_me
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -24169,10 +25039,12 @@ end:
 
 }
 
+// unpinAllChatMessages
+//
 // Use this method to clear the list of pinned messages in a chat. If the chat is not a private chat, the bot must be an administrator in the chat for this to work and must have the 'can\\_pin\\_messages' administrator right in a supergroup or 'can\\_edit\\_messages' administrator right in a channel. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_unpinAllChatMessagesPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postUnpinAllChatMessages(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -24194,7 +25066,7 @@ DefaultAPI_unpinAllChatMessagesPost(apiClient_t *apiClient, _send_message_post_r
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -24223,14 +25095,18 @@ DefaultAPI_unpinAllChatMessagesPost(apiClient_t *apiClient, _send_message_post_r
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -24261,10 +25137,12 @@ end:
 
 }
 
+// unpinAllForumTopicMessages
+//
 // Use this method to clear the list of pinned messages in a forum topic. The bot must be an administrator in the chat for this to work and must have the *can\\_pin\\_messages* administrator right in the supergroup. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_unpinAllForumTopicMessagesPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id, int *message_thread_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postUnpinAllForumTopicMessages(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id, int *message_thread_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -24286,7 +25164,7 @@ DefaultAPI_unpinAllForumTopicMessagesPost(apiClient_t *apiClient, _restrict_chat
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -24328,14 +25206,18 @@ DefaultAPI_unpinAllForumTopicMessagesPost(apiClient_t *apiClient, _restrict_chat
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -24371,10 +25253,12 @@ end:
 
 }
 
+// unpinAllGeneralForumTopicMessages
+//
 // Use this method to clear the list of pinned messages in a General forum topic. The bot must be an administrator in the chat for this to work and must have the *can\\_pin\\_messages* administrator right in the supergroup. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_unpinAllGeneralForumTopicMessagesPost(apiClient_t *apiClient, _restrict_chat_member_post_request_chat_id_t *chat_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postUnpinAllGeneralForumTopicMessages(apiClient_t *apiClient, post_restrict_chat_member_request_chat_id_t *chat_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -24396,7 +25280,7 @@ DefaultAPI_unpinAllGeneralForumTopicMessagesPost(apiClient_t *apiClient, _restri
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _restrict_chat_member_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_restrict_chat_member_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -24425,14 +25309,18 @@ DefaultAPI_unpinAllGeneralForumTopicMessagesPost(apiClient_t *apiClient, _restri
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -24463,10 +25351,12 @@ end:
 
 }
 
+// unpinChatMessage
+//
 // Use this method to remove a message from the list of pinned messages in a chat. If the chat is not a private chat, the bot must be an administrator in the chat for this to work and must have the 'can\\_pin\\_messages' administrator right in a supergroup or 'can\\_edit\\_messages' administrator right in a channel. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_unpinChatMessagePost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, char *business_connection_id, int *message_id)
+post_set_webhook_200_response_t*
+DefaultAPI_postUnpinChatMessage(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, char *business_connection_id, int *message_id)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -24500,7 +25390,7 @@ DefaultAPI_unpinChatMessagePost(apiClient_t *apiClient, _send_message_post_reque
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -24542,14 +25432,18 @@ DefaultAPI_unpinChatMessagePost(apiClient_t *apiClient, _send_message_post_reque
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -24594,10 +25488,12 @@ end:
 
 }
 
+// upgradeGift
+//
 // Upgrades a given regular gift to a unique gift. Requires the *can\\_transfer\\_and\\_upgrade\\_gifts* business bot right. Additionally requires the *can\\_transfer\\_stars* business bot right if the upgrade is paid. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_upgradeGiftPost(apiClient_t *apiClient, char *business_connection_id, char *owned_gift_id, int *keep_original_details, int *star_count)
+post_set_webhook_200_response_t*
+DefaultAPI_postUpgradeGift(apiClient_t *apiClient, char *business_connection_id, char *owned_gift_id, int *keep_original_details, int *star_count)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -24686,14 +25582,18 @@ DefaultAPI_upgradeGiftPost(apiClient_t *apiClient, char *business_connection_id,
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -24747,10 +25647,12 @@ end:
 
 }
 
+// uploadStickerFile
+//
 // Use this method to upload a file with a sticker for later use in the [createNewStickerSet](https://core.telegram.org/bots/api/#createnewstickerset), [addStickerToSet](https://core.telegram.org/bots/api/#addstickertoset), or [replaceStickerInSet](https://core.telegram.org/bots/api/#replacestickerinset) methods (the file can be used multiple times). Returns the uploaded [File](https://core.telegram.org/bots/api/#file) on success.
 //
-_get_file_post_200_response_t*
-DefaultAPI_uploadStickerFilePost(apiClient_t *apiClient, int *user_id, sticker, telegram_bot_api_uploadStickerFilePost_sticker_format_e sticker_format)
+post_get_file_200_response_t*
+DefaultAPI_postUploadStickerFile(apiClient_t *apiClient, int *user_id, sticker, telegram_bot_api_postUploadStickerFile_sticker_format_e sticker_format)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -24797,7 +25699,7 @@ DefaultAPI_uploadStickerFilePost(apiClient_t *apiClient, int *user_id, sticker, 
 
     // form parameters
     char *keyForm_sticker_format = NULL;
-    telegram_bot_api_uploadStickerFilePost_sticker_format_e valueForm_sticker_format = 0;
+    telegram_bot_api_postUploadStickerFile_sticker_format_e valueForm_sticker_format = 0;
     keyValuePair_t *keyPairForm_sticker_format = 0;
     if (sticker_format != 0)
     {
@@ -24824,14 +25726,18 @@ DefaultAPI_uploadStickerFilePost(apiClient_t *apiClient, int *user_id, sticker, 
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _get_file_post_200_response_t *elementToReturn = NULL;
+    post_get_file_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _get_file_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_get_file_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -24875,10 +25781,12 @@ end:
 
 }
 
+// verifyChat
+//
 // Verifies a chat [on behalf of the organization](https://telegram.org/verify#third-party-verification) which is represented by the bot. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_verifyChatPost(apiClient_t *apiClient, _send_message_post_request_chat_id_t *chat_id, char *custom_description)
+post_set_webhook_200_response_t*
+DefaultAPI_postVerifyChat(apiClient_t *apiClient, post_send_message_request_chat_id_t *chat_id, char *custom_description)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -24900,7 +25808,7 @@ DefaultAPI_verifyChatPost(apiClient_t *apiClient, _send_message_post_request_cha
 
     // form parameters
     char *keyForm_chat_id = NULL;
-    _send_message_post_request_chat_id_t * valueForm_chat_id = 0;
+    post_send_message_request_chat_id_t * valueForm_chat_id = 0;
     keyValuePair_t *keyPairForm_chat_id = 0;
     if (chat_id != NULL)
     {
@@ -24941,14 +25849,18 @@ DefaultAPI_verifyChatPost(apiClient_t *apiClient, _send_message_post_request_cha
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
@@ -24988,10 +25900,12 @@ end:
 
 }
 
+// verifyUser
+//
 // Verifies a user [on behalf of the organization](https://telegram.org/verify#third-party-verification) which is represented by the bot. Returns *True* on success.
 //
-_set_webhook_post_200_response_t*
-DefaultAPI_verifyUserPost(apiClient_t *apiClient, int *user_id, char *custom_description)
+post_set_webhook_200_response_t*
+DefaultAPI_postVerifyUser(apiClient_t *apiClient, int *user_id, char *custom_description)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -25055,14 +25969,18 @@ DefaultAPI_verifyUserPost(apiClient_t *apiClient, int *user_id, char *custom_des
     //    printf("%s\n","");
     //}
     // uncomment below to debug the error response
+    //if (apiClient->response_code == 400) {
+    //    printf("%s\n","Bad Request");
+    //}
+    // uncomment below to debug the error response
     //if (apiClient->response_code == 0) {
     //    printf("%s\n","");
     //}
     //nonprimitive not container
-    _set_webhook_post_200_response_t *elementToReturn = NULL;
+    post_set_webhook_200_response_t *elementToReturn = NULL;
     if(apiClient->response_code >= 200 && apiClient->response_code < 300) {
         cJSON *DefaultAPIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
-        elementToReturn = _set_webhook_post_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
+        elementToReturn = post_set_webhook_200_response_parseFromJSON(DefaultAPIlocalVarJSON);
         cJSON_Delete(DefaultAPIlocalVarJSON);
         if(elementToReturn == NULL) {
             // return 0;
