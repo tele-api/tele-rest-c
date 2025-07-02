@@ -16,7 +16,7 @@
 #include "../model/bot_command_scope_chat_member.h"
 bot_command_scope_chat_member_t* instantiate_bot_command_scope_chat_member(int include_optional);
 
-#include "test__restrict_chat_member_post_request_chat_id.c"
+#include "test_bot_command_scope_chat_chat_id.c"
 
 
 bot_command_scope_chat_member_t* instantiate_bot_command_scope_chat_member(int include_optional) {

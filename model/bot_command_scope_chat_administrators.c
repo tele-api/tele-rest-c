@@ -7,7 +7,7 @@
 
 static bot_command_scope_chat_administrators_t *bot_command_scope_chat_administrators_create_internal(
     char *type,
-    _restrict_chat_member_post_request_chat_id_t *chat_id
+    bot_command_scope_chat_chat_id_t *chat_id
     ) {
     bot_command_scope_chat_administrators_t *bot_command_scope_chat_administrators_local_var = malloc(sizeof(bot_command_scope_chat_administrators_t));
     if (!bot_command_scope_chat_administrators_local_var) {
@@ -22,7 +22,7 @@ static bot_command_scope_chat_administrators_t *bot_command_scope_chat_administr
 
 __attribute__((deprecated)) bot_command_scope_chat_administrators_t *bot_command_scope_chat_administrators_create(
     char *type,
-    _restrict_chat_member_post_request_chat_id_t *chat_id
+    bot_command_scope_chat_chat_id_t *chat_id
     ) {
     return bot_command_scope_chat_administrators_create_internal (
         type,
@@ -44,7 +44,7 @@ void bot_command_scope_chat_administrators_free(bot_command_scope_chat_administr
         bot_command_scope_chat_administrators->type = NULL;
     }
     if (bot_command_scope_chat_administrators->chat_id) {
-        _restrict_chat_member_post_request_chat_id_free(bot_command_scope_chat_administrators->chat_id);
+        bot_command_scope_chat_chat_id_free(bot_command_scope_chat_administrators->chat_id);
         bot_command_scope_chat_administrators->chat_id = NULL;
     }
     free(bot_command_scope_chat_administrators);
@@ -66,7 +66,7 @@ cJSON *bot_command_scope_chat_administrators_convertToJSON(bot_command_scope_cha
     if (!bot_command_scope_chat_administrators->chat_id) {
         goto fail;
     }
-    cJSON *chat_id_local_JSON = _restrict_chat_member_post_request_chat_id_convertToJSON(bot_command_scope_chat_administrators->chat_id);
+    cJSON *chat_id_local_JSON = bot_command_scope_chat_chat_id_convertToJSON(bot_command_scope_chat_administrators->chat_id);
     if(chat_id_local_JSON == NULL) {
     goto fail; //model
     }
@@ -88,7 +88,7 @@ bot_command_scope_chat_administrators_t *bot_command_scope_chat_administrators_p
     bot_command_scope_chat_administrators_t *bot_command_scope_chat_administrators_local_var = NULL;
 
     // define the local variable for bot_command_scope_chat_administrators->chat_id
-    _restrict_chat_member_post_request_chat_id_t *chat_id_local_nonprim = NULL;
+    bot_command_scope_chat_chat_id_t *chat_id_local_nonprim = NULL;
 
     // bot_command_scope_chat_administrators->type
     cJSON *type = cJSON_GetObjectItemCaseSensitive(bot_command_scope_chat_administratorsJSON, "type");
@@ -115,7 +115,7 @@ bot_command_scope_chat_administrators_t *bot_command_scope_chat_administrators_p
     }
 
     
-    chat_id_local_nonprim = _restrict_chat_member_post_request_chat_id_parseFromJSON(chat_id); //nonprimitive
+    chat_id_local_nonprim = bot_command_scope_chat_chat_id_parseFromJSON(chat_id); //nonprimitive
 
 
     bot_command_scope_chat_administrators_local_var = bot_command_scope_chat_administrators_create_internal (
@@ -126,7 +126,7 @@ bot_command_scope_chat_administrators_t *bot_command_scope_chat_administrators_p
     return bot_command_scope_chat_administrators_local_var;
 end:
     if (chat_id_local_nonprim) {
-        _restrict_chat_member_post_request_chat_id_free(chat_id_local_nonprim);
+        bot_command_scope_chat_chat_id_free(chat_id_local_nonprim);
         chat_id_local_nonprim = NULL;
     }
     return NULL;

@@ -48,179 +48,23 @@ set(SRCS
     src/binary.c
     external/cJSON.c
     model/object.c
-    model/_answer_callback_query_post_request.c
-    model/_answer_inline_query_post_request.c
-    model/_answer_pre_checkout_query_post_request.c
-    model/_answer_shipping_query_post_request.c
-    model/_answer_web_app_query_post_200_response.c
-    model/_answer_web_app_query_post_request.c
-    model/_approve_chat_join_request_post_request.c
-    model/_ban_chat_member_post_request.c
-    model/_ban_chat_member_post_request_chat_id.c
-    model/_ban_chat_sender_chat_post_request.c
-    model/_close_forum_topic_post_request.c
-    model/_convert_gift_to_stars_post_request.c
-    model/_copy_message_post_200_response.c
-    model/_copy_message_post_request.c
-    model/_copy_messages_post_request.c
-    model/_create_chat_invite_link_post_200_response.c
-    model/_create_chat_invite_link_post_request.c
-    model/_create_chat_subscription_invite_link_post_request.c
-    model/_create_chat_subscription_invite_link_post_request_chat_id.c
-    model/_create_forum_topic_post_200_response.c
-    model/_create_forum_topic_post_request.c
-    model/_create_invoice_link_post_request.c
-    model/_delete_business_messages_post_request.c
-    model/_delete_chat_sticker_set_post_request.c
-    model/_delete_message_post_request.c
-    model/_delete_messages_post_request.c
-    model/_delete_my_commands_post_request.c
-    model/_delete_sticker_from_set_post_request.c
-    model/_delete_sticker_set_post_request.c
-    model/_delete_story_post_request.c
-    model/_delete_webhook_post_request.c
-    model/_edit_chat_invite_link_post_request.c
-    model/_edit_chat_subscription_invite_link_post_request.c
-    model/_edit_forum_topic_post_request.c
-    model/_edit_general_forum_topic_post_request.c
-    model/_edit_message_caption_post_request.c
-    model/_edit_message_live_location_post_request.c
-    model/_edit_message_reply_markup_post_request.c
-    model/_edit_message_text_post_200_response.c
-    model/_edit_message_text_post_200_response_result.c
-    model/_edit_message_text_post_request.c
-    model/_edit_message_text_post_request_chat_id.c
-    model/_edit_user_star_subscription_post_request.c
-    model/_export_chat_invite_link_post_200_response.c
-    model/_export_chat_invite_link_post_request.c
-    model/_forward_message_post_request.c
-    model/_forward_message_post_request_from_chat_id.c
-    model/_forward_messages_post_200_response.c
-    model/_forward_messages_post_request.c
-    model/_forward_messages_post_request_from_chat_id.c
-    model/_get_available_gifts_post_200_response.c
-    model/_get_business_account_gifts_post_200_response.c
-    model/_get_business_account_gifts_post_request.c
-    model/_get_business_account_star_balance_post_200_response.c
-    model/_get_business_connection_post_200_response.c
-    model/_get_business_connection_post_request.c
-    model/_get_chat_administrators_post_200_response.c
-    model/_get_chat_member_count_post_200_response.c
-    model/_get_chat_member_post_200_response.c
-    model/_get_chat_member_post_request.c
-    model/_get_chat_menu_button_post_200_response.c
-    model/_get_chat_menu_button_post_request.c
-    model/_get_chat_post_200_response.c
-    model/_get_custom_emoji_stickers_post_request.c
-    model/_get_file_post_200_response.c
-    model/_get_file_post_request.c
-    model/_get_forum_topic_icon_stickers_post_200_response.c
-    model/_get_game_high_scores_post_200_response.c
-    model/_get_game_high_scores_post_request.c
-    model/_get_me_post_200_response.c
-    model/_get_my_commands_post_200_response.c
-    model/_get_my_commands_post_request.c
-    model/_get_my_default_administrator_rights_post_200_response.c
-    model/_get_my_default_administrator_rights_post_request.c
-    model/_get_my_description_post_200_response.c
-    model/_get_my_name_post_200_response.c
-    model/_get_my_name_post_request.c
-    model/_get_my_short_description_post_200_response.c
-    model/_get_star_transactions_post_200_response.c
-    model/_get_star_transactions_post_request.c
-    model/_get_sticker_set_post_200_response.c
-    model/_get_sticker_set_post_request.c
-    model/_get_updates_post_200_response.c
-    model/_get_updates_post_request.c
-    model/_get_user_chat_boosts_post_200_response.c
-    model/_get_user_chat_boosts_post_request.c
-    model/_get_user_chat_boosts_post_request_chat_id.c
-    model/_get_user_profile_photos_post_200_response.c
-    model/_get_user_profile_photos_post_request.c
-    model/_get_webhook_info_post_200_response.c
-    model/_gift_premium_subscription_post_request.c
-    model/_leave_chat_post_request.c
-    model/_leave_chat_post_request_chat_id.c
-    model/_pin_chat_message_post_request.c
-    model/_post_story_post_200_response.c
-    model/_promote_chat_member_post_request.c
-    model/_read_business_message_post_request.c
-    model/_refund_star_payment_post_request.c
-    model/_remove_business_account_profile_photo_post_request.c
-    model/_remove_user_verification_post_request.c
-    model/_restrict_chat_member_post_request.c
-    model/_restrict_chat_member_post_request_chat_id.c
-    model/_revoke_chat_invite_link_post_request.c
-    model/_revoke_chat_invite_link_post_request_chat_id.c
-    model/_save_prepared_inline_message_post_200_response.c
-    model/_save_prepared_inline_message_post_request.c
-    model/_send_animation_post_request_animation.c
-    model/_send_audio_post_request_audio.c
-    model/_send_audio_post_request_thumbnail.c
-    model/_send_chat_action_post_request.c
-    model/_send_contact_post_request.c
-    model/_send_dice_post_request.c
-    model/_send_document_post_request_document.c
-    model/_send_game_post_request.c
-    model/_send_gift_post_request.c
-    model/_send_gift_post_request_chat_id.c
-    model/_send_invoice_post_request.c
-    model/_send_location_post_request.c
-    model/_send_media_group_post_200_response.c
-    model/_send_media_group_post_request_media_inner.c
-    model/_send_message_post_200_response.c
-    model/_send_message_post_request.c
-    model/_send_message_post_request_chat_id.c
-    model/_send_message_post_request_reply_markup.c
-    model/_send_paid_media_post_request_chat_id.c
-    model/_send_photo_post_request_photo.c
-    model/_send_poll_post_request.c
-    model/_send_sticker_post_request_sticker.c
-    model/_send_venue_post_request.c
-    model/_send_video_note_post_request_video_note.c
-    model/_send_video_post_request_cover.c
-    model/_send_video_post_request_video.c
-    model/_send_voice_post_request_voice.c
-    model/_set_business_account_bio_post_request.c
-    model/_set_business_account_gift_settings_post_request.c
-    model/_set_business_account_name_post_request.c
-    model/_set_business_account_username_post_request.c
-    model/_set_chat_administrator_custom_title_post_request.c
-    model/_set_chat_description_post_request.c
-    model/_set_chat_menu_button_post_request.c
-    model/_set_chat_permissions_post_request.c
-    model/_set_chat_sticker_set_post_request.c
-    model/_set_chat_title_post_request.c
-    model/_set_custom_emoji_sticker_set_thumbnail_post_request.c
-    model/_set_game_score_post_request.c
-    model/_set_message_reaction_post_request.c
-    model/_set_my_commands_post_request.c
-    model/_set_my_default_administrator_rights_post_request.c
-    model/_set_my_description_post_request.c
-    model/_set_my_name_post_request.c
-    model/_set_my_short_description_post_request.c
-    model/_set_passport_data_errors_post_request.c
-    model/_set_sticker_emoji_list_post_request.c
-    model/_set_sticker_keywords_post_request.c
-    model/_set_sticker_mask_position_post_request.c
-    model/_set_sticker_position_in_set_post_request.c
-    model/_set_sticker_set_thumbnail_post_request_thumbnail.c
-    model/_set_sticker_set_title_post_request.c
-    model/_set_user_emoji_status_post_request.c
-    model/_set_webhook_post_200_response.c
-    model/_stop_message_live_location_post_request.c
-    model/_stop_poll_post_200_response.c
-    model/_stop_poll_post_request.c
-    model/_transfer_business_account_stars_post_request.c
-    model/_transfer_gift_post_request.c
-    model/_unban_chat_member_post_request.c
-    model/_unpin_chat_message_post_request.c
-    model/_upgrade_gift_post_request.c
-    model/_verify_chat_post_request.c
-    model/_verify_user_post_request.c
     model/accepted_gift_types.c
+    model/add_sticker_to_set_request.c
+    model/add_sticker_to_set_response.c
     model/affiliate_info.c
     model/animation.c
+    model/answer_callback_query_request.c
+    model/answer_callback_query_response.c
+    model/answer_inline_query_request.c
+    model/answer_inline_query_response.c
+    model/answer_pre_checkout_query_request.c
+    model/answer_pre_checkout_query_response.c
+    model/answer_shipping_query_request.c
+    model/answer_shipping_query_response.c
+    model/answer_web_app_query_request.c
+    model/answer_web_app_query_response.c
+    model/approve_chat_join_request_request.c
+    model/approve_chat_join_request_response.c
     model/audio.c
     model/background_fill.c
     model/background_fill_freeform_gradient.c
@@ -231,6 +75,11 @@ set(SRCS
     model/background_type_fill.c
     model/background_type_pattern.c
     model/background_type_wallpaper.c
+    model/ban_chat_member_request.c
+    model/ban_chat_member_request_chat_id.c
+    model/ban_chat_member_response.c
+    model/ban_chat_sender_chat_request.c
+    model/ban_chat_sender_chat_response.c
     model/birthdate.c
     model/bot_command.c
     model/bot_command_scope.c
@@ -239,6 +88,7 @@ set(SRCS
     model/bot_command_scope_all_private_chats.c
     model/bot_command_scope_chat.c
     model/bot_command_scope_chat_administrators.c
+    model/bot_command_scope_chat_chat_id.c
     model/bot_command_scope_chat_member.c
     model/bot_command_scope_default.c
     model/bot_description.c
@@ -279,28 +129,157 @@ set(SRCS
     model/chat_photo.c
     model/chat_shared.c
     model/chosen_inline_result.c
+    model/close_forum_topic_request.c
+    model/close_forum_topic_response.c
+    model/close_general_forum_topic_request.c
+    model/close_general_forum_topic_response.c
+    model/close_response.c
     model/contact.c
+    model/convert_gift_to_stars_request.c
+    model/convert_gift_to_stars_response.c
+    model/copy_message_request.c
+    model/copy_message_response.c
+    model/copy_messages_request.c
+    model/copy_messages_response.c
     model/copy_text_button.c
+    model/create_chat_invite_link_request.c
+    model/create_chat_invite_link_response.c
+    model/create_chat_subscription_invite_link_request.c
+    model/create_chat_subscription_invite_link_request_chat_id.c
+    model/create_chat_subscription_invite_link_response.c
+    model/create_forum_topic_request.c
+    model/create_forum_topic_response.c
+    model/create_invoice_link_request.c
+    model/create_invoice_link_response.c
+    model/create_new_sticker_set_request.c
+    model/create_new_sticker_set_response.c
+    model/decline_chat_join_request_request.c
+    model/decline_chat_join_request_response.c
+    model/delete_business_messages_request.c
+    model/delete_business_messages_response.c
+    model/delete_chat_photo_request.c
+    model/delete_chat_photo_response.c
+    model/delete_chat_sticker_set_request.c
+    model/delete_chat_sticker_set_response.c
+    model/delete_forum_topic_request.c
+    model/delete_forum_topic_response.c
+    model/delete_message_request.c
+    model/delete_message_response.c
+    model/delete_messages_request.c
+    model/delete_messages_response.c
+    model/delete_my_commands_request.c
+    model/delete_my_commands_response.c
+    model/delete_sticker_from_set_request.c
+    model/delete_sticker_from_set_response.c
+    model/delete_sticker_set_request.c
+    model/delete_sticker_set_response.c
+    model/delete_story_request.c
+    model/delete_story_response.c
+    model/delete_webhook_request.c
+    model/delete_webhook_response.c
     model/dice.c
     model/document.c
+    model/edit_chat_invite_link_request.c
+    model/edit_chat_invite_link_response.c
+    model/edit_chat_subscription_invite_link_request.c
+    model/edit_chat_subscription_invite_link_response.c
+    model/edit_forum_topic_request.c
+    model/edit_forum_topic_response.c
+    model/edit_general_forum_topic_request.c
+    model/edit_general_forum_topic_response.c
+    model/edit_message_caption_request.c
+    model/edit_message_caption_response.c
+    model/edit_message_live_location_request.c
+    model/edit_message_live_location_response.c
+    model/edit_message_media_request.c
+    model/edit_message_media_response.c
+    model/edit_message_reply_markup_request.c
+    model/edit_message_reply_markup_response.c
+    model/edit_message_text_request.c
+    model/edit_message_text_request_chat_id.c
+    model/edit_message_text_response.c
+    model/edit_message_text_response_result.c
+    model/edit_story_request.c
+    model/edit_story_response.c
+    model/edit_user_star_subscription_request.c
+    model/edit_user_star_subscription_response.c
     model/encrypted_credentials.c
     model/encrypted_passport_element.c
     model/error.c
+    model/export_chat_invite_link_request.c
+    model/export_chat_invite_link_response.c
     model/external_reply_info.c
     model/file.c
     model/force_reply.c
     model/forum_topic.c
     model/forum_topic_created.c
     model/forum_topic_edited.c
+    model/forward_message_request.c
+    model/forward_message_request_from_chat_id.c
+    model/forward_message_response.c
+    model/forward_messages_request.c
+    model/forward_messages_request_from_chat_id.c
+    model/forward_messages_response.c
     model/game.c
     model/game_high_score.c
+    model/get_available_gifts_response.c
+    model/get_business_account_gifts_request.c
+    model/get_business_account_gifts_response.c
+    model/get_business_account_star_balance_request.c
+    model/get_business_account_star_balance_response.c
+    model/get_business_connection_request.c
+    model/get_business_connection_response.c
+    model/get_chat_administrators_request.c
+    model/get_chat_administrators_response.c
+    model/get_chat_member_count_request.c
+    model/get_chat_member_count_response.c
+    model/get_chat_member_request.c
+    model/get_chat_member_response.c
+    model/get_chat_menu_button_request.c
+    model/get_chat_menu_button_response.c
+    model/get_chat_request.c
+    model/get_chat_response.c
+    model/get_custom_emoji_stickers_request.c
+    model/get_custom_emoji_stickers_response.c
+    model/get_file_request.c
+    model/get_file_response.c
+    model/get_forum_topic_icon_stickers_response.c
+    model/get_game_high_scores_request.c
+    model/get_game_high_scores_response.c
+    model/get_me_response.c
+    model/get_my_commands_request.c
+    model/get_my_commands_response.c
+    model/get_my_default_administrator_rights_request.c
+    model/get_my_default_administrator_rights_response.c
+    model/get_my_description_request.c
+    model/get_my_description_response.c
+    model/get_my_name_request.c
+    model/get_my_name_response.c
+    model/get_my_short_description_request.c
+    model/get_my_short_description_response.c
+    model/get_star_transactions_request.c
+    model/get_star_transactions_response.c
+    model/get_sticker_set_request.c
+    model/get_sticker_set_response.c
+    model/get_updates_request.c
+    model/get_updates_response.c
+    model/get_user_chat_boosts_request.c
+    model/get_user_chat_boosts_request_chat_id.c
+    model/get_user_chat_boosts_response.c
+    model/get_user_profile_photos_request.c
+    model/get_user_profile_photos_response.c
+    model/get_webhook_info_response.c
     model/gift.c
     model/gift_info.c
+    model/gift_premium_subscription_request.c
+    model/gift_premium_subscription_response.c
     model/gifts.c
     model/giveaway.c
     model/giveaway_completed.c
     model/giveaway_created.c
     model/giveaway_winners.c
+    model/hide_general_forum_topic_request.c
+    model/hide_general_forum_topic_response.c
     model/inaccessible_message.c
     model/inline_keyboard_button.c
     model/inline_keyboard_markup.c
@@ -356,9 +335,13 @@ set(SRCS
     model/keyboard_button_request_chat.c
     model/keyboard_button_request_users.c
     model/labeled_price.c
+    model/leave_chat_request.c
+    model/leave_chat_request_chat_id.c
+    model/leave_chat_response.c
     model/link_preview_options.c
     model/location.c
     model/location_address.c
+    model/log_out_response.c
     model/login_url.c
     model/mask_position.c
     model/maybe_inaccessible_message.c
@@ -402,28 +385,160 @@ set(SRCS
     model/passport_element_error_unspecified.c
     model/passport_file.c
     model/photo_size.c
+    model/pin_chat_message_request.c
+    model/pin_chat_message_response.c
     model/poll.c
     model/poll_answer.c
     model/poll_option.c
+    model/post_story_request.c
+    model/post_story_response.c
     model/pre_checkout_query.c
     model/prepared_inline_message.c
+    model/promote_chat_member_request.c
+    model/promote_chat_member_response.c
     model/proximity_alert_triggered.c
     model/reaction_count.c
     model/reaction_type.c
     model/reaction_type_custom_emoji.c
     model/reaction_type_emoji.c
     model/reaction_type_paid.c
+    model/read_business_message_request.c
+    model/read_business_message_response.c
+    model/refund_star_payment_request.c
+    model/refund_star_payment_response.c
     model/refunded_payment.c
+    model/remove_business_account_profile_photo_request.c
+    model/remove_business_account_profile_photo_response.c
+    model/remove_chat_verification_request.c
+    model/remove_chat_verification_response.c
+    model/remove_user_verification_request.c
+    model/remove_user_verification_response.c
+    model/reopen_forum_topic_request.c
+    model/reopen_forum_topic_response.c
+    model/reopen_general_forum_topic_request.c
+    model/reopen_general_forum_topic_response.c
+    model/replace_sticker_in_set_request.c
+    model/replace_sticker_in_set_response.c
     model/reply_keyboard_markup.c
     model/reply_keyboard_remove.c
     model/reply_parameters.c
     model/reply_parameters_chat_id.c
     model/response_parameters.c
+    model/restrict_chat_member_request.c
+    model/restrict_chat_member_response.c
     model/revenue_withdrawal_state.c
     model/revenue_withdrawal_state_failed.c
     model/revenue_withdrawal_state_pending.c
     model/revenue_withdrawal_state_succeeded.c
+    model/revoke_chat_invite_link_request.c
+    model/revoke_chat_invite_link_request_chat_id.c
+    model/revoke_chat_invite_link_response.c
+    model/save_prepared_inline_message_request.c
+    model/save_prepared_inline_message_response.c
+    model/send_animation_request.c
+    model/send_animation_response.c
+    model/send_audio_request.c
+    model/send_audio_response.c
+    model/send_chat_action_request.c
+    model/send_chat_action_response.c
+    model/send_contact_request.c
+    model/send_contact_response.c
+    model/send_dice_request.c
+    model/send_dice_response.c
+    model/send_document_request.c
+    model/send_document_response.c
+    model/send_game_request.c
+    model/send_game_response.c
+    model/send_gift_request.c
+    model/send_gift_request_chat_id.c
+    model/send_gift_response.c
+    model/send_invoice_request.c
+    model/send_invoice_response.c
+    model/send_location_request.c
+    model/send_location_response.c
+    model/send_media_group_request.c
+    model/send_media_group_request_media_inner.c
+    model/send_media_group_response.c
+    model/send_message_request.c
+    model/send_message_request_chat_id.c
+    model/send_message_request_reply_markup.c
+    model/send_message_response.c
+    model/send_paid_media_request.c
+    model/send_paid_media_request_chat_id.c
+    model/send_paid_media_response.c
+    model/send_photo_request.c
+    model/send_photo_response.c
+    model/send_poll_request.c
+    model/send_poll_response.c
+    model/send_sticker_request.c
+    model/send_sticker_response.c
+    model/send_venue_request.c
+    model/send_venue_response.c
+    model/send_video_note_request.c
+    model/send_video_note_response.c
+    model/send_video_request.c
+    model/send_video_response.c
+    model/send_voice_request.c
+    model/send_voice_response.c
     model/sent_web_app_message.c
+    model/set_business_account_bio_request.c
+    model/set_business_account_bio_response.c
+    model/set_business_account_gift_settings_request.c
+    model/set_business_account_gift_settings_response.c
+    model/set_business_account_name_request.c
+    model/set_business_account_name_response.c
+    model/set_business_account_profile_photo_request.c
+    model/set_business_account_profile_photo_response.c
+    model/set_business_account_username_request.c
+    model/set_business_account_username_response.c
+    model/set_chat_administrator_custom_title_request.c
+    model/set_chat_administrator_custom_title_response.c
+    model/set_chat_description_request.c
+    model/set_chat_description_response.c
+    model/set_chat_menu_button_request.c
+    model/set_chat_menu_button_response.c
+    model/set_chat_permissions_request.c
+    model/set_chat_permissions_response.c
+    model/set_chat_photo_request.c
+    model/set_chat_photo_response.c
+    model/set_chat_sticker_set_request.c
+    model/set_chat_sticker_set_response.c
+    model/set_chat_title_request.c
+    model/set_chat_title_response.c
+    model/set_custom_emoji_sticker_set_thumbnail_request.c
+    model/set_custom_emoji_sticker_set_thumbnail_response.c
+    model/set_game_score_request.c
+    model/set_game_score_response.c
+    model/set_message_reaction_request.c
+    model/set_message_reaction_response.c
+    model/set_my_commands_request.c
+    model/set_my_commands_response.c
+    model/set_my_default_administrator_rights_request.c
+    model/set_my_default_administrator_rights_response.c
+    model/set_my_description_request.c
+    model/set_my_description_response.c
+    model/set_my_name_request.c
+    model/set_my_name_response.c
+    model/set_my_short_description_request.c
+    model/set_my_short_description_response.c
+    model/set_passport_data_errors_request.c
+    model/set_passport_data_errors_response.c
+    model/set_sticker_emoji_list_request.c
+    model/set_sticker_emoji_list_response.c
+    model/set_sticker_keywords_request.c
+    model/set_sticker_keywords_response.c
+    model/set_sticker_mask_position_request.c
+    model/set_sticker_mask_position_response.c
+    model/set_sticker_position_in_set_request.c
+    model/set_sticker_position_in_set_response.c
+    model/set_sticker_set_thumbnail_request.c
+    model/set_sticker_set_thumbnail_response.c
+    model/set_sticker_set_title_request.c
+    model/set_sticker_set_title_response.c
+    model/set_user_emoji_status_request.c
+    model/set_user_emoji_status_response.c
+    model/set_webhook_request.c
+    model/set_webhook_response.c
     model/shared_user.c
     model/shipping_address.c
     model/shipping_option.c
@@ -433,6 +548,10 @@ set(SRCS
     model/star_transactions.c
     model/sticker.c
     model/sticker_set.c
+    model/stop_message_live_location_request.c
+    model/stop_message_live_location_response.c
+    model/stop_poll_request.c
+    model/stop_poll_response.c
     model/story.c
     model/story_area.c
     model/story_area_position.c
@@ -453,18 +572,44 @@ set(SRCS
     model/transaction_partner_telegram_ads.c
     model/transaction_partner_telegram_api.c
     model/transaction_partner_user.c
+    model/transfer_business_account_stars_request.c
+    model/transfer_business_account_stars_response.c
+    model/transfer_gift_request.c
+    model/transfer_gift_response.c
+    model/unban_chat_member_request.c
+    model/unban_chat_member_response.c
+    model/unban_chat_sender_chat_request.c
+    model/unban_chat_sender_chat_response.c
+    model/unhide_general_forum_topic_request.c
+    model/unhide_general_forum_topic_response.c
     model/unique_gift.c
     model/unique_gift_backdrop.c
     model/unique_gift_backdrop_colors.c
     model/unique_gift_info.c
     model/unique_gift_model.c
     model/unique_gift_symbol.c
+    model/unpin_all_chat_messages_request.c
+    model/unpin_all_chat_messages_response.c
+    model/unpin_all_forum_topic_messages_request.c
+    model/unpin_all_forum_topic_messages_response.c
+    model/unpin_all_general_forum_topic_messages_request.c
+    model/unpin_all_general_forum_topic_messages_response.c
+    model/unpin_chat_message_request.c
+    model/unpin_chat_message_response.c
     model/update.c
+    model/upgrade_gift_request.c
+    model/upgrade_gift_response.c
+    model/upload_sticker_file_request.c
+    model/upload_sticker_file_response.c
     model/user.c
     model/user_chat_boosts.c
     model/user_profile_photos.c
     model/users_shared.c
     model/venue.c
+    model/verify_chat_request.c
+    model/verify_chat_response.c
+    model/verify_user_request.c
+    model/verify_user_response.c
     model/video.c
     model/video_chat_ended.c
     model/video_chat_participants_invited.c
@@ -487,179 +632,23 @@ set(HDRS
     external/cJSON.h
     model/object.h
     model/any_type.h
-    model/_answer_callback_query_post_request.h
-    model/_answer_inline_query_post_request.h
-    model/_answer_pre_checkout_query_post_request.h
-    model/_answer_shipping_query_post_request.h
-    model/_answer_web_app_query_post_200_response.h
-    model/_answer_web_app_query_post_request.h
-    model/_approve_chat_join_request_post_request.h
-    model/_ban_chat_member_post_request.h
-    model/_ban_chat_member_post_request_chat_id.h
-    model/_ban_chat_sender_chat_post_request.h
-    model/_close_forum_topic_post_request.h
-    model/_convert_gift_to_stars_post_request.h
-    model/_copy_message_post_200_response.h
-    model/_copy_message_post_request.h
-    model/_copy_messages_post_request.h
-    model/_create_chat_invite_link_post_200_response.h
-    model/_create_chat_invite_link_post_request.h
-    model/_create_chat_subscription_invite_link_post_request.h
-    model/_create_chat_subscription_invite_link_post_request_chat_id.h
-    model/_create_forum_topic_post_200_response.h
-    model/_create_forum_topic_post_request.h
-    model/_create_invoice_link_post_request.h
-    model/_delete_business_messages_post_request.h
-    model/_delete_chat_sticker_set_post_request.h
-    model/_delete_message_post_request.h
-    model/_delete_messages_post_request.h
-    model/_delete_my_commands_post_request.h
-    model/_delete_sticker_from_set_post_request.h
-    model/_delete_sticker_set_post_request.h
-    model/_delete_story_post_request.h
-    model/_delete_webhook_post_request.h
-    model/_edit_chat_invite_link_post_request.h
-    model/_edit_chat_subscription_invite_link_post_request.h
-    model/_edit_forum_topic_post_request.h
-    model/_edit_general_forum_topic_post_request.h
-    model/_edit_message_caption_post_request.h
-    model/_edit_message_live_location_post_request.h
-    model/_edit_message_reply_markup_post_request.h
-    model/_edit_message_text_post_200_response.h
-    model/_edit_message_text_post_200_response_result.h
-    model/_edit_message_text_post_request.h
-    model/_edit_message_text_post_request_chat_id.h
-    model/_edit_user_star_subscription_post_request.h
-    model/_export_chat_invite_link_post_200_response.h
-    model/_export_chat_invite_link_post_request.h
-    model/_forward_message_post_request.h
-    model/_forward_message_post_request_from_chat_id.h
-    model/_forward_messages_post_200_response.h
-    model/_forward_messages_post_request.h
-    model/_forward_messages_post_request_from_chat_id.h
-    model/_get_available_gifts_post_200_response.h
-    model/_get_business_account_gifts_post_200_response.h
-    model/_get_business_account_gifts_post_request.h
-    model/_get_business_account_star_balance_post_200_response.h
-    model/_get_business_connection_post_200_response.h
-    model/_get_business_connection_post_request.h
-    model/_get_chat_administrators_post_200_response.h
-    model/_get_chat_member_count_post_200_response.h
-    model/_get_chat_member_post_200_response.h
-    model/_get_chat_member_post_request.h
-    model/_get_chat_menu_button_post_200_response.h
-    model/_get_chat_menu_button_post_request.h
-    model/_get_chat_post_200_response.h
-    model/_get_custom_emoji_stickers_post_request.h
-    model/_get_file_post_200_response.h
-    model/_get_file_post_request.h
-    model/_get_forum_topic_icon_stickers_post_200_response.h
-    model/_get_game_high_scores_post_200_response.h
-    model/_get_game_high_scores_post_request.h
-    model/_get_me_post_200_response.h
-    model/_get_my_commands_post_200_response.h
-    model/_get_my_commands_post_request.h
-    model/_get_my_default_administrator_rights_post_200_response.h
-    model/_get_my_default_administrator_rights_post_request.h
-    model/_get_my_description_post_200_response.h
-    model/_get_my_name_post_200_response.h
-    model/_get_my_name_post_request.h
-    model/_get_my_short_description_post_200_response.h
-    model/_get_star_transactions_post_200_response.h
-    model/_get_star_transactions_post_request.h
-    model/_get_sticker_set_post_200_response.h
-    model/_get_sticker_set_post_request.h
-    model/_get_updates_post_200_response.h
-    model/_get_updates_post_request.h
-    model/_get_user_chat_boosts_post_200_response.h
-    model/_get_user_chat_boosts_post_request.h
-    model/_get_user_chat_boosts_post_request_chat_id.h
-    model/_get_user_profile_photos_post_200_response.h
-    model/_get_user_profile_photos_post_request.h
-    model/_get_webhook_info_post_200_response.h
-    model/_gift_premium_subscription_post_request.h
-    model/_leave_chat_post_request.h
-    model/_leave_chat_post_request_chat_id.h
-    model/_pin_chat_message_post_request.h
-    model/_post_story_post_200_response.h
-    model/_promote_chat_member_post_request.h
-    model/_read_business_message_post_request.h
-    model/_refund_star_payment_post_request.h
-    model/_remove_business_account_profile_photo_post_request.h
-    model/_remove_user_verification_post_request.h
-    model/_restrict_chat_member_post_request.h
-    model/_restrict_chat_member_post_request_chat_id.h
-    model/_revoke_chat_invite_link_post_request.h
-    model/_revoke_chat_invite_link_post_request_chat_id.h
-    model/_save_prepared_inline_message_post_200_response.h
-    model/_save_prepared_inline_message_post_request.h
-    model/_send_animation_post_request_animation.h
-    model/_send_audio_post_request_audio.h
-    model/_send_audio_post_request_thumbnail.h
-    model/_send_chat_action_post_request.h
-    model/_send_contact_post_request.h
-    model/_send_dice_post_request.h
-    model/_send_document_post_request_document.h
-    model/_send_game_post_request.h
-    model/_send_gift_post_request.h
-    model/_send_gift_post_request_chat_id.h
-    model/_send_invoice_post_request.h
-    model/_send_location_post_request.h
-    model/_send_media_group_post_200_response.h
-    model/_send_media_group_post_request_media_inner.h
-    model/_send_message_post_200_response.h
-    model/_send_message_post_request.h
-    model/_send_message_post_request_chat_id.h
-    model/_send_message_post_request_reply_markup.h
-    model/_send_paid_media_post_request_chat_id.h
-    model/_send_photo_post_request_photo.h
-    model/_send_poll_post_request.h
-    model/_send_sticker_post_request_sticker.h
-    model/_send_venue_post_request.h
-    model/_send_video_note_post_request_video_note.h
-    model/_send_video_post_request_cover.h
-    model/_send_video_post_request_video.h
-    model/_send_voice_post_request_voice.h
-    model/_set_business_account_bio_post_request.h
-    model/_set_business_account_gift_settings_post_request.h
-    model/_set_business_account_name_post_request.h
-    model/_set_business_account_username_post_request.h
-    model/_set_chat_administrator_custom_title_post_request.h
-    model/_set_chat_description_post_request.h
-    model/_set_chat_menu_button_post_request.h
-    model/_set_chat_permissions_post_request.h
-    model/_set_chat_sticker_set_post_request.h
-    model/_set_chat_title_post_request.h
-    model/_set_custom_emoji_sticker_set_thumbnail_post_request.h
-    model/_set_game_score_post_request.h
-    model/_set_message_reaction_post_request.h
-    model/_set_my_commands_post_request.h
-    model/_set_my_default_administrator_rights_post_request.h
-    model/_set_my_description_post_request.h
-    model/_set_my_name_post_request.h
-    model/_set_my_short_description_post_request.h
-    model/_set_passport_data_errors_post_request.h
-    model/_set_sticker_emoji_list_post_request.h
-    model/_set_sticker_keywords_post_request.h
-    model/_set_sticker_mask_position_post_request.h
-    model/_set_sticker_position_in_set_post_request.h
-    model/_set_sticker_set_thumbnail_post_request_thumbnail.h
-    model/_set_sticker_set_title_post_request.h
-    model/_set_user_emoji_status_post_request.h
-    model/_set_webhook_post_200_response.h
-    model/_stop_message_live_location_post_request.h
-    model/_stop_poll_post_200_response.h
-    model/_stop_poll_post_request.h
-    model/_transfer_business_account_stars_post_request.h
-    model/_transfer_gift_post_request.h
-    model/_unban_chat_member_post_request.h
-    model/_unpin_chat_message_post_request.h
-    model/_upgrade_gift_post_request.h
-    model/_verify_chat_post_request.h
-    model/_verify_user_post_request.h
     model/accepted_gift_types.h
+    model/add_sticker_to_set_request.h
+    model/add_sticker_to_set_response.h
     model/affiliate_info.h
     model/animation.h
+    model/answer_callback_query_request.h
+    model/answer_callback_query_response.h
+    model/answer_inline_query_request.h
+    model/answer_inline_query_response.h
+    model/answer_pre_checkout_query_request.h
+    model/answer_pre_checkout_query_response.h
+    model/answer_shipping_query_request.h
+    model/answer_shipping_query_response.h
+    model/answer_web_app_query_request.h
+    model/answer_web_app_query_response.h
+    model/approve_chat_join_request_request.h
+    model/approve_chat_join_request_response.h
     model/audio.h
     model/background_fill.h
     model/background_fill_freeform_gradient.h
@@ -670,6 +659,11 @@ set(HDRS
     model/background_type_fill.h
     model/background_type_pattern.h
     model/background_type_wallpaper.h
+    model/ban_chat_member_request.h
+    model/ban_chat_member_request_chat_id.h
+    model/ban_chat_member_response.h
+    model/ban_chat_sender_chat_request.h
+    model/ban_chat_sender_chat_response.h
     model/birthdate.h
     model/bot_command.h
     model/bot_command_scope.h
@@ -678,6 +672,7 @@ set(HDRS
     model/bot_command_scope_all_private_chats.h
     model/bot_command_scope_chat.h
     model/bot_command_scope_chat_administrators.h
+    model/bot_command_scope_chat_chat_id.h
     model/bot_command_scope_chat_member.h
     model/bot_command_scope_default.h
     model/bot_description.h
@@ -718,28 +713,157 @@ set(HDRS
     model/chat_photo.h
     model/chat_shared.h
     model/chosen_inline_result.h
+    model/close_forum_topic_request.h
+    model/close_forum_topic_response.h
+    model/close_general_forum_topic_request.h
+    model/close_general_forum_topic_response.h
+    model/close_response.h
     model/contact.h
+    model/convert_gift_to_stars_request.h
+    model/convert_gift_to_stars_response.h
+    model/copy_message_request.h
+    model/copy_message_response.h
+    model/copy_messages_request.h
+    model/copy_messages_response.h
     model/copy_text_button.h
+    model/create_chat_invite_link_request.h
+    model/create_chat_invite_link_response.h
+    model/create_chat_subscription_invite_link_request.h
+    model/create_chat_subscription_invite_link_request_chat_id.h
+    model/create_chat_subscription_invite_link_response.h
+    model/create_forum_topic_request.h
+    model/create_forum_topic_response.h
+    model/create_invoice_link_request.h
+    model/create_invoice_link_response.h
+    model/create_new_sticker_set_request.h
+    model/create_new_sticker_set_response.h
+    model/decline_chat_join_request_request.h
+    model/decline_chat_join_request_response.h
+    model/delete_business_messages_request.h
+    model/delete_business_messages_response.h
+    model/delete_chat_photo_request.h
+    model/delete_chat_photo_response.h
+    model/delete_chat_sticker_set_request.h
+    model/delete_chat_sticker_set_response.h
+    model/delete_forum_topic_request.h
+    model/delete_forum_topic_response.h
+    model/delete_message_request.h
+    model/delete_message_response.h
+    model/delete_messages_request.h
+    model/delete_messages_response.h
+    model/delete_my_commands_request.h
+    model/delete_my_commands_response.h
+    model/delete_sticker_from_set_request.h
+    model/delete_sticker_from_set_response.h
+    model/delete_sticker_set_request.h
+    model/delete_sticker_set_response.h
+    model/delete_story_request.h
+    model/delete_story_response.h
+    model/delete_webhook_request.h
+    model/delete_webhook_response.h
     model/dice.h
     model/document.h
+    model/edit_chat_invite_link_request.h
+    model/edit_chat_invite_link_response.h
+    model/edit_chat_subscription_invite_link_request.h
+    model/edit_chat_subscription_invite_link_response.h
+    model/edit_forum_topic_request.h
+    model/edit_forum_topic_response.h
+    model/edit_general_forum_topic_request.h
+    model/edit_general_forum_topic_response.h
+    model/edit_message_caption_request.h
+    model/edit_message_caption_response.h
+    model/edit_message_live_location_request.h
+    model/edit_message_live_location_response.h
+    model/edit_message_media_request.h
+    model/edit_message_media_response.h
+    model/edit_message_reply_markup_request.h
+    model/edit_message_reply_markup_response.h
+    model/edit_message_text_request.h
+    model/edit_message_text_request_chat_id.h
+    model/edit_message_text_response.h
+    model/edit_message_text_response_result.h
+    model/edit_story_request.h
+    model/edit_story_response.h
+    model/edit_user_star_subscription_request.h
+    model/edit_user_star_subscription_response.h
     model/encrypted_credentials.h
     model/encrypted_passport_element.h
     model/error.h
+    model/export_chat_invite_link_request.h
+    model/export_chat_invite_link_response.h
     model/external_reply_info.h
     model/file.h
     model/force_reply.h
     model/forum_topic.h
     model/forum_topic_created.h
     model/forum_topic_edited.h
+    model/forward_message_request.h
+    model/forward_message_request_from_chat_id.h
+    model/forward_message_response.h
+    model/forward_messages_request.h
+    model/forward_messages_request_from_chat_id.h
+    model/forward_messages_response.h
     model/game.h
     model/game_high_score.h
+    model/get_available_gifts_response.h
+    model/get_business_account_gifts_request.h
+    model/get_business_account_gifts_response.h
+    model/get_business_account_star_balance_request.h
+    model/get_business_account_star_balance_response.h
+    model/get_business_connection_request.h
+    model/get_business_connection_response.h
+    model/get_chat_administrators_request.h
+    model/get_chat_administrators_response.h
+    model/get_chat_member_count_request.h
+    model/get_chat_member_count_response.h
+    model/get_chat_member_request.h
+    model/get_chat_member_response.h
+    model/get_chat_menu_button_request.h
+    model/get_chat_menu_button_response.h
+    model/get_chat_request.h
+    model/get_chat_response.h
+    model/get_custom_emoji_stickers_request.h
+    model/get_custom_emoji_stickers_response.h
+    model/get_file_request.h
+    model/get_file_response.h
+    model/get_forum_topic_icon_stickers_response.h
+    model/get_game_high_scores_request.h
+    model/get_game_high_scores_response.h
+    model/get_me_response.h
+    model/get_my_commands_request.h
+    model/get_my_commands_response.h
+    model/get_my_default_administrator_rights_request.h
+    model/get_my_default_administrator_rights_response.h
+    model/get_my_description_request.h
+    model/get_my_description_response.h
+    model/get_my_name_request.h
+    model/get_my_name_response.h
+    model/get_my_short_description_request.h
+    model/get_my_short_description_response.h
+    model/get_star_transactions_request.h
+    model/get_star_transactions_response.h
+    model/get_sticker_set_request.h
+    model/get_sticker_set_response.h
+    model/get_updates_request.h
+    model/get_updates_response.h
+    model/get_user_chat_boosts_request.h
+    model/get_user_chat_boosts_request_chat_id.h
+    model/get_user_chat_boosts_response.h
+    model/get_user_profile_photos_request.h
+    model/get_user_profile_photos_response.h
+    model/get_webhook_info_response.h
     model/gift.h
     model/gift_info.h
+    model/gift_premium_subscription_request.h
+    model/gift_premium_subscription_response.h
     model/gifts.h
     model/giveaway.h
     model/giveaway_completed.h
     model/giveaway_created.h
     model/giveaway_winners.h
+    model/hide_general_forum_topic_request.h
+    model/hide_general_forum_topic_response.h
     model/inaccessible_message.h
     model/inline_keyboard_button.h
     model/inline_keyboard_markup.h
@@ -795,9 +919,13 @@ set(HDRS
     model/keyboard_button_request_chat.h
     model/keyboard_button_request_users.h
     model/labeled_price.h
+    model/leave_chat_request.h
+    model/leave_chat_request_chat_id.h
+    model/leave_chat_response.h
     model/link_preview_options.h
     model/location.h
     model/location_address.h
+    model/log_out_response.h
     model/login_url.h
     model/mask_position.h
     model/maybe_inaccessible_message.h
@@ -841,28 +969,160 @@ set(HDRS
     model/passport_element_error_unspecified.h
     model/passport_file.h
     model/photo_size.h
+    model/pin_chat_message_request.h
+    model/pin_chat_message_response.h
     model/poll.h
     model/poll_answer.h
     model/poll_option.h
+    model/post_story_request.h
+    model/post_story_response.h
     model/pre_checkout_query.h
     model/prepared_inline_message.h
+    model/promote_chat_member_request.h
+    model/promote_chat_member_response.h
     model/proximity_alert_triggered.h
     model/reaction_count.h
     model/reaction_type.h
     model/reaction_type_custom_emoji.h
     model/reaction_type_emoji.h
     model/reaction_type_paid.h
+    model/read_business_message_request.h
+    model/read_business_message_response.h
+    model/refund_star_payment_request.h
+    model/refund_star_payment_response.h
     model/refunded_payment.h
+    model/remove_business_account_profile_photo_request.h
+    model/remove_business_account_profile_photo_response.h
+    model/remove_chat_verification_request.h
+    model/remove_chat_verification_response.h
+    model/remove_user_verification_request.h
+    model/remove_user_verification_response.h
+    model/reopen_forum_topic_request.h
+    model/reopen_forum_topic_response.h
+    model/reopen_general_forum_topic_request.h
+    model/reopen_general_forum_topic_response.h
+    model/replace_sticker_in_set_request.h
+    model/replace_sticker_in_set_response.h
     model/reply_keyboard_markup.h
     model/reply_keyboard_remove.h
     model/reply_parameters.h
     model/reply_parameters_chat_id.h
     model/response_parameters.h
+    model/restrict_chat_member_request.h
+    model/restrict_chat_member_response.h
     model/revenue_withdrawal_state.h
     model/revenue_withdrawal_state_failed.h
     model/revenue_withdrawal_state_pending.h
     model/revenue_withdrawal_state_succeeded.h
+    model/revoke_chat_invite_link_request.h
+    model/revoke_chat_invite_link_request_chat_id.h
+    model/revoke_chat_invite_link_response.h
+    model/save_prepared_inline_message_request.h
+    model/save_prepared_inline_message_response.h
+    model/send_animation_request.h
+    model/send_animation_response.h
+    model/send_audio_request.h
+    model/send_audio_response.h
+    model/send_chat_action_request.h
+    model/send_chat_action_response.h
+    model/send_contact_request.h
+    model/send_contact_response.h
+    model/send_dice_request.h
+    model/send_dice_response.h
+    model/send_document_request.h
+    model/send_document_response.h
+    model/send_game_request.h
+    model/send_game_response.h
+    model/send_gift_request.h
+    model/send_gift_request_chat_id.h
+    model/send_gift_response.h
+    model/send_invoice_request.h
+    model/send_invoice_response.h
+    model/send_location_request.h
+    model/send_location_response.h
+    model/send_media_group_request.h
+    model/send_media_group_request_media_inner.h
+    model/send_media_group_response.h
+    model/send_message_request.h
+    model/send_message_request_chat_id.h
+    model/send_message_request_reply_markup.h
+    model/send_message_response.h
+    model/send_paid_media_request.h
+    model/send_paid_media_request_chat_id.h
+    model/send_paid_media_response.h
+    model/send_photo_request.h
+    model/send_photo_response.h
+    model/send_poll_request.h
+    model/send_poll_response.h
+    model/send_sticker_request.h
+    model/send_sticker_response.h
+    model/send_venue_request.h
+    model/send_venue_response.h
+    model/send_video_note_request.h
+    model/send_video_note_response.h
+    model/send_video_request.h
+    model/send_video_response.h
+    model/send_voice_request.h
+    model/send_voice_response.h
     model/sent_web_app_message.h
+    model/set_business_account_bio_request.h
+    model/set_business_account_bio_response.h
+    model/set_business_account_gift_settings_request.h
+    model/set_business_account_gift_settings_response.h
+    model/set_business_account_name_request.h
+    model/set_business_account_name_response.h
+    model/set_business_account_profile_photo_request.h
+    model/set_business_account_profile_photo_response.h
+    model/set_business_account_username_request.h
+    model/set_business_account_username_response.h
+    model/set_chat_administrator_custom_title_request.h
+    model/set_chat_administrator_custom_title_response.h
+    model/set_chat_description_request.h
+    model/set_chat_description_response.h
+    model/set_chat_menu_button_request.h
+    model/set_chat_menu_button_response.h
+    model/set_chat_permissions_request.h
+    model/set_chat_permissions_response.h
+    model/set_chat_photo_request.h
+    model/set_chat_photo_response.h
+    model/set_chat_sticker_set_request.h
+    model/set_chat_sticker_set_response.h
+    model/set_chat_title_request.h
+    model/set_chat_title_response.h
+    model/set_custom_emoji_sticker_set_thumbnail_request.h
+    model/set_custom_emoji_sticker_set_thumbnail_response.h
+    model/set_game_score_request.h
+    model/set_game_score_response.h
+    model/set_message_reaction_request.h
+    model/set_message_reaction_response.h
+    model/set_my_commands_request.h
+    model/set_my_commands_response.h
+    model/set_my_default_administrator_rights_request.h
+    model/set_my_default_administrator_rights_response.h
+    model/set_my_description_request.h
+    model/set_my_description_response.h
+    model/set_my_name_request.h
+    model/set_my_name_response.h
+    model/set_my_short_description_request.h
+    model/set_my_short_description_response.h
+    model/set_passport_data_errors_request.h
+    model/set_passport_data_errors_response.h
+    model/set_sticker_emoji_list_request.h
+    model/set_sticker_emoji_list_response.h
+    model/set_sticker_keywords_request.h
+    model/set_sticker_keywords_response.h
+    model/set_sticker_mask_position_request.h
+    model/set_sticker_mask_position_response.h
+    model/set_sticker_position_in_set_request.h
+    model/set_sticker_position_in_set_response.h
+    model/set_sticker_set_thumbnail_request.h
+    model/set_sticker_set_thumbnail_response.h
+    model/set_sticker_set_title_request.h
+    model/set_sticker_set_title_response.h
+    model/set_user_emoji_status_request.h
+    model/set_user_emoji_status_response.h
+    model/set_webhook_request.h
+    model/set_webhook_response.h
     model/shared_user.h
     model/shipping_address.h
     model/shipping_option.h
@@ -872,6 +1132,10 @@ set(HDRS
     model/star_transactions.h
     model/sticker.h
     model/sticker_set.h
+    model/stop_message_live_location_request.h
+    model/stop_message_live_location_response.h
+    model/stop_poll_request.h
+    model/stop_poll_response.h
     model/story.h
     model/story_area.h
     model/story_area_position.h
@@ -892,18 +1156,44 @@ set(HDRS
     model/transaction_partner_telegram_ads.h
     model/transaction_partner_telegram_api.h
     model/transaction_partner_user.h
+    model/transfer_business_account_stars_request.h
+    model/transfer_business_account_stars_response.h
+    model/transfer_gift_request.h
+    model/transfer_gift_response.h
+    model/unban_chat_member_request.h
+    model/unban_chat_member_response.h
+    model/unban_chat_sender_chat_request.h
+    model/unban_chat_sender_chat_response.h
+    model/unhide_general_forum_topic_request.h
+    model/unhide_general_forum_topic_response.h
     model/unique_gift.h
     model/unique_gift_backdrop.h
     model/unique_gift_backdrop_colors.h
     model/unique_gift_info.h
     model/unique_gift_model.h
     model/unique_gift_symbol.h
+    model/unpin_all_chat_messages_request.h
+    model/unpin_all_chat_messages_response.h
+    model/unpin_all_forum_topic_messages_request.h
+    model/unpin_all_forum_topic_messages_response.h
+    model/unpin_all_general_forum_topic_messages_request.h
+    model/unpin_all_general_forum_topic_messages_response.h
+    model/unpin_chat_message_request.h
+    model/unpin_chat_message_response.h
     model/update.h
+    model/upgrade_gift_request.h
+    model/upgrade_gift_response.h
+    model/upload_sticker_file_request.h
+    model/upload_sticker_file_response.h
     model/user.h
     model/user_chat_boosts.h
     model/user_profile_photos.h
     model/users_shared.h
     model/venue.h
+    model/verify_chat_request.h
+    model/verify_chat_response.h
+    model/verify_user_request.h
+    model/verify_user_response.h
     model/video.h
     model/video_chat_ended.h
     model/video_chat_participants_invited.h

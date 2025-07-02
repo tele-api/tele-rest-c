@@ -15,20 +15,20 @@
 
 typedef struct bot_command_scope_chat_t bot_command_scope_chat_t;
 
-#include "_restrict_chat_member_post_request_chat_id.h"
+#include "bot_command_scope_chat_chat_id.h"
 
 
 
 typedef struct bot_command_scope_chat_t {
     char *type; // string
-    struct _restrict_chat_member_post_request_chat_id_t *chat_id; //model
+    struct bot_command_scope_chat_chat_id_t *chat_id; //model
 
     int _library_owned; // Is the library responsible for freeing this object?
 } bot_command_scope_chat_t;
 
 __attribute__((deprecated)) bot_command_scope_chat_t *bot_command_scope_chat_create(
     char *type,
-    _restrict_chat_member_post_request_chat_id_t *chat_id
+    bot_command_scope_chat_chat_id_t *chat_id
 );
 
 void bot_command_scope_chat_free(bot_command_scope_chat_t *bot_command_scope_chat);
